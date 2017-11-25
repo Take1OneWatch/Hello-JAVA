@@ -1,0 +1,53 @@
+package com.imooc;
+
+public class Animal {
+	 int age = 10;
+	// String name = "小甜甜！";
+	 public void name() {
+			System.out.println("小甜甜！"); }
+	public void eat() {
+		System.out.println("陈广峰具有吃东西的能力！");
+	}
+    public Animal(){ //构造方法！！（构造方法是后面才运行的）
+	System.out.println("Animal类执行了！！"); 
+	age = 20;
+     }
+}
+
+
+package com.imooc;
+
+public class Dog extends Animal {
+	public Dog() {
+		System.out.println("Dog类执行了！");
+}
+	public void eat() {
+		System.out.println("狗具有吃东西的能力！");
+	}
+	 public void name() {
+			System.out.println("小喵喵！"); }
+}
+
+
+
+//这是主函数！！
+package com.imooc;
+
+public class Initail {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Animal animal =new Animal();//执行Animal中的构造方法！
+		System.out.println("animal  age:"+animal.age);
+		Dog d =new Dog();
+/*这一行代码主要是执行了一次Animal中的构造方法，再执行Dog中的构造方法！	
+		/*Animal类执行了！！
+          Dog类执行了！*/
+		d.eat();
+	 d.age=50;   //执行父类的属性初始值！
+		//System.out.println("animal name:"+animal.name);
+		d.name();
+	}
+}
+
+
