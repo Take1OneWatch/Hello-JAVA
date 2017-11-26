@@ -1,16 +1,16 @@
 package com.imooc;
 
 public class Animal {
-	 int age = 10;
-	// String name = "Ğ¡ÌğÌğ£¡";
+	 int age = 10 ;
+	// String name = "å°ç”œç”œï¼";
 	 public void name() {
-			System.out.println("Ğ¡ÌğÌğ£¡"); }
+			System.out.println("å°ç”œç”œï¼"); }
 	public void eat() {
-		System.out.println("³Â¹ã·å¾ßÓĞ³Ô¶«Î÷µÄÄÜÁ¦£¡");
+		System.out.println("é™ˆå¹¿å³°å…·æœ‰åƒä¸œè¥¿çš„èƒ½åŠ›ï¼");
 	}
-    public Animal(){ //¹¹Ôì·½·¨£¡£¡£¨¹¹Ôì·½·¨ÊÇºóÃæ²ÅÔËĞĞµÄ£©
-	System.out.println("AnimalÀàÖ´ĞĞÁË£¡£¡"); 
-	age = 20;
+    public Animal(){ //æ„é€ æ–¹æ³•ï¼ï¼ï¼ˆæ„é€ æ–¹æ³•æ˜¯åé¢æ‰è¿è¡Œçš„ï¼‰
+	System.out.println("Animalç±»æ‰§è¡Œäº†ï¼ï¼"); 
+	 age = 15;
      }
 }
 
@@ -19,35 +19,67 @@ package com.imooc;
 
 public class Dog extends Animal {
 	public Dog() {
-		System.out.println("DogÀàÖ´ĞĞÁË£¡");
+		System.out.println("Dogç±»æ‰§è¡Œäº†ï¼");
 }
-	public void eat() {
-		System.out.println("¹·¾ßÓĞ³Ô¶«Î÷µÄÄÜÁ¦£¡");
+	public void eat() {  //å…¶ä¸­æš—è—éšå½¢çš„superï¼Œè°ƒç”¨çˆ¶ç±»çš„æ— å‚æ–¹æ³•ï¼Œæœ‰å‚çš„å¿…é¡»æ˜å†™super
+		//super; å†™å‡ºæ¥çš„æ—¶å€™å¿…é¡»è¦æ”¾åœ¨æ–¹æ³•çš„ç¬¬ä¸€è¡Œ
+		System.out.println("ç‹—å…·æœ‰åƒä¸œè¥¿çš„èƒ½åŠ›ï¼");
 	}
-	 public void name() {
-			System.out.println("Ğ¡ß÷ß÷£¡"); }
+	@Override
+	public String toString() {
+		return "Dog[age="+age+"]"; 
+	}
+	
+	@Override   // equalsæ–¹æ³•
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Dog other = (Dog) obj;
+		if (age != other.age)
+			return false;
+		return true;
+	}
+	public void name() {
+			System.out.println("å°å–µå–µï¼"); }
+	 public void test() {
+		 System.out.println(super.age); //å¦‚æœæ²¡åŠ superå°±æ˜¯è¾“å‡ºå­ç±»çš„35
+		 super.eat();  //è°ƒç”¨çˆ¶ç±»çš„eatæ–¹æ³•ï¼
+	 }
+	 int age = 35 ;
 }
 
 
 
-//ÕâÊÇÖ÷º¯Êı£¡£¡
+//è¿™æ˜¯ä¸»å‡½æ•°ï¼ï¼
 package com.imooc;
 
 public class Initail {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Animal animal =new Animal();//Ö´ĞĞAnimalÖĞµÄ¹¹Ôì·½·¨£¡
+		Animal animal =new Animal();//æ‰§è¡ŒAnimalä¸­çš„æ„é€ æ–¹æ³•ï¼
 		System.out.println("animal  age:"+animal.age);
 		Dog d =new Dog();
-/*ÕâÒ»ĞĞ´úÂëÖ÷ÒªÊÇÖ´ĞĞÁËÒ»´ÎAnimalÖĞµÄ¹¹Ôì·½·¨£¬ÔÙÖ´ĞĞDogÖĞµÄ¹¹Ôì·½·¨£¡	
-		/*AnimalÀàÖ´ĞĞÁË£¡£¡
-          DogÀàÖ´ĞĞÁË£¡*/
+		Dog d2 =new Dog();
+		if(d.equals(d2)) {
+			System.out.println("ä¸¤ä¸ªå¯¹è±¡æ˜¯ç›¸åŒçš„");
+			}else {
+				System.out.println("ä¸¤ä¸ªå¯¹è±¡æ˜¯ä¸ç›¸åŒçš„");
+			}
+/*è¿™ä¸€è¡Œä»£ç ä¸»è¦æ˜¯æ‰§è¡Œäº†ä¸€æ¬¡Animalä¸­çš„æ„é€ æ–¹æ³•ï¼Œå†æ‰§è¡ŒDogä¸­çš„æ„é€ æ–¹æ³•ï¼	
+		/*Animalç±»æ‰§è¡Œäº†ï¼ï¼
+          Dogç±»æ‰§è¡Œäº†ï¼*/
+		System.out.println(d); //åˆ©ç”¨toStringæ–¹æ³•ç›´æ¥è°ƒç”¨Dogé‡Œé¢çš„å±æ€§ï¼
 		d.eat();
-	 d.age=50;   //Ö´ĞĞ¸¸ÀàµÄÊôĞÔ³õÊ¼Öµ£¡
-		//System.out.println("animal name:"+animal.name);
+		d.test();
+	 d.age=50;   //æ‰§è¡Œçˆ¶ç±»çš„å±æ€§åˆå§‹å€¼ï¼ (æ— æ•ˆï¼)
+	//	System.out.println("animal name:"+animal.name);
 		d.name();
 	}
 }
 
-
+//è‹¥ç”¨finalå¯¹å˜é‡ä½¿ç”¨ä¹‹åï¼Œå°±æ— æ³•å†å¯¹å˜é‡è¿›è¡Œèµ‹å€¼ï¼
