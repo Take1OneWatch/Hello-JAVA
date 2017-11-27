@@ -1,0 +1,46 @@
+package com.imooc;
+
+public class qiche {
+	public void fangshi() {
+		System.out.println("汽车能同时载40个人");
+	}
+
+}
+
+
+
+
+package com.imooc;
+
+public class lunchuan extends qiche {
+	public void fangshi(){
+		System.out.println("轮船能同时载200人");
+	}
+	
+}
+
+
+
+
+package com.imooc;
+
+public class feiji extends qiche {
+    public void fangshi() {
+    	System.out.println("飞机能同时载xxx人");
+    }
+}
+
+
+package com.imooc;
+
+public class Initail {
+
+	public static void main(String[] args) {
+	qiche obj = new qiche();
+	qiche obj2 =new lunchuan();
+	qiche obj3 =new feiji();
+	obj.fangshi();   
+	obj2.fangshi();
+	obj3.fangshi();
+	}
+}
