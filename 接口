@@ -1,0 +1,89 @@
+package com.imooc;
+
+public abstract class Telphone {    //定义抽象的类
+	public abstract void call();     // 限定了方法，但不具体限定方法的实现内容！
+	public abstract void message();
+}
+
+
+
+
+package com.imooc;
+
+public class Callphone extends Telphone {
+
+	@Override
+	public void call() {
+		// TODO Auto-generated method stub
+         System.out.println("1111");
+	}
+
+	@Override
+	public void message() {
+		// TODO Auto-generated method stub
+		System.out.println("2222");    //书写抽象类的方法！！
+	}
+
+}
+
+
+
+
+
+public class Smartphone extends Telphone implements IPlayGame {   //
+
+	@Override
+	public void call() {
+		// TODO Auto-generated method stub
+		System.out.println("3333");
+	}
+
+	@Override
+	public void message() {
+		// TODO Auto-generated method stub
+		System.out.println("4444");
+	}
+
+	@Override
+	public void IPlayGame() {
+		// TODO Auto-generated method stub
+		System.out.println("具有玩游戏的功能！！");
+	}
+
+}
+
+
+
+
+package com.imooc;
+
+public interface IPlayGame {    //创建一个接口！
+   public void IPlayGame();
+}
+
+
+
+
+package com.imooc;
+
+public class Initail {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         Telphone tel1 =new Callphone();    //创建子类的对象！！再执行！
+         tel1.call();
+         tel1.message();
+         Telphone tel2 =new Smartphone();
+         tel2.call();
+         tel2.message();
+	
+         IPlayGame ip1 =new Smartphone();  //实现接口的引用！
+         ip1.IPlayGame(); //调用！
+         IPlayGame ip2 =new Psp();
+         ip2.IPlayGame();
+    
+	}
+}
+  
+  
+  
