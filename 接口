@@ -28,6 +28,13 @@ public class Callphone extends Telphone {
 
 
 
+package com.imooc;
+ 
+public /*abstract*/ interface IPlayGame {    //声明一个接口！ public 后省略了一个abstract关键字，系统会默认添加
+   public /*abstract*/ void IPlayGame();
+}
+
+
 
 
 public class Smartphone extends Telphone implements IPlayGame {   //
@@ -50,15 +57,6 @@ public class Smartphone extends Telphone implements IPlayGame {   //
 		System.out.println("具有玩游戏的功能！！");
 	}
 
-}
-
-
-
-
-package com.imooc;
- 
-public /*abstract*/ interface IPlayGame {    //声明一个接口！ public 后省略了一个abstract关键字，系统会默认添加
-   public /*abstract*/ void IPlayGame();
 }
 
 
