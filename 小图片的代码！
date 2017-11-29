@@ -1,0 +1,18 @@
+//image
+import java.applet.Applet;
+import java.net.*;
+import java.awt.*;
+public class image extends Applet 
+{
+    Image im ;
+    public void init(){
+    	URL mypage=this.getDocumentBase();
+    	String imagename = this.getParameter("aaa");
+    	im = this.getImage(mypage,imagename);
+    }
+    public void paint(Graphics g)
+    {
+    	g.drawImage(im,100,100,this);
+    }
+	
+}
