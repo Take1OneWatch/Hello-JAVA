@@ -16,7 +16,9 @@ public class inside {
     	    	   int d =d1.nextInt();
     	    	   money1 = money1*d;
     	    	   System.out.print(d+"天需要支付的费用为：");
-    	    	   System.out.print(money1);
+    	    	   System.out.println(money1);
+    	    	   System.out.println("请核对账单后确定是否租用！");
+      	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
     		   }
     		   if(s==2) {
     			   int money1 =800 ;
@@ -25,10 +27,12 @@ public class inside {
     	    	   int d =d1.nextInt();
     	    	   money1 = money1*d;
     	    	   System.out.print(d+"天需要支付的费用为：");
-    	    	   System.out.print(money1);
+    	    	   System.out.println(money1);
+    	    	   System.out.println("请核对账单后确定是否租用！");
+      	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
     		   }
-    	   }if(s!=1||s!=2) {
-    		   System.out.println("输入错误，请输入正确的序号！");
+    	   }if(s!=1&&s!=2) {
+    		   System.out.println("系统错误，请输入正确的序号！");
     	   }
        }
        public void test1() {   //客车
@@ -45,7 +49,9 @@ public class inside {
    	    	   int d =d1.nextInt();
    	    	   money1 = money1*d;
 	    	   System.out.print(d+"天需要支付的费用为：");
-	    	   System.out.print(money1);
+	    	   System.out.println(money1);
+	    	   System.out.println("请核对账单后确定是否租用！");
+  	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
     		}
     		if(s==2) {
     			 int money1 =400 ;
@@ -54,7 +60,9 @@ public class inside {
   	    	   int d =d1.nextInt();
   	    	   money1 = money1*d;
 	    	   System.out.print(d+"天需要支付的费用为：");
-	    	   System.out.print(money1);
+	    	   System.out.println(money1);
+	    	   System.out.println("请核对账单后确定是否租用！");
+  	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
     		}
     		if(s==3) {
     			 int money1 =800 ;
@@ -64,10 +72,12 @@ public class inside {
      	    	   money1 = money1*d;
    	    	   System.out.print(d+"天需要支付的费用为：");
    	    	   System.out.println(money1);
+   	    	 System.out.println("请核对账单后确定是否租用！");
+	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
     		}
-    	/*	else  {
-     		   System.out.println("输入错误，请输入正确的序号！");
-    		  }  */
+    		if(s!=1&&s!=2&&s!=3)  {
+     		   System.out.println("系统错误，请输入正确的序号！");
+    		  }  
     	   }   
        }
        public void test2() {    //皮卡
@@ -83,6 +93,8 @@ public class inside {
       	    	   money1 = money1*d;
     	    	   System.out.print(d+"天需要支付的费用为：");
     	    	   System.out.print(money1);
+    	    	   System.out.println("请核对账单后确定是否租用！");
+      	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
     		   }
     		   if(s==2) {
     			   int money1 =500 ;
@@ -92,12 +104,16 @@ public class inside {
        	    	   money1 = money1*d;
      	    	   System.out.print(d+"天需要支付的费用为：");
      	    	   System.out.print(money1);
+     	    	   System.out.println("请核对账单后确定是否租用！");
+     	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
     		   }
-    	   }if(s!=1||s!=2) {
-    		   System.out.println("输入错误，请输入正确的序号！");
+    	   }if(s!=1&&s!=2) {
+    		   System.out.println("系统错误，请输入正确的序号！");
            }  
 	    }
      }
+
+
 
 
 
@@ -124,20 +140,19 @@ public class User {
     			 if(d==1) {
     				 System.out.println("请输入想要选择的车型！");
     				 inside s1 =new inside();
-    				 s1.test();
-    			 }
+    				 s1.test();}
     			 if(d==2) {
     				 System.out.println("请输入想要选择的车型！");
     				 inside s2 =new inside();
-    				 s2.test1();
-    			 }
+    				 s2.test1();}    			 
     			 if(d==3) {
     				 System.out.println("请输入想要选择的车型！");
     				 inside s3 =new inside();
-    				 s3.test2();
-    		 }
-    		 
-    	 }
+    				 s3.test2();}
+    	      }
+	}if(s==2) 
+		{System.out.println("期待您的下次使用，再见");}
+if(s!=1&&s!=2) 
+        {System.out.println("系统错误，请输入正确的序号");}
+      } 
 	}
-
-} }
