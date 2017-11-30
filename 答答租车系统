@@ -3,9 +3,10 @@ package com.imooc;
 import java.util.Scanner;
 
 public class inside {
-	    public void test() {  //货车
-    	   System.out.println("1.松花江  400元/天  载货：4吨");
-    	   System.out.println("2.依维柯  800元/天  载货：20吨");
+	   int lease=0;int leasea=0; int a = 20;int b = 20;int c = 20;int d = 20;int e = 20;int f = 20;int g = 20;
+	    public void  test() {  //货车
+    	   System.out.println("1.松花江  400元/天  载货：4吨        空闲车数："+(a-lease));
+    	   System.out.println("2.依维柯  800元/天  载货：20吨      空闲车数："+(b-lease));
     	 for(int m =1;m<=3;m++)
     	   {
     		   Scanner s1= new Scanner(System.in);
@@ -34,6 +35,7 @@ public class inside {
     	    	   int x =x1.nextInt();
     	    	   if(x==1) {
     	    		   System.out.println("租用成功！祝您路途愉快");
+    	    		   //leasea = a - l;
     	    		   break;
     	    	   }
     	    	   if(x==2) {
@@ -107,9 +109,9 @@ public class inside {
     	   }
        }
        public void test1() {   //客车
-    	   System.out.println("1.奥迪A4  500元/天  载人：4人");
-    	   System.out.println("2.马自达6  400元/天  载货：4人");
-    	   System.out.println("3.金龙  800元/天  载人：20人");
+    	   System.out.println("1.奥迪A4  500元/天  载人：4人          空闲车数："+(c-lease));
+    	   System.out.println("2.马自达6  400元/天  载货：4人        空闲车数："+(d-lease));
+    	   System.out.println("3.金龙  800元/天  载人：20人             空闲车数："+(e-lease));
     	   for(int m=1;m<=3;m++)
     	   {
     		   Scanner s2 = new Scanner(System.in);
@@ -251,8 +253,8 @@ public class inside {
        
        
        public void test2() {    //皮卡
-    	   System.out.println("1.皮卡雪  450元/天  载货：4人 载货：2吨");
-    	   System.out.println("2.皮卡红  500元/天  载货：4人 载货：3吨");
+    	   System.out.println("1.皮卡雪  450元/天  载货：4人 载货：2吨      空闲车数："+(f-lease));
+    	   System.out.println("2.皮卡红  500元/天  载货：4人 载货：3吨      空闲车数："+(g-lease));
     	   for(int m=1;m<=3;m++)
     	   {   Scanner s3 = new Scanner(System.in);
     	   int s =s3.nextInt();{
@@ -269,6 +271,7 @@ public class inside {
       			   Scanner d1= new Scanner(System.in);
       	    	   int d =d1.nextInt();
       	    	   money1 = money1*d*l;
+      	    	 System.out.println("账单：");
       	    	 System.out.println("**************************************");
      	    	   System.out.println("皮卡雪  450元/天  载货：4人 载货：2吨");
      	    	   System.out.println("租用数量："+l);
@@ -309,6 +312,7 @@ public class inside {
        			   Scanner d1= new Scanner(System.in);
        	    	   int d =d1.nextInt();
        	    	   money1 = money1*d*l;
+       	    	System.out.println("账单：");
        	       System.out.println("***************************************");
   	    	   System.out.println("皮卡红  500元/天  载货：4人 载货：3吨");
   	    	   System.out.println("租用数量："+l);
@@ -345,7 +349,9 @@ public class inside {
  		  }
  		}   
     	   }   }
+
      }
+
 
 
 
