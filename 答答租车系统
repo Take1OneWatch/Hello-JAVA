@@ -43,11 +43,11 @@ public class inside {
     	    	   if(x!=1&&x!=2) {
     	    		   System.out.println("系统错误，请输入正确的序号！");
     	    		   if(i==3) {
-    	    			   System.out.println("输入错误超过三次已自动退出程序！");
+    	    			   System.out.println("输入错误超过三次已自动退出程序！");break;
     	    		   }
     	    	   }
-    		   }
-    		}
+    		   }break;
+    		} 
     	 }	   
     		   
     		   
@@ -87,7 +87,7 @@ public class inside {
      	    			   System.out.println("输入错误超过三次已自动退出程序！");
      	    		   }
      	    	   }
-     		   }
+     		   }break;
     		 }
     		   }
     		   
@@ -149,10 +149,10 @@ public class inside {
  	    	   if(x!=1&&x!=2) {
  	    		   System.out.println("系统错误，请输入正确的序号！");
  	    		   if(i==3) {
- 	    			   System.out.println("输入错误超过三次已自动退出程序！");
+ 	    			   System.out.println("输入错误超过三次已自动退出程序！");break;
  	    		   }
  	    	   }
- 		   }
+ 		   }break;
         }
     		
     		
@@ -190,10 +190,10 @@ public class inside {
  	    	   if(x!=1&&x!=2) {
  	    		   System.out.println("系统错误，请输入正确的序号！");
  	    		   if(i==3) {
- 	    			   System.out.println("输入错误超过三次已自动退出程序！");
+ 	    			   System.out.println("输入错误超过三次已自动退出程序！");break;
  	    		   }
  	    	   }
- 		   }
+ 		   }break;
     	}
     		
     		
@@ -234,12 +234,12 @@ public class inside {
  	    			   System.out.println("输入错误超过三次已自动退出程序！");
  	    		   }
  	    	   }
- 		   }
+ 		   }break;
         }
     		if(s!=1&&s!=2&&s!=3) {
     			 System.out.println("系统错误，请输入正确的序号！");
 	    		   if(m==3) {
-	    			   System.out.println("输入错误超过三次已自动退出程序！");
+	    			   System.out.println("输入错误超过三次已自动退出程序！");break;
 	    		   }
     		}
       }  
@@ -291,11 +291,15 @@ public class inside {
      	    	   if(x!=1&&x!=2) {
      	    		   System.out.println("系统错误，请输入正确的序号！");
      	    		   if(i==3) {
-     	    			   System.out.println("输入错误超过三次已自动退出程序！");
+     	    			   System.out.println("输入错误超过三次已自动退出程序！");break;
      	    		   }
      	    	   }
-     		   }
+     		   }break;
     		   }
+    		   
+    		   
+    		   
+    		   
     		   if(s==2) {
     			   int money1 =500 ;
     			   System.out.println("请输入要租用的数量！");
@@ -327,10 +331,10 @@ public class inside {
      	    	   if(x!=1&&x!=2) {
      	    		   System.out.println("系统错误，请输入正确的序号！");
      	    		   if(i==3) {
-     	    			   System.out.println("输入错误超过三次已自动退出程序！");
+     	    			   System.out.println("输入错误超过三次已自动退出程序！");break;
      	    		   }
      	    	   }
-     		   }
+     		   }break;
     	    }
     	  }
     	   {  if(s!=1&&s!=2) {
