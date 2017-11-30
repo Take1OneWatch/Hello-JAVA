@@ -27,18 +27,25 @@ public class inside {
     	    	   System.out.println("*********************************");
     	    	   System.out.println("请核对账单后确定是否租用！");
     	    	   System.out.println("确定请按：1 ; 取消请按：2 ");
-    	    	   Scanner x1= new Scanner(System.in);
+    	    	   for(int i=1;i<=3;i++)
+    	    	 {  Scanner x1= new Scanner(System.in);
     	    	   int x =x1.nextInt();
     	    	   if(x==1) {
     	    		   System.out.println("租用成功！祝您路途愉快");
+    	    		   break;
     	    	   }
     	    	   if(x==2) {
     	    		   System.out.println("已取消支付订单，期待您的下次使用！");
+    	    		   break;
     	    	   }
     	    	   if(x!=1&&x!=2) {
-    	    		   System.out.println("系统错误！请重新操作。");
+    	    		   System.out.println("系统错误，请输入正确的序号！");
+    	    		   if(i==3) {
+    	    			   System.out.println("输入错误超过三次已自动退出程序！");
+    	    		   }
     	    	   }
     		   }
+    		}
     		   if(s==2) {
     			   int money1 =800 ;
     			   System.out.println("请输入要租用的数量！");
@@ -57,20 +64,25 @@ public class inside {
     	    	   System.out.println("*********************************");
     	    	   System.out.println("请核对账单后确定是否租用！");
       	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
-      	    	 Scanner x1= new Scanner(System.in);
-  	    	   int x =x1.nextInt();
-  	    	   if(x==1) {
-  	    		   System.out.println("租用成功！祝您路途愉快");
-  	    	   }
-  	    	   if(x==2) {
-  	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-  	    	   }
-  	    	   if(x!=1&&x!=2) {
-  	    		   System.out.println("系统错误！请重新操作。");
-  	    	   }
+      	    	  for(int i=1;i<=3;i++)
+     	    	 {  Scanner x1= new Scanner(System.in);
+     	    	   int x =x1.nextInt();
+     	    	   if(x==1) {
+     	    		   System.out.println("租用成功！祝您路途愉快");
+     	    		   break;
+     	    	   }
+     	    	   if(x==2) {
+     	    		   System.out.println("已取消支付订单，期待您的下次使用！");
+     	    		   break;
+     	    	   }
+     	    	   if(x!=1&&x!=2) {
+     	    		   System.out.println("系统错误，请输入正确的序号！");
+     	    		   if(i==3) {
+     	    			   System.out.println("输入错误超过三次已自动退出程序！");
+     	    		   }
+     	    	   }
+     		   }
     		   }
-    	   }if(s!=1&&s!=2) {
-    		   System.out.println("系统错误，请输入正确的序号！");
     	   }
        }
        public void test1() {   //客车
@@ -98,17 +110,24 @@ public class inside {
 	    	   System.out.println("*******************************");
 	    	   System.out.println("请核对账单后确定是否租用！");
   	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
-  	    	 Scanner x1= new Scanner(System.in);
-	    	   int x =x1.nextInt();
-	    	   if(x==1) {
-	    		   System.out.println("租用成功！祝您路途愉快");
-	    	   }
-	    	   if(x==2) {
-	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-	    	   }
-	    	   if(x!=1&&x!=2) {
-	    		   System.out.println("系统错误！请重新操作。");
-	    	   }
+  	    	  for(int i=1;i<=3;i++)
+ 	    	 {  Scanner x1= new Scanner(System.in);
+ 	    	   int x =x1.nextInt();
+ 	    	   if(x==1) {
+ 	    		   System.out.println("租用成功！祝您路途愉快");
+ 	    		   break;
+ 	    	   }
+ 	    	   if(x==2) {
+ 	    		   System.out.println("已取消支付订单，期待您的下次使用！");
+ 	    		   break;
+ 	    	   }
+ 	    	   if(x!=1&&x!=2) {
+ 	    		   System.out.println("系统错误，请输入正确的序号！");
+ 	    		   if(i==3) {
+ 	    			   System.out.println("输入错误超过三次已自动退出程序！");
+ 	    		   }
+ 	    	   }
+ 		   }
     		}
     		if(s==2) {
     			 int money1 =400 ;
@@ -128,17 +147,24 @@ public class inside {
 	    	   System.out.println("********************************");
 	    	   System.out.println("请核对账单后确定是否租用！");
   	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
-  	    	 Scanner x1= new Scanner(System.in);
-	    	   int x =x1.nextInt();
-	    	   if(x==1) {
-	    		   System.out.println("租用成功！祝您路途愉快");
-	    	   }
-	    	   if(x==2) {
-	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-	    	   }
-	    	   if(x!=1&&x!=2) {
-	    		   System.out.println("系统错误！请重新操作。");
-	    	   }
+  	    	  for(int i=1;i<=3;i++)
+ 	    	 {  Scanner x1= new Scanner(System.in);
+ 	    	   int x =x1.nextInt();
+ 	    	   if(x==1) {
+ 	    		   System.out.println("租用成功！祝您路途愉快");
+ 	    		   break;
+ 	    	   }
+ 	    	   if(x==2) {
+ 	    		   System.out.println("已取消支付订单，期待您的下次使用！");
+ 	    		   break;
+ 	    	   }
+ 	    	   if(x!=1&&x!=2) {
+ 	    		   System.out.println("系统错误，请输入正确的序号！");
+ 	    		   if(i==3) {
+ 	    			   System.out.println("输入错误超过三次已自动退出程序！");
+ 	    		   }
+ 	    	   }
+ 		   }
     		}
     		if(s==3) {
     			 int money1 =800 ;
@@ -158,23 +184,27 @@ public class inside {
    	    	   System.out.println("******************************");
    	    	 System.out.println("请核对账单后确定是否租用！");
 	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
-	    	  Scanner x1= new Scanner(System.in);
-	    	   int x =x1.nextInt();
-	    	   if(x==1) {
-	    		   System.out.println("租用成功！祝您路途愉快");
-	    	   }
-	    	   if(x==2) {
-	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-	    	   }
-	    	   if(x!=1&&x!=2) {
-	    		   System.out.println("系统错误！请重新操作。");
-	    	   }
-    		}
-    		if(s!=1&&s!=2&&s!=3)  {
-     		   System.out.println("系统错误，请输入正确的序号！");
-    		  }  
-    	   }   
-       }
+	    	  for(int i=1;i<=3;i++)
+ 	    	 {  Scanner x1= new Scanner(System.in);
+ 	    	   int x =x1.nextInt();
+ 	    	   if(x==1) {
+ 	    		   System.out.println("租用成功！祝您路途愉快");
+ 	    		   break;
+ 	    	   }
+ 	    	   if(x==2) {
+ 	    		   System.out.println("已取消支付订单，期待您的下次使用！");
+ 	    		   break;
+ 	    	   }
+ 	    	   if(x!=1&&x!=2) {
+ 	    		   System.out.println("系统错误，请输入正确的序号！");
+ 	    		   if(i==3) {
+ 	    			   System.out.println("输入错误超过三次已自动退出程序！");
+ 	    		   }
+ 	    	   }
+ 		   }
+        }
+      }  
+    }
        public void test2() {    //皮卡
     	   System.out.println("1.皮卡雪  450元/天  载货：4人 载货：2吨");
     	   System.out.println("2.皮卡红  500元/天  载货：4人 载货：3吨");
@@ -197,17 +227,24 @@ public class inside {
      	    	   System.out.println("*************************************");
     	    	   System.out.println("请核对账单后确定是否租用！");
       	    	   System.out.println("确定请按：1 ; 取消请按：2 ");
-      	    	 Scanner x1= new Scanner(System.in);
-  	    	   int x =x1.nextInt();
-  	    	   if(x==1) {
-  	    		   System.out.println("租用成功！祝您路途愉快");
-  	    	   }
-  	    	   if(x==2) {
-  	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-  	    	   }
-  	    	   if(x!=1&&x!=2) {
-  	    		   System.out.println("系统错误！请重新操作。");
-  	    	   }
+      	    	  for(int i=1;i<=3;i++)
+     	    	 {  Scanner x1= new Scanner(System.in);
+     	    	   int x =x1.nextInt();
+     	    	   if(x==1) {
+     	    		   System.out.println("租用成功！祝您路途愉快");
+     	    		   break;
+     	    	   }
+     	    	   if(x==2) {
+     	    		   System.out.println("已取消支付订单，期待您的下次使用！");
+     	    		   break;
+     	    	   }
+     	    	   if(x!=1&&x!=2) {
+     	    		   System.out.println("系统错误，请输入正确的序号！");
+     	    		   if(i==3) {
+     	    			   System.out.println("输入错误超过三次已自动退出程序！");
+     	    		   }
+     	    	   }
+     		   }
     		   }
     		   if(s==2) {
     			   int money1 =500 ;
@@ -226,25 +263,28 @@ public class inside {
   	    	   System.out.println("***************************************");
      	    	   System.out.println("请核对账单后确定是否租用！");
      	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
-     	    	 Scanner x1= new Scanner(System.in);
-  	    	   int x =x1.nextInt();
-  	    	   if(x==1) {
-  	    		   System.out.println("租用成功！祝您路途愉快");
-  	    	   }
-  	    	   if(x==2) {
-  	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-  	    	   }
-  	    	   if(x!=1&&x!=2) {
-  	    		   System.out.println("系统错误！请重新操作。");
-  	    	   }
-    	}
-    	   }if(s!=1&&s!=2) {
-    		   System.out.println("系统错误，请输入正确的序号！");
-           }  
-	    }
-     }
-
-
+     	    	  for(int i=1;i<=3;i++)
+     	    	 {  Scanner x1= new Scanner(System.in);
+     	    	   int x =x1.nextInt();
+     	    	   if(x==1) {
+     	    		   System.out.println("租用成功！祝您路途愉快");
+     	    		   break;
+     	    	   }
+     	    	   if(x==2) {
+     	    		   System.out.println("已取消支付订单，期待您的下次使用！");
+     	    		   break;
+     	    	   }
+     	    	   if(x!=1&&x!=2) {
+     	    		   System.out.println("系统错误，请输入正确的序号！");
+     	    		   if(i==3) {
+     	    			   System.out.println("输入错误超过三次已自动退出程序！");
+     	    		   }
+     	    	        }
+     		      }
+    	            }
+    	          }
+	        }
+            }  
 
 
 
