@@ -362,7 +362,7 @@ public class User {
 		 System.out.println("欢迎来到答答租车系统！");
     	 System.out.println("请问您是否需要租车：1.是 ; 2.否");
     	for(int i = 1 ;i<=3;i++) {
-    		 Scanner input = new Scanner(System.in);
+    		 Scanner input = new Scanner(System.in);    //如果第一次输入成功了则必须要越过第一次输入！
         	 int s =input.nextInt();
     	 if(s==1) {
     		 System.out.println("您好！欢迎来到租车界面！");
