@@ -372,17 +372,19 @@ public class User {
     			 if(d==1) {
     				 System.out.println("请输入想要选择的车型！");
     				 inside s1 =new inside();
-    				 s1.test();}
+    				 s1.test(); break;}
     			 if(d==2) {
     				 System.out.println("请输入想要选择的车型！");
     				 inside s2 =new inside();
-    				 s2.test1();}    			 
+    				 s2.test1();break;}    			 
     			 if(d==3) {
     				 System.out.println("请输入想要选择的车型！");
     				 inside s3 =new inside();
-    				 s3.test2();}
-    			 break;
-			  //if(d!=1&&d!=2&&d!=3)
+    				 s3.test2();break;}
+    			
+    			 if(d!=1&&d!=2&&d!=3) {
+    				 System.out.println("系统错误，请重新输入正确的序号");
+    			 }
     	      }
 	}if(s==2) 
 		{System.out.println("期待您的下次使用，再见");
