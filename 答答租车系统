@@ -29,7 +29,7 @@ public class inside {
     	    	   System.out.println("总费用："+money1);
     	    	   System.out.println("*********************************");
     	    	   System.out.println("请核对账单后确定是否租用！");
-    	    	   System.out.println("确定请按：1 ; 取消请按：2 ");
+    	    	   System.out.println("确定请按：1 ; 取消请按：2 ;继续租用请按：3");
     	    	   for(int i=1;i<=3;i++)
     	    	 {  Scanner x1= new Scanner(System.in);
     	    	   int x =x1.nextInt();
@@ -71,7 +71,7 @@ public class inside {
     	    	   System.out.println("总费用："+money1);
     	    	   System.out.println("*********************************");
     	    	   System.out.println("请核对账单后确定是否租用！");
-      	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
+      	    	  System.out.println("确定请按：1 ; 取消请按：2 ;继续租用请按：3");
       	    	  for(int i=1;i<=3;i++)
      	    	 {  Scanner x1= new Scanner(System.in);
      	    	   int x =x1.nextInt();
@@ -136,7 +136,7 @@ public class inside {
 	    	   System.out.println("总费用："+money1);
 	    	   System.out.println("*******************************");
 	    	   System.out.println("请核对账单后确定是否租用！");
-  	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
+  	    	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用请按：3");
   	    	  for(int i=1;i<=3;i++)
  	    	 {  Scanner x1= new Scanner(System.in);
  	    	   int x =x1.nextInt();
@@ -177,7 +177,7 @@ public class inside {
 	    	   System.out.println("总费用："+money1);
 	    	   System.out.println("********************************");
 	    	   System.out.println("请核对账单后确定是否租用！");
-  	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
+  	    	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用请按：3");
   	    	  for(int i=1;i<=3;i++)
  	    	 {  Scanner x1= new Scanner(System.in);
  	    	   int x =x1.nextInt();
@@ -218,7 +218,7 @@ public class inside {
    	    	   System.out.println("总费用："+money1);
    	    	   System.out.println("******************************");
    	    	 System.out.println("请核对账单后确定是否租用！");
-	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
+	    	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用请按：3");
 	    	  for(int i=1;i<=3;i++)
  	    	 {  Scanner x1= new Scanner(System.in);
  	    	   int x =x1.nextInt();
@@ -279,7 +279,7 @@ public class inside {
      	    	   System.out.println("总费用："+money1);
      	    	   System.out.println("*************************************");
     	    	   System.out.println("请核对账单后确定是否租用！");
-      	    	   System.out.println("确定请按：1 ; 取消请按：2 ");
+      	    	  System.out.println("确定请按：1 ; 取消请按：2 ;继续租用请按：3");
       	    	  for(int i=1;i<=3;i++)
      	    	 {  Scanner x1= new Scanner(System.in);
      	    	   int x =x1.nextInt();
@@ -320,7 +320,7 @@ public class inside {
   	    	   System.out.println("总费用："+money1);
   	    	   System.out.println("***************************************");
      	    	   System.out.println("请核对账单后确定是否租用！");
-     	    	  System.out.println("确定请按：1 ; 取消请按：2 ");
+     	    	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用请按：3");
      	    	  for(int i=1;i<=3;i++)
      	    	 {  Scanner x1= new Scanner(System.in);
      	    	   int x =x1.nextInt();
