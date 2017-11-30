@@ -396,7 +396,7 @@ public class User {
     		 System.out.println("选择客车请按 2 ");
     		 System.out.println("选择皮卡请按 3 ");
      	     User x =new User();
-     	     x.user1();
+     	     x.user1();break;
 	}if(s==2) 
 		{System.out.println("期待您的下次使用，再见");
 		break;}
