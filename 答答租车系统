@@ -382,6 +382,7 @@ public class User {
     				 inside s3 =new inside();
     				 s3.test2();}
     			 break;
+			  //if(d!=1&&d!=2&&d!=3)
     	      }
 	}if(s==2) 
 		{System.out.println("期待您的下次使用，再见");
