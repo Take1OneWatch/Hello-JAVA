@@ -10,7 +10,8 @@ public class inside {
     	   {
     		   Scanner s1= new Scanner(System.in);
     	   int s =s1.nextInt();
-    		   if(s==1) {
+    	   { 
+    	       if(s==1) {
     			   int money1 =400 ;
     			   System.out.println("请输入要租用的数量！");
       			 Scanner l1= new Scanner(System.in);
@@ -47,11 +48,11 @@ public class inside {
     	    	   }
     		   }
     		}
+    	 }	   
     		   
     		   
     		   
-    		   
-    		   if(s==2) {
+    		   {  if(s==2) {
     			   int money1 =800 ;
     			   System.out.println("请输入要租用的数量！");
       			 Scanner l1= new Scanner(System.in);
@@ -88,13 +89,19 @@ public class inside {
      	    	   }
      		   }
     		 }
-    		  if(s!=1&&s!=2) {
+    		   }
+    		   
+    		   
+    		   
+    		   
+    		   
+    		   {  if(s!=1&&s!=2) {
     			  System.out.println("系统错误，请输入正确的序号！");
 	    		   if(m==3) {
 	    			   System.out.println("输入错误超过三次已自动退出程序！");
 	    		   }
     		  }
-    		   
+    		}   
     		   
     		   
     	   }
@@ -107,7 +114,10 @@ public class inside {
     	   {
     		   Scanner s2 = new Scanner(System.in);
         	   int s =s2.nextInt();
-    		if(s==1) {
+    		
+        	   
+        	   
+        	   if(s==1) {
     			 int money1 =500 ;
     			 System.out.println("请输入要租用的数量！");
     			 Scanner l1= new Scanner(System.in);
@@ -188,6 +198,7 @@ public class inside {
     		
     		
     		
+    		
     		if(s==3) {
     			 int money1 =800 ;
     			 System.out.println("请输入要租用的数量！");
@@ -226,19 +237,29 @@ public class inside {
  		   }
         }
     		if(s!=1&&s!=2&&s!=3) {
-    			System.out.println("系统错误，请输入正确的序号！");
+    			 System.out.println("系统错误，请输入正确的序号！");
 	    		   if(m==3) {
 	    			   System.out.println("输入错误超过三次已自动退出程序！");
 	    		   }
-     	   }
-      }
-    	   
+    		}
+      }  
     }
+       
+       
+       
+       
+       
+       
        public void test2() {    //皮卡
     	   System.out.println("1.皮卡雪  450元/天  载货：4人 载货：2吨");
     	   System.out.println("2.皮卡红  500元/天  载货：4人 载货：3吨");
-    	   Scanner s3 = new Scanner(System.in);
+    	   for(int m=1;m<=3;m++)
+    	   {   Scanner s3 = new Scanner(System.in);
     	   int s =s3.nextInt();{
+    		 
+    		   
+    		   
+    		   
     		   if(s==1) {
     			   int money1 =450 ;
     			   System.out.println("请输入要租用的数量！");
@@ -283,7 +304,7 @@ public class inside {
         			  System.out.println("请输入想要租用的天数：");
        			   Scanner d1= new Scanner(System.in);
        	    	   int d =d1.nextInt();
-       	    	   money1 = money1*d;
+       	    	   money1 = money1*d*l;
        	       System.out.println("***************************************");
   	    	   System.out.println("皮卡红  500元/天  载货：4人 载货：3吨");
   	    	   System.out.println("租用数量："+l);
@@ -312,7 +333,14 @@ public class inside {
      		   }
     	    }
     	  }
-	   }
+    	   {  if(s!=1&&s!=2) {
+ 			  System.out.println("系统错误，请输入正确的序号！");
+	    		   if(m==3) {
+	    			   System.out.println("输入错误超过三次已自动退出程序！");
+	    		   }
+ 		  }
+ 		}   
+    	   }   }
      }
 
 
