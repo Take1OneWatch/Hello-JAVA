@@ -13,7 +13,9 @@ public class test {
 		int divider = 10;
 		int result= 100;
 		try {
-			while(divider>-1) {
+			while(divider>-1) 
+		//	for(int i =1 ; i<10;i++)    这时的循环条件必须开始成立，当执行到一定地步才会出现错误！
+			{
 				divider--;
 				result = result + 100/divider;
 			}
