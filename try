@@ -1,0 +1,28 @@
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       test s = new test();
+       int result=s.test1();
+       System.out.println("test方法执行完了！！"+result);
+	}
+	
+	
+	public int test1() {
+		int divider = 10;
+		int result= 100;
+		try {
+			while(divider>-1) {
+				divider--;
+				result = result + 100/divider;
+			}
+			return result ;
+		}catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("循环异常抛出啦！！");
+			return -1 ;
+			} 
+		}
+
+}
