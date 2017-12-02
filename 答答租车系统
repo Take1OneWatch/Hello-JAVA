@@ -31,7 +31,7 @@ public class inside {
     	    		   break;
     	    	   }
     	    	   if(x==3) {
-    	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ");
+    	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
     	    		   User user = new User();
         	    	   user.user2();break;
     	    		   
@@ -84,9 +84,10 @@ public class inside {
     		   if(s==3){
     			   System.out.println("您好！欢迎来到租车界面！");
     	    		 System.out.println("我们有货车，客车，以及皮卡供您选择");
-    	    		 System.out.println("选择货车请按 1 ");
-    	    		 System.out.println("选择客车请按 2 ");
-    	    		 System.out.println("选择皮卡请按 3 ");
+    	    		 System.out.println("选择货车请按: 1 ");
+    	    		 System.out.println("选择客车请按: 2 ");
+    	    		 System.out.println("选择皮卡请按: 3 ");
+    	    		 System.out.println("退出请按： 4   ");
     	    		 User a =new User();
     	    		 a.user1();
     	    		 break;
@@ -124,6 +125,7 @@ public class inside {
  	    	   int x =x1.nextInt();
  	    	   if(x==1) {
  	    		   System.out.println("租用成功！祝您路途愉快");
+ 	    		 
  	    		   break;
  	    	   }
  	    	   if(x==2) {
@@ -218,11 +220,12 @@ public class inside {
         }
     		
     		if(s==4){
- 			   System.out.println("您好！欢迎来到租车界面！");
- 	    		 System.out.println("我们有货车，客车，以及皮卡供您选择");
- 	    		 System.out.println("选择货车请按 1 ");
- 	    		 System.out.println("选择客车请按 2 ");
- 	    		 System.out.println("选择皮卡请按 3 ");
+    			 System.out.println("我们有货车，客车，以及皮卡供您选择");
+	    		 System.out.println("选择货车请按: 1 ");
+	    		 System.out.println("选择客车请按: 2 ");
+	    		 System.out.println("选择皮卡请按: 3 ");
+	    		 System.out.println("退出请按： 4   ");
+
  	    		 User a =new User();
  	    		 a.user1();
  	    		 break;
@@ -318,11 +321,12 @@ public class inside {
     	    }
     		   
     		   if(s==3){
-       			   System.out.println("您好！欢迎来到租车界面！");
-       	    		 System.out.println("我们有货车，客车，以及皮卡供您选择");
-       	    		 System.out.println("选择货车请按 1 ");
-       	    		 System.out.println("选择客车请按 2 ");
-       	    		 System.out.println("选择皮卡请按 3 ");
+    			   System.out.println("我们有货车，客车，以及皮卡供您选择");
+  	    		 System.out.println("选择货车请按: 1 ");
+  	    		 System.out.println("选择客车请按: 2 ");
+  	    		 System.out.println("选择皮卡请按: 3 ");
+  	    		 System.out.println("退出请按： 4   ");
+
        	    		 User a =new User();
        	    		 a.user1();
        	    		 break;
@@ -345,9 +349,7 @@ public class inside {
      
      
      
-     
-     
-     package com.imooc;
+    package com.imooc;
 
 import java.util.Scanner;
 
@@ -369,7 +371,7 @@ public class Renew {
    	   System.out.println("总费用："+money1);
    	   System.out.println("*********************************");
    	   System.out.println("请核对账单后确定是否租用！");
-   	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用其他车型请按：3");
+   	  System.out.println("确定请按：1 ; 取消请按：2 ;");
     	
     }
     
@@ -391,7 +393,7 @@ public class Renew {
   	   System.out.println("总费用："+money1);
   	   System.out.println("*********************************");
   	   System.out.println("请核对账单后确定是否租用！");
-  	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用其他车型请按：3");
+  	  System.out.println("确定请按：1 ; 取消请按：2 ;");
     }
     
     
@@ -414,7 +416,7 @@ public class Renew {
 	   System.out.println("总费用："+money1);
 	   System.out.println("*******************************");
 	   System.out.println("请核对账单后确定是否租用！");
-	   System.out.println("确定请按：1 ; 取消请按：2 ;继续租用其他车型请按：3");
+	   System.out.println("确定请按：1 ; 取消请按：2 ;");
     }
     
     
@@ -435,7 +437,7 @@ public class Renew {
 	   System.out.println("总费用："+money1);
 	   System.out.println("********************************");
 	   System.out.println("请核对账单后确定是否租用！");
-	   System.out.println("确定请按：1 ; 取消请按：2 ;继续租用其他车型请按：3");
+	   System.out.println("确定请按：1 ; 取消请按：2 ;");
     }
     
     
@@ -456,7 +458,7 @@ public class Renew {
    	   System.out.println("总费用："+money1);
    	   System.out.println("******************************");
    	 System.out.println("请核对账单后确定是否租用！");
-   	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用其他车型请按：3");
+     System.out.println("确定请按：1 ; 取消请按：2 ;");
     }
     
     
@@ -477,7 +479,7 @@ public class Renew {
    	   System.out.println("总费用："+money1);
    	   System.out.println("*************************************");
   	   System.out.println("请核对账单后确定是否租用！");
-  	 System.out.println("确定请按：1 ; 取消请按：2 ;继续租用其他车型请按：3");
+  	  System.out.println("确定请按：1 ; 取消请按：2 ;");
     }
     
     
@@ -500,7 +502,7 @@ public class Renew {
  	   System.out.println("总费用："+money1);
  	   System.out.println("***************************************");
     	   System.out.println("请核对账单后确定是否租用！");
-    	   System.out.println("确定请按：1 ; 取消请按：2 ;继续租用其他车型请按：3");
+    	   System.out.println("确定请按：1 ; 取消请按：2 ;");
     }
     
     
@@ -509,11 +511,12 @@ public class Renew {
     public void user () {
     	System.out.println("您好！欢迎来到租车界面！");
 		 System.out.println("我们有货车，客车，以及皮卡供您选择");
-		 System.out.println("选择货车请按 1 ");
-		 System.out.println("选择客车请按 2 ");
-		 System.out.println("选择皮卡请按 3 ");
+		 System.out.println("选择货车请按： 1 ");
+		 System.out.println("选择客车请按： 2 ");
+		 System.out.println("选择皮卡请按： 3 ");
+		 System.out.println("退出请按： 4   ");
     }
-}
+} 
 
 
 
@@ -540,7 +543,10 @@ public class User {
 			 System.out.println("请输入想要选择的车型！");
 			 inside s3 = new inside();
 			 s3.test2();   break;}
-		  if(d!=1&&d!=2&&d!=3) {
+		 if(d==4) {
+			 System.out.println("期待您的再次使用，再见！");
+			   break;}   
+		  if(d!=1&&d!=2&&d!=3&&d!=4) {
 			 System.out.println("系统错误，请重新输入正确的序号");
 			  if(m==3){
 				 System.out.println("输入错误超过三次已自动退出程序！");   break;
@@ -557,9 +563,10 @@ public class User {
    	 if(s==1) {
    		 System.out.println("您好！欢迎来到租车界面！");
    		 System.out.println("我们有货车，客车，以及皮卡供您选择");
-   		 System.out.println("选择货车请按 1 ");
-   		 System.out.println("选择客车请按 2 ");
-   		 System.out.println("选择皮卡请按 3 ");
+   		 System.out.println("选择货车请按 ：1 ");
+   		 System.out.println("选择客车请按 ：2 ");
+   		 System.out.println("选择皮卡请按： 3 ");
+   		System.out.println("退出请按： 4   ");
     	     User x =new User();
     	     x.user1();break;
 	}if(s==2) 
@@ -569,6 +576,7 @@ public class User {
        {System.out.println("系统错误，请重新输入正确的序号");
        if(i==3) {
        	System.out.println("输入错误超过三次已自动退出程序！"); }
+       
        }   
      }
 	}
