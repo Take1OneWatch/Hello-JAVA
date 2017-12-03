@@ -433,7 +433,7 @@ import java.util.Scanner;
 public class Renew {
     public void s() {
     	  int money1 =400 ;
-		   System.out.println("请输入要租用的数量！");
+		   System.out.println("请输入要租用的数量：");
 			 Scanner l1= new Scanner(System.in);
 			 int l = l1.nextInt();
 		   System.out.println("请输入想要租用的天数：");
@@ -455,7 +455,7 @@ public class Renew {
     
     public void s1() {
     	 int money1 =800 ;
-		   System.out.println("请输入要租用的数量！");
+		   System.out.println("请输入要租用的数量：");
 		 Scanner l1= new Scanner(System.in);
 		 int l = l1.nextInt();
 		   System.out.println("请输入想要租用的天数：");
@@ -478,7 +478,7 @@ public class Renew {
     
     public void x () {
     	 int money1 =500 ;
-		 System.out.println("请输入要租用的数量！");
+		 System.out.println("请输入要租用的数量：");
 		 Scanner l1= new Scanner(System.in);
 		 int l = l1.nextInt();
 		  System.out.println("请输入想要租用的天数：");
@@ -499,7 +499,7 @@ public class Renew {
     
     public void x1 () {
     	 int money1 =400 ;
-		 System.out.println("请输入要租用的数量！");
+		 System.out.println("请输入要租用的数量：");
 		 Scanner l1= new Scanner(System.in);
 		 int l = l1.nextInt();
 		  System.out.println("请输入想要租用的天数：");
@@ -520,7 +520,7 @@ public class Renew {
     
     public void x2 () {
     	 int money1 =800 ;
-		 System.out.println("请输入要租用的数量！");
+		 System.out.println("请输入要租用的数量：");
 		 Scanner l1= new Scanner(System.in);
 		 int l = l1.nextInt();
 			  System.out.println("请输入想要租用的天数：");
@@ -541,7 +541,7 @@ public class Renew {
     
     public void e () {
     	 int money1 =450 ;
-		   System.out.println("请输入要租用的数量！");
+		   System.out.println("请输入要租用的数量：");
 		 Scanner l1= new Scanner(System.in);
 		 int l = l1.nextInt();
 			  System.out.println("请输入想要租用的天数：");
@@ -564,7 +564,7 @@ public class Renew {
     
     public void e1 () {
     	  int money1 =500 ;
-		   System.out.println("请输入要租用的数量！");
+		   System.out.println("请输入要租用的数量：");
 			 Scanner l1= new Scanner(System.in);
 			 int l = l1.nextInt();
 			  System.out.println("请输入想要租用的天数：");
