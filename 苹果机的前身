@@ -1,47 +1,126 @@
-import java.util.Scanner;
+package com.imooc;
 
-public class test {
-    
-    public static void main(String[] args) {
-        
-        // 定义一个整型数组，长度为10
+public class Random extends Interface {
+//1号是燕子，2号是鸽子，3号是孔雀，4号是老鹰，5号是兔子，6号是熊猫，7号是猴子，8号是狮子，9号是金鲨
+	public static void main(String[] args) {
+		Interface a = new Interface();
+		a.test1();	
 		int[] nums = new int[10];
-		System.out.println("请输入你的数字");
-        //通过循环给数组赋值
-		test1 a = new test1();
-		a.s();
-		for (int i = 0; i < nums.length; i++) {
-            // 产生10以内的随机数
-			
-			int x = (int) (Math.random() * 8);
-			nums[i] = x;// 为元素赋值
+		System.out.println("请输入你想买的数：");
+		System.out.println("1号是燕子    x6 ，2号是鸽子    x8 ，3号是孔雀    x8 ，4号是老鹰    x12      飞禽类 ");
+		System.out.println("5号是兔子    x6 ，6号是熊猫    x8 ，7号是猴子    x8 ，8号是狮子    x12       走兽类");
+		System.out.println("特等奖：9号是金鲨    x24");   
+		System.out.print("请输入你想买的数：");
+		Interface a1 = new Interface();
+		a1.test();
+		System.out.println("请输入你想买多少分");
+		Interface a2 = new Interface();
+		a2.test();
+		Interface a3 = new Interface();
+	/*	int s = a3.test1(super.score);	
+		if(a2>s) {
+			System.out.println("输入错误，你没有那么多分！");
+		}   */
+				for (int i = 0; i < nums.length; i++) {
+			int x = (int) (Math.random() * 9);
+			nums[i] = x;
 		}
-	//System.out.println("请输入你的数字");
- 	   if(nums[0]==2) {
- 		   System.out.println("qqqqq");
- 	   } 
-		// 使用foreach循环输出数组中的元素
-		for (int num : nums)    //数组不能采用length();来获取长度！
-		{
-			System.out.print(num + " ");
-		}
+		System.out.println(nums[0] + " ");
+ 	   if(nums[0]==1) {
+ 		   System.out.println("燕子！     飞禽");
+ 		   
+ 	   }
+ 	  if(nums[0]==2) {
+		   System.out.println("鸽子！     飞禽"); 
+		   }
+ 	 if(nums[0]==3) {
+		   System.out.println("孔雀！     飞禽"); 
+		   }
+ 	if(nums[0]==4) {
+		   System.out.println("老鹰！     飞禽"); 
+		   }
+ 	if(nums[0]==5) {
+		   System.out.println("兔子！      走兽"); 
+		   }
+ 	if(nums[0]==6) {
+		   System.out.println("熊猫！      走兽"); 
+		   }
+ 	if(nums[0]==7) {
+		   System.out.println("猴子！      走兽"); 
+		   }
+ 	if(nums[0]==8) {
+		   System.out.println("狮子！      走兽"); 
+		   }
+ 	  
 	}
+
 }
 
 
 
-//int y = (int) (Math.random() * 99);   产生0-99之间的随机证整数！
 
 
 
 
 
-
+package com.imooc;
 import java.util.Scanner;
+public class Interface {
 
-public class test1 {
-   public void s() {
-	   Scanner s1= new Scanner(System.in);
- 	   int s =s1.nextInt();
-   }
+	public void test() {
+		  
+			   Scanner s1= new Scanner(System.in);
+		 	   int s =s1.nextInt();
+		 	//  System.out.println("请输入你想买多少分：");
+		 	 /* Scanner a1= new Scanner(System.in);
+		 	   int a =a1.nextInt(); */
+		 	   
+	}
+	public void test1() {
+		int score= 500;int score1= 1000;int score2= 2500;int score3= 5000;
+		System.out.println("请问你需要上多少分！");
+		System.out.println("（十块钱500分，以此类推）");
+		System.out.println("十元请按：1 ； 二十元请按：2 ； 五十元请按：3 ； 一百元请按： 4 ");
+		 Scanner s1= new Scanner(System.in);
+	 	   int s =s1.nextInt();
+         if(s==1) {
+        	
+        	 System.out.println("你当前的总分为"+score);
+         }
+         if(s==2) {
+        	 score =score1;
+        	 System.out.println("你当前的总分为"+score1);
+         }
+         if(s==3) {
+        	 score =score2;
+        	 System.out.println("你当前的总分为"+score2);
+         }	
+         if(s==4) {
+        	 score =score3;
+        	 System.out.println("你当前的总分为"+score3);
+         }	 	
+
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	package com.imooc;
+
+public class User {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
 }
