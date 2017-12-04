@@ -1,0 +1,41 @@
+import java.io.IOException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Stu {
+
+	public static void main(String[] args) {
+	/*	int divider = 10;
+		int result= 100;
+		
+			//while(divider>-1) 
+			for(int i =1; i<20;i++)    //这时的循环条件必须开始成立，当执行到一定地步才会出现错误！
+			{
+				divider--;
+				result = result + 100/divider;
+			}
+			System.out.println("！"+result); */
+		
+		try{
+			System.out.println("请输入你的年龄：");
+			Scanner input= new Scanner(System.in);
+			 int age =input.nextInt();
+			if(age>100||age<0) {
+				System.out.println("错误！");
+			}
+			// if(s==1) {
+			else  {
+				System.out.println("十年后的你"+(age+10)+"岁！");
+			}
+				// System.out.println("十年后的你"+(age+10)+"岁！");
+		//	 }
+			
+		}catch(InputMismatchException e) {
+		e.printStackTrace();
+			System.out.println("捕抓到了异常");
+			System.out.println("你应该输入正数！");
+		}
+	System.out.println("程序结束！");
+	}
+
+}
