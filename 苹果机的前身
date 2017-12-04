@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Random extends Interface {
 //1号是燕子，2号是鸽子，3号是孔雀，4号是老鹰，5号是兔子，6号是熊猫，7号是猴子，8号是狮子，9号是金鲨
 	public static void main(String[] args) {
-		int score = 5000 ;
-		Interface a = new Interface();
-		a.test1();	
+		Interface q = new Interface();
+		int score = q.test1();
+	/*	Interface a = new Interface();
+		a.test1();	 */
 		int[] nums = new int[10];
 		System.out.println("请输入你想买的数：");
 		System.out.println("1号是燕子    x6 ，2号是鸽子    x8 ，3号是孔雀    x8 ，4号是老鹰    x12      飞禽类 ");
@@ -148,6 +149,7 @@ public class Random extends Interface {
 
 
 
+
 package com.imooc;
 import java.util.Scanner;
 public class Interface {
@@ -161,14 +163,16 @@ public class Interface {
 		 	   int a =a1.nextInt(); */
 		 	   
 	}
-	public void test1() {
+	public int test1() {
 		int score= 500;int score1= 1000;int score2= 2500;int score3= 5000;
 		System.out.println("请问你需要上多少分！");
-		System.out.println("（十块钱500分，以此类推）");
-		System.out.println("十元请按：1 ； 二十元请按：2 ； 五十元请按：3 ； 一百元请按： 4 ");
+		System.out.println("（目前一次上分只能上5000分）");
+		System.out.println("请输入你要上多少分：");
 		 Scanner s1= new Scanner(System.in);
 	 	   int s =s1.nextInt();
-         if(s==1) {
+	 	   int a = s;
+	 	   return a ;
+   /*      if(s==1) {
         	
         	 System.out.println("你当前的总分为"+score);
          }
@@ -183,7 +187,7 @@ public class Interface {
          if(s==4) {
         	 score =score3;
         	 System.out.println("你当前的总分为"+score3);
-         }	 	
+         }	 	 */
 
 	}
 	
@@ -211,3 +215,4 @@ public class User {
 	}
 
 }
+
