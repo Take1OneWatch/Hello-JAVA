@@ -1,8 +1,11 @@
 package com.imooc;
 
+import java.util.Scanner;
+
 public class Random extends Interface {
 //1号是燕子，2号是鸽子，3号是孔雀，4号是老鹰，5号是兔子，6号是熊猫，7号是猴子，8号是狮子，9号是金鲨
 	public static void main(String[] args) {
+		int score = 5000 ;
 		Interface a = new Interface();
 		a.test1();	
 		int[] nums = new int[10];
@@ -10,52 +13,134 @@ public class Random extends Interface {
 		System.out.println("1号是燕子    x6 ，2号是鸽子    x8 ，3号是孔雀    x8 ，4号是老鹰    x12      飞禽类 ");
 		System.out.println("5号是兔子    x6 ，6号是熊猫    x8 ，7号是猴子    x8 ，8号是狮子    x12       走兽类");
 		System.out.println("特等奖：9号是金鲨    x24");   
-		System.out.print("请输入你想买的数：");
-		Interface a1 = new Interface();
-		a1.test();
+		System.out.println("请输入你想买的数：");
+		 Scanner s1= new Scanner(System.in);
+	 	   int s =s1.nextInt();
 		System.out.println("请输入你想买多少分");
-		Interface a2 = new Interface();
-		a2.test();
-		Interface a3 = new Interface();
-	/*	int s = a3.test1(super.score);	
+		 Scanner s2= new Scanner(System.in);
+	 	   int c =s2.nextInt();
+		/*	Interface a3 = new Interface();
+		int s = a3.test1(super.score);	
 		if(a2>s) {
 			System.out.println("输入错误，你没有那么多分！");
 		}   */
-				for (int i = 0; i < nums.length; i++) {
+				for (int i = 0; i < nums.length; i++) 
+				{
 			int x = (int) (Math.random() * 9);
 			nums[i] = x;
 		}
 		System.out.println(nums[0] + " ");
  	   if(nums[0]==1) {
  		   System.out.println("燕子！     飞禽");
- 		   
+ 		   if(s==1) {
+ 			   int money;
+ 			   money = c * 6;
+ 			  int score1 = score - c +money;
+ 			System.out.println("当前分数："+score1);
+ 		   }
+ 		   else {
+ 			   int score1 = score -c ;
+ 			  System.out.println("当前分数" + score1);
+ 		   }
  	   }
  	  if(nums[0]==2) {
-		   System.out.println("鸽子！     飞禽"); 
+ 		 {
+ 	 		   System.out.println("鸽子！     飞禽");
+ 	 		   if(s==2) {
+ 	 			   int money;
+ 	 			   money = c * 8;
+ 	 			 int score1 = score - c +money;
+ 	 			System.out.println("当前分数："+score1);
+ 	 		   }
+ 	 		   else {
+ 	 			   int score1 = score -c ;
+ 	 			 System.out.println("当前分数" + score1);
+ 	 		   }
+ 	 	   }
 		   }
- 	 if(nums[0]==3) {
-		   System.out.println("孔雀！     飞禽"); 
+ 	 if(nums[0]==3)
+ 	 {	 
+ 	 		   System.out.println("孔雀！     飞禽");
+ 	 		   if(s==3) {
+ 	 			   int money;
+ 	 			   money = c * 8;
+ 	 			 int score1 = score - c +money;
+ 	 			System.out.println("当前分数："+score1);
+ 	 		   }
+ 	 		   else {
+ 	 			   int score1 = score -c ;
+ 	 			   System.out.println("当前分数" + score1);
+ 	 		   }
 		   }
- 	if(nums[0]==4) {
-		   System.out.println("老鹰！     飞禽"); 
+ 	if(nums[0]==4)  {	 
+		   System.out.println("老鹰！     飞禽");
+		   if(s==4) {
+			   int money;
+			   money = c * 12;
+			   int score1 = score - c +money;
+			System.out.println("当前分数："+score1);
 		   }
- 	if(nums[0]==5) {
-		   System.out.println("兔子！      走兽"); 
+		   else {
+			   int score1 = score -c ;
+			   System.out.println("当前分数" + score1);
 		   }
- 	if(nums[0]==6) {
-		   System.out.println("熊猫！      走兽"); 
+	   }
+ 	if(nums[0]==5)  {	 
+		   System.out.println("兔子！     走兽");
+		   if(s==5) {
+			   int money;
+			   money = c * 8;
+			   int score1 = score - c +money;
+			System.out.println("当前分数："+score1);
 		   }
- 	if(nums[0]==7) {
-		   System.out.println("猴子！      走兽"); 
+		   else {
+			   int score1 = score -c ;
+			   System.out.println("当前分数" + score1);
 		   }
- 	if(nums[0]==8) {
-		   System.out.println("狮子！      走兽"); 
+	   }
+ 	if(nums[0]==6)  {	 
+		   System.out.println("熊猫！     走兽");
+		   if(s==6) {
+			   int money;
+			   money = c * 8;
+			int score1 = score-c+money;
+			System.out.println("当前分数："+score1);
 		   }
+		   else {
+			   int score1 = score -c ;
+			   System.out.println("当前分数" + score1);
+		   }
+	   }
+ 	if(nums[0]==7)  {	 
+		   System.out.println("猴子！     走兽");
+		   if(s==7) {
+			   int money;
+			   money = c * 8;
+			   int score1 = score - c +money;
+			System.out.println("当前分数："+score1);
+		   }
+		   else {
+			   int score1 = score -c ;
+			   System.out.println("当前分数" + score1);
+		   }
+	   }
+ 	if(nums[0]==8)  {	 
+		   System.out.println("狮子！     走兽");
+		   if(s==8) {
+			   int money;
+			   money = c * 12;
+			   int score1 = score - c +money;
+			System.out.println("当前分数："+score1);
+		   }
+		   else {
+			   int score1 = score -c ;
+			   System.out.println("当前分数" + score1);
+		   }
+	   }
  	  
 	}
 
 }
-
 
 
 
@@ -108,13 +193,15 @@ public class Interface {
 
 	}
 	
-	
-	
-	
-	
-	
-	
-	package com.imooc;
+
+}
+
+
+
+
+
+
+package com.imooc;
 
 public class User {
 
