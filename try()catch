@@ -1,0 +1,48 @@
+import java.io.*;
+class student implements Serializable
+{
+	int id;
+	String name;
+	int age;
+	String dep;
+	 student(int id,String name,int age,String dep){
+	 this.id=id;this.name=name;this.age=age;this.dep=dep;	
+	 }
+	 void print()
+	 {
+	 System.out.println("id="+id);
+	    System.out.println("name="+name);
+	    System.out.println("age="+age);
+	    System.out.println("dep="+dep);
+	 	}
+	}
+class file11{
+public static void main(String []ppp)
+{	student stu;
+	try
+	{
+		FileOutputStream fos=new 	FileOutputStream("datafile11.txt");
+     	ObjectOutputStream  dos=new   ObjectOutputStream (fos);
+	    stu=new student(981036,"小明",19,"计算机系");
+		dos.writeObject(stu);
+		/*	dos.writeDouble(456.8790);
+		dos.writeBoolean(false);
+		dos.writeInt(100000);*/
+		dos.close();
+		}catch(Exception e){
+			System.out.println("无法保存文件！！");}
+	try
+	{
+		FileInputStream fis=new FileInputStream("datafile11.txt");
+	    ObjectInputStream  dis=new   ObjectInputStream (fis);
+	    stu=(student)dis.readObject();
+	   /*ystem.out.println(dis.readInt());
+	    System.out.println(dis.readDouble());
+	    System.out.println(dis.readBoolean());
+	    System.out.println(dis.readInt());  */
+	    dis.close();
+	    stu.print();
+		}catch(Exception e){
+			System.out.println("找不到这个文件");}
+	}
+	}
