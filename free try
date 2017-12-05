@@ -1,0 +1,46 @@
+package com.imooc.test;
+
+public class ChainTest {
+
+	public static void main(String[] args) {
+		ChainTest ct = new ChainTest();
+         try {
+			ct.test2();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void test1() throws DrunkTest{
+		throw new DrunkTest("喝车别开酒！");
+	}
+	public void test2() {
+		try {
+			test1();
+		} catch (Exception e) {
+			// TODO: handle exception
+			RuntimeException newExc = 
+					new RuntimeException("司机一滴酒，情人两行泪~~");
+		 newExc.initCause(e);
+		 throw newExc;
+		 
+		}
+	}
+
+}
+
+
+
+
+
+package com.imooc.test;
+
+public class DrunkTest extends Exception{
+
+	public DrunkTest() {
+		
+	}
+	public DrunkTest(String message) {
+		super(message);
+	}
+
+}
