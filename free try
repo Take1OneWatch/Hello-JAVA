@@ -11,23 +11,24 @@ public class ChainTest {
 		}
 	}
 	public void test1() throws DrunkTest{
-		throw new DrunkTest("喝车别开酒！");
+		throw new DrunkTest("喝车别开酒！");    //抛出异常
 	}
 	public void test2() {
 		try {
-			test1();
+			test1();  //捕获异常！
 		} catch (Exception e) {
-			// TODO: handle exception
-			RuntimeException newExc = 
+			//也可以RuntimeException newExc =   new RuntimeException(e);直接调用！
+			RuntimeException newExc =   //对异常进行包装！
 					new RuntimeException("司机一滴酒，情人两行泪~~");
-		 newExc.initCause(e);
-		 throw newExc;
+		 newExc.initCause(e);  //引用原始异常！
+		 throw newExc;   //抛出新的异常！
 		 
 		}
 	}
 
 }
-
+//运行时异常是由 com.imooc.test.DrunkTest引起的！
+//at com.imooc.test.ChainTest.test1(ChainTest.java:14)    com.imooc.test.DrunkTest最先抛出异常的地方！
 
 
 
