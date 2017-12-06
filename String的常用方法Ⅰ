@@ -1,0 +1,27 @@
+返回当前字符串的长度                                      int 1ength()
+
+查找ch字符在该字符串中第一次出现的位置                      int indexOf(int ch)
+
+查找str子字符串在该字符串中第一次出现的位置                  int indexOf(String str)
+
+查找ch字符在该字符串中最后一次出现的位置                     int lastIndex0f(int ch)
+
+查找str子字符串在该字符串中最后一次出现的位置                 int lastIndexOf(String str)
+
+获取从beginIndex位置开始到结束的子字符串                    String substring(int beginIndex)
+
+获取从beginIndex位置开始到endIndex位置的子字符串            String substring(int beginIndex,int endIndex)
+
+返回去除了前后空格的字符串                                 String trim()
+
+将该字符串与指定对象比较，返回true或false                   boolean equals (0bject obj)
+
+将字符串转换为小写                                        String  toLowerCase ()
+
+将字符串转换为大写                                        String  toUpperCas e ()
+
+获取字符串中指定位置的字符                                 char charAt (int index)
+
+将字符串分割为子字符串，返回字符串数组                       String[] split(String regex,int limit)
+
+将该字符串转换为byte数组                                  lbyte[] getBytes()
