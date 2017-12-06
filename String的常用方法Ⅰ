@@ -34,6 +34,7 @@
 
 
 
+
 public class Test2 {
 
 	public static void main(String[] args) {
@@ -71,5 +72,12 @@ public class Test2 {
           {
         	  System.out.println(p[r]+" ");
           }//将每个字符转换成字节数组！！
+          
+          
+          StringBuilder str = new StringBuilder("lalalalala");
+          //StringBuilder相对比String 的好处就是可以随意更改对象的内容！！！
+          System.out.println(str);
+    
 	}
+
 }
