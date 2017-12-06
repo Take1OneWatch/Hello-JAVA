@@ -25,3 +25,27 @@
 将字符串分割为子字符串，返回字符串数组                       String[] split(String regex,int limit)
 
 将该字符串转换为byte数组                                  lbyte[] getBytes()
+
+
+
+
+
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		String fileName = "www.imooc.com";
+           int a = fileName.indexOf("com");//输入com在字符串中的位置
+           String b = fileName.substring(a,fileName.length());
+           //fileName.length()是到字符串的最后的意思
+           int c = fileName.lastIndexOf(".");
+           int d = fileName.indexOf(".");
+           int e = fileName.length();
+           System.out.println(a);
+           System.out.println(b);
+           System.out.println(c);
+           System.out.println(d);
+           System.out.println(e);
+           
+	}
+}
