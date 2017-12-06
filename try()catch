@@ -16,7 +16,8 @@ class student implements Serializable
 	    System.out.println("dep="+dep);
 	 	}
 	}
-class file11{
+class file11
+{
 public static void main(String []ppp)
 {	student stu;
 	try
