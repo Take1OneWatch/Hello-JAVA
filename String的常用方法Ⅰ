@@ -33,6 +33,7 @@
 
 
 
+
 public class Test2 {
 
 	public static void main(String[] args) {
@@ -49,7 +50,7 @@ public class Test2 {
            //会全部变成大写,好像是没有办法只改变部分！！
            String h = fileName.substring(3,7);
            //截取字符串中的一部分！！
-         
+      
            System.out.println(a);
            System.out.println(b);
            System.out.println(c);
@@ -59,10 +60,16 @@ public class Test2 {
            System.out.println(g);
            System.out.println(h);
            for(int q=0;q<fileName.length();q++) {
-        	   if(fileName.charAt(q)=='o') {
+        	   if(fileName.charAt(q)=='o')//轮流判断字符是否为a!!!
+        	   {
         		   num++;
         	   }
            }
-          System.out.println("o字符出现了:"+num+"次");       
+          System.out.println("o字符出现了:"+num+"次");   
+          byte [] p = fileName.getBytes();
+          for(int r =0;r<fileName.length();r++) 
+          {
+        	  System.out.println(p[r]+" ");
+          }//将每个字符转换成字节数组！！
 	}
 }
