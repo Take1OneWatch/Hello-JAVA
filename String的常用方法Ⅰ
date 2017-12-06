@@ -31,21 +31,32 @@
 
 
 
+
 public class Test2 {
 
 	public static void main(String[] args) {
-		String fileName = "www.imooc.com";
+		String fileName = "wWW.iMOoc.com";
            int a = fileName.indexOf("com");//输入com在字符串中的位置
            String b = fileName.substring(a,fileName.length());
            //fileName.length()是到字符串的最后的意思
            int c = fileName.lastIndexOf(".");
            int d = fileName.indexOf(".");
            int e = fileName.length();
+           String f =fileName.toLowerCase();
+           //当最后一个.号后面跟着有大写的字母时候，无法变成小写！
+           String g =fileName.toUpperCase();
+           //会全部变成大写,好像是没有办法只改变部分！！
+           String h = fileName.substring(3,7);
+           //截取字符串中的一部分！！
+           
            System.out.println(a);
            System.out.println(b);
            System.out.println(c);
            System.out.println(d);
            System.out.println(e);
+           System.out.println(f);
+           System.out.println(g);
+           System.out.println(h);
            
 	}
 }
