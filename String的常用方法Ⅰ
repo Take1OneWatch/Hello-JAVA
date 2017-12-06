@@ -35,6 +35,7 @@
 
 
 
+
 public class Test2 {
 
 	public static void main(String[] args) {
@@ -74,10 +75,17 @@ public class Test2 {
           }//将每个字符转换成字节数组！！
           
           
-          StringBuilder str = new StringBuilder("lalalalala");
+          StringBuilder str = new StringBuilder("草拟吗");
           //StringBuilder相对比String 的好处就是可以随意更改对象的内容！！！
+          str.append("nimabi"); //而且修改内容超级方便！！
+          for(int t = 0 ;t<str.length();t++) 
+          {
+        	  str.insert(t, "!!");
+        	  t+=4;
+          }
           System.out.println(str);
     
 	}
 
 }
+
