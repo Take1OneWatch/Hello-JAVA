@@ -1,12 +1,12 @@
 import java.io.*;
-class student implements Serializable
+class student implements Serializable    //java project
 {
 	int id;
 	String name;
 	int age;
 	String dep;
 	 student(int id,String name,int age,String dep){
-	 this.id=id;this.name=name;this.age=age;this.dep=dep;	
+	 this.id=id;this.name=name;this.age=age;this.dep=dep;	//采用this调用当前的java project的数据！
 	 }
 	 void print()
 	 {
@@ -16,19 +16,16 @@ class student implements Serializable
 	    System.out.println("dep="+dep);
 	 	}
 	}
-class file11
+class file11   //类 class
 {
 public static void main(String []ppp)
 {	student stu;
 	try
 	{
-		FileOutputStream fos=new 	FileOutputStream("datafile11.txt");
-     	ObjectOutputStream  dos=new   ObjectOutputStream (fos);
+		FileOutputStream fos = new FileOutputStream("datafile11.txt");
+     	ObjectOutputStream  dos = new ObjectOutputStream (fos);
 	    stu=new student(981036,"小明",19,"计算机系");
 		dos.writeObject(stu);
-		/*	dos.writeDouble(456.8790);
-		dos.writeBoolean(false);
-		dos.writeInt(100000);*/
 		dos.close();
 		}catch(Exception e){
 			System.out.println("无法保存文件！！");}
@@ -37,13 +34,10 @@ public static void main(String []ppp)
 		FileInputStream fis=new FileInputStream("datafile11.txt");
 	    ObjectInputStream  dis=new   ObjectInputStream (fis);
 	    stu=(student)dis.readObject();
-	   /*ystem.out.println(dis.readInt());
-	    System.out.println(dis.readDouble());
-	    System.out.println(dis.readBoolean());
-	    System.out.println(dis.readInt());  */
+	
 	    dis.close();
 	    stu.print();
-		}catch(Exception e){
+		}catch(Exception e){ //捕获并处理try中抛出的异常！
 			System.out.println("找不到这个文件");}
 	}
 	}
