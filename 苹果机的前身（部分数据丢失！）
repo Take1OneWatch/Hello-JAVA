@@ -155,9 +155,6 @@ public class Random extends Interface {
 
 
 
-
-
-
 package com.imooc;
 import java.util.Scanner;
 public class Interface {
@@ -180,23 +177,13 @@ public class Interface {
 	 	   int s =s1.nextInt();
 	 	   int a = s;
 	 	   return a ;
-   /*      if(s==1) {
-        	
-        	 System.out.println("你当前的总分为"+score);
-         }
-         if(s==2) {
-        	 score =score1;
-        	 System.out.println("你当前的总分为"+score1);
-         }
-         if(s==3) {
-        	 score =score2;
-        	 System.out.println("你当前的总分为"+score2);
-         }	
-         if(s==4) {
-        	 score =score3;
-        	 System.out.println("你当前的总分为"+score3);
-         }	 	 */
-
+	}
+	public void test2() {
+		System.out.println("号数以及倍率：");
+		System.out.println("1号是燕子    x6 ，2号是鸽子    x8 ，3号是孔雀    x8 ，4号是老鹰    x12      飞禽类 ");
+		System.out.println("5号是兔子    x6 ，6号是熊猫    x8 ，7号是猴子    x8 ，8号是狮子    x12       走兽类");
+		System.out.println("特等奖：9号是金鲨    x24");   
+		System.out.println("请输入你想买的数：");
 	}
 	
 	
@@ -223,4 +210,3 @@ public class User {
 	}
 
 }
-
