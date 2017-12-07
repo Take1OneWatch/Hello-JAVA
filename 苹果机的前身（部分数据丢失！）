@@ -12,11 +12,42 @@ public class Random extends Interface {
 		int[] nums = new int[10];
 		Interface z1 = new Interface();
 		z1.test2();
+		
 		 Scanner s1= new Scanner(System.in);
 		 int w =s1.nextInt();
+		 if(w==1) {
+         System.out.println("1号：燕子     飞禽");
+		 }
+		 if(w==2) {
+	         System.out.println("2号：鸽子     飞禽");
+			 }
+		 if(w==3) {
+	         System.out.println("3号：孔雀     飞禽");
+			 }
+		 if(w==4) {
+	         System.out.println("4号：老鹰     飞禽");
+			 }
+		 if(w==5) {
+	         System.out.println("5号：兔子     走兽");
+			 }
+		 if(w==6) {
+	         System.out.println("6号：熊猫     走兽");
+			 }
+		 if(w==7) {
+	         System.out.println("7号：猴子     走兽");
+			 }
+		 if(w==8) {
+	         System.out.println("8号：狮子     走兽");
+			 }
+		 if(w==9) {
+	         System.out.println("9号：金鲨");
+			 }
 		 if(w!=1&&w!=2&&w!=3&&w!=4&&w!=5&&w!=6&&w!=7&&w!=8&&w!=9) {
-	 		   System.out.println("尼玛嘿了，根本没有这个数！");}
-		 for(int i=1;i<3;i++) {
+	 		   System.out.println("系统错误，没有这个号数！");
+          User te = new User();
+           te.test();
+		 } 
+		/* for(int i=1;i<2;i++) {
 			 Scanner s2= new Scanner(System.in);
 			 int s =s1.nextInt();
 			 if(s==1) {
@@ -27,7 +58,7 @@ public class Random extends Interface {
 	 		   if(i==3) {
 	 			   System.out.println("输错三次，自动退出程序");break;
 	 		   }
-	 	   } }
+	 	   } }*/
 		System.out.println("请输入你想买多少分");
 		 Scanner s2= new Scanner(System.in);
 	 	   int c =s2.nextInt();
@@ -149,6 +180,8 @@ public class Random extends Interface {
 	}
 
 }
+
+
 
 
 
