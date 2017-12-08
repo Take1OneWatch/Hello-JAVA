@@ -1,6 +1,6 @@
 package com.imooc;
-
-import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class inside {
 	   int lease=0;int leasea=0; int a = 20;int b = 20;int c = 20;int d = 20;int e = 20;int f = 20;int g = 20;
@@ -24,6 +24,11 @@ public class inside {
  	    	   
     	    	   if(x==1) {
     	    		   System.out.println("租用成功！祝您路途愉快");
+    	    		   Date d = new Date();
+    	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+    	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+    	    	       String today1 = today.format(d);
+    	    		    System.out.println(today1);
     	    		   break;
     	    	   }
     	    	   if(x==2) {
@@ -37,6 +42,11 @@ public class inside {
         	    	   int a =a1.nextInt();
     	             if(a==1) {
     	            	 System.out.println("结账成功！");
+    	            	 Date d = new Date();
+     	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+     	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+     	    	       String today1 = today.format(d);
+     	    		    System.out.println(today1);
     	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
     	    		   User user = new User();
         	    	   user.user2();break; }
@@ -67,6 +77,11 @@ public class inside {
      	    	   int x =x1.nextInt();
      	    	   if(x==1) {
      	    		   System.out.println("租用成功！祝您路途愉快");
+     	    		  Date d = new Date();
+  	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+  	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+  	    	       String today1 = today.format(d);
+  	    		    System.out.println(today1);
      	    		   break;
      	    	   }
      	    	   if(x==2) {
@@ -81,6 +96,11 @@ public class inside {
       	    	   int a =a1.nextInt();
   	             if(a==1) {
   	            	 System.out.println("结账成功！");
+  	            	 Date d = new Date();
+ 	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+ 	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+ 	    	       String today1 = today.format(d);
+ 	    		    System.out.println(today1);
   	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
   	    		   User user = new User();
       	    	   user.user2();break; }
@@ -147,7 +167,11 @@ public class inside {
  	    	   int x =x1.nextInt();
  	    	   if(x==1) {
  	    		   System.out.println("租用成功！祝您路途愉快");
- 	    		 
+ 	    		  Date d = new Date();
+	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+	    	       String today1 = today.format(d);
+	    		    System.out.println(today1);
  	    		   break;
  	    	   }
  	    	   if(x==2) {
@@ -162,6 +186,11 @@ public class inside {
   	    	   int a =a1.nextInt();
 	             if(a==1) {
 	            	 System.out.println("结账成功！");
+	            	 Date d = new Date();
+ 	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+ 	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+ 	    	       String today1 = today.format(d);
+ 	    		    System.out.println(today1);
 	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
 	    		   User user = new User();
   	    	   user.user2();break; }
@@ -193,6 +222,11 @@ public class inside {
  	    	   int x =x1.nextInt();
  	    	   if(x==1) {
  	    		   System.out.println("租用成功！祝您路途愉快");
+ 	    		  Date d = new Date();
+	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+	    	       String today1 = today.format(d);
+	    		    System.out.println(today1);
  	    		   break;
  	    	   }
  	    	   if(x==2) {
@@ -207,6 +241,11 @@ public class inside {
   	    	   int a =a1.nextInt();
 	             if(a==1) {
 	            	 System.out.println("结账成功！");
+	            	 Date d = new Date();
+ 	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+ 	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+ 	    	       String today1 = today.format(d);
+ 	    		    System.out.println(today1);
 	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
 	    		   User user = new User();
   	    	   user.user2();break; }
@@ -239,6 +278,11 @@ public class inside {
  	    	   int x =x1.nextInt();
  	    	   if(x==1) {
  	    		   System.out.println("租用成功！祝您路途愉快");
+ 	    		  Date d = new Date();
+	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+	    	       String today1 = today.format(d);
+	    		    System.out.println(today1);
  	    		   break;
  	    	   }
  	    	   if(x==2) {
@@ -253,6 +297,11 @@ public class inside {
   	    	   int a =a1.nextInt();
 	             if(a==1) {
 	            	 System.out.println("结账成功！");
+	            	 Date d = new Date();
+ 	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+ 	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+ 	    	       String today1 = today.format(d);
+ 	    		    System.out.println(today1);
 	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
 	    		   User user = new User();
   	    	   user.user2();break; }
@@ -317,6 +366,11 @@ public class inside {
      	    	   int x =x1.nextInt();
      	    	   if(x==1) {
      	    		   System.out.println("租用成功！祝您路途愉快");
+     	    		  Date d = new Date();
+  	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+  	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+  	    	       String today1 = today.format(d);
+  	    		    System.out.println(today1);
      	    		   break;
      	    	   }
      	    	   if(x==2) {
@@ -331,6 +385,11 @@ public class inside {
       	    	   int a =a1.nextInt();
   	             if(a==1) {
   	            	 System.out.println("结账成功！");
+  	            	 Date d = new Date();
+ 	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+ 	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+ 	    	       String today1 = today.format(d);
+ 	    		    System.out.println(today1);
   	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
   	    		   User user = new User();
       	    	   user.user2();break; }
@@ -362,6 +421,11 @@ public class inside {
      	    	   int x =x1.nextInt();
      	    	   if(x==1) {
      	    		   System.out.println("租用成功！祝您路途愉快");
+     	    		  Date d = new Date();
+  	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+  	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+  	    	       String today1 = today.format(d);
+  	    		    System.out.println(today1);
      	    		   break;
      	    	   }
      	    	   if(x==2) {
@@ -376,6 +440,11 @@ public class inside {
       	    	   int a =a1.nextInt();
   	             if(a==1) {
   	            	 System.out.println("结账成功！");
+  	            	 Date d = new Date();
+ 	    		    SimpleDateFormat today = new  SimpleDateFormat("租用时间：yyyy-MM-dd HH:mm:ss");
+ 	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+ 	    	       String today1 = today.format(d);
+ 	    		    System.out.println(today1);
   	    		   System.out.println("确定继续租用请按：1  ； 取消请按 ： 2 ; ");
   	    		   User user = new User();
       	    	   user.user2();break; }
