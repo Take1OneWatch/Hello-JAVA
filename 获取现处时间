@@ -5,7 +5,7 @@ public class date {
 	public static void main(String[] args) {
 	    Date d = new Date();
 	    SimpleDateFormat today = new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-	    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+	    //SimpleDateFormat里面的字母要特别注意，已经被硬性规定不能随意更改
        String today1 = today.format(d); //导入现在的时间到String类型的today1中
 	    System.out.println(today1);
 	}
