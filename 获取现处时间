@@ -1,0 +1,13 @@
+import java.text.SimpleDateFormat;
+import java.util.*;
+public class date {
+
+	public static void main(String[] args) {
+	    Date d = new Date();
+	    SimpleDateFormat today = new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
+       String today1 = today.format(d);
+	    System.out.println(today1);
+	}
+}
+
