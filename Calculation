@@ -1,0 +1,17 @@
+
+public class test {
+
+	public static void main(String[] args) {
+		double a = 99.99;
+     long b = Math.round(a);  //四舍五入
+     double c =Math.ceil(a);   //求大于a的最小正数
+     double d = Math.floor(a);  //求小于a的最小正数
+    
+     double f = Math.random();   //用于产生随机数
+     System.out.println(b);
+     System.out.println(c);
+     System.out.println(d);
+     System.out.println(f);
+	}
+
+}
