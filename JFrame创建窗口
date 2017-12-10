@@ -15,3 +15,37 @@ public class Graphical {
 	}
 }
 
+
+
+
+
+
+//改变背景颜色
+package imooc_collection;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Panel;
+
+import javax.swing.*;
+public class Graphical {
+
+	public static void main(String[] args) {
+	
+		
+		JFrame frame = new JFrame("JFrameDemo");
+		Container contentPane = frame.getContentPane();
+		contentPane.setBackground(Color.CYAN);//整体背景为蓝色！
+		
+		JPanel panel = new JPanel ();
+		panel.setBackground(Color.yellow); //与JButton同行为黄色
+		
+		JButton button = new JButton("caonima");
+		panel.add(button);
+		
+		contentPane.add(panel, BorderLayout.SOUTH);
+		frame.pack();      //将JFrame 设置到适当的大小！
+		frame.setVisible(true); //现实JFrame;
+	}
+}
+
