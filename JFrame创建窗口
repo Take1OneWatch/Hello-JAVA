@@ -1,0 +1,11 @@
+package imooc_collection;
+import javax.swing.*;
+public class Graphical {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("JFrameDemo");
+		
+          frame.pack();
+          frame.setVisible(true);
+	}
+}
