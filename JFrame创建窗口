@@ -1,11 +1,17 @@
 package imooc_collection;
+import java.awt.BorderLayout;
+
 import javax.swing.*;
 public class Graphical {
 
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("JFrameDemo");
+		JFrame frame = new JFrame("JFrameDemo");   //创建一个JFrame的实例
+		JButton button = new JButton("caonima");   //创建一个JButton的实例
 		
-          frame.pack();
-          frame.setVisible(true);
+		frame.getContentPane().add(button,BorderLayout.CENTER);
+         //将JButton 放到 JFrame 的中央
+		frame.pack();      //将JFrame 设置到适当的大小！
+		frame.setVisible(true); //现实JFrame;
 	}
 }
+
