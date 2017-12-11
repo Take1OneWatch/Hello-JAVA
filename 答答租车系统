@@ -2,11 +2,11 @@ package com.imooc;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class inside {
-	   int lease=0;int leasea=0; int a = 20;int b = 20;int c = 20;int d = 20;int e = 20;int f = 20;int g = 20;
+public class inside extends Renew {
+	   int lease=0;int leasea=0; int a = 5;int b = 5;int c = 5;int d = 5;int e = 5;int f = 5;int g = 5;
 	    public void  test() {  //货车
-    	   System.out.println("1.松花江  400元/天  载货：4吨        空闲车数："+(a-lease));
-    	   System.out.println("2.依维柯  800元/天  载货：20吨      空闲车数："+(b-lease));
+    	   System.out.println("1.松花江  400元/天  载货：4吨        空闲车数："+a);
+    	   System.out.println("2.依维柯  800元/天  载货：20吨      空闲车数："+b);
     	   System.out.println("3.返回上一界面！");
     	 for(int m =1;m<=3;m++)
     	   {
@@ -29,19 +29,23 @@ public class inside {
     	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
     	    	       String today1 = today.format(d);
     	    		    System.out.println(today1);
+    	    		//    Renew h = new Renew();
+    	    		   
+    	    		   
     	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
-    	    		    Scanner x2= new Scanner(System.in);
-    	    	    	   int z =x2.nextInt();
-    	    		    if(z==1) {
-    	    		    	System.out.println("确定请按：1 ;取消请按：2");
-    	    		    	User r = new User();
-    	    		    	r.user2();
-    	    		    	
-    	    		    }
-    	    		    if(z==2) {
-    	    		    	 System.out.println("期待您的再次使用，再见！");
-    	    		    	break;
-    	    		    }break;
+    	    		    {   User it = new User();
+    	    		   it.user3();break; }
+    	    	    	    
+    	    	    	   
+    	    		   
+    	    	/*		  if(z!=1&&z!=2) {
+    	    					 System.out.println("系统错误，请重新输入正确的序号");
+    	    					  if(m==3){
+    	    						 System.out.println("输入错误超过三次已自动退出程序！");   break;
+    	    					 } 
+    	    					 
+    	    				 }  */
+    	    	    	   
     	    		   
     	    	   }
     	    	   if(x==2) {
@@ -80,16 +84,9 @@ public class inside {
   	    	       String today1 = today.format(d);
   	    		    System.out.println(today1);
   	    		  System.out.println("继续租用请按：1 ;退出程序请按：2");
- 	    		    Scanner x2= new Scanner(System.in);
- 	    	    	   int z =x2.nextInt();
- 	    		    if(z==1) {
- 	    		    	System.out.println("确定请按：1 ;取消请按：2");
- 	    		    	User r = new User();
- 	    		    	r.user2();
- 	    		    }
- 	    		    if(z==2) {
- 	    		    	break;
- 	    		    }break;
+  	    		  {   User it = new User();
+	    		   it.user3();break; } 
+  	    		  
      	    	   }
      	    	   if(x==2) {
      	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -137,8 +134,8 @@ public class inside {
     		  }
     		}   
     		   
-    		   
-    	   }
+    	   } 
+    	  
        }
        public void test1() {   //客车
     	   System.out.println("1.奥迪A4  500元/天  载人：4人          空闲车数："+(c-lease));
@@ -166,16 +163,8 @@ public class inside {
 	    	       String today1 = today.format(d);
 	    		    System.out.println(today1);
 	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
-   	    		    Scanner x2= new Scanner(System.in);
-   	    	    	   int z =x2.nextInt();
-   	    		    if(z==1) {
-   	    		    	System.out.println("确定请按：1 ;取消请按：2");
-   	    		    	User r = new User();
-   	    		    	r.user2();
-   	    		    }
-   	    		    if(z==2) {
-   	    		    	break;
-   	    		    }break;
+	    		    {   User it = new User();
+ 	    		   it.user3();break; }
  	    	   }
  	    	   if(x==2) {
  	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -214,16 +203,8 @@ public class inside {
 	    	       String today1 = today.format(d);
 	    		    System.out.println(today1);
 	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
-   	    		    Scanner x2= new Scanner(System.in);
-   	    	    	   int z =x2.nextInt();
-   	    		    if(z==1) {
-   	    		    	System.out.println("确定请按：1 ;取消请按：2");
-   	    		    	User r = new User();
-   	    		    	r.user2();
-   	    		    }
-   	    		    if(z==2) {
-   	    		    	break;
-   	    		    }break;
+	    		    {   User it = new User();
+	 	    		   it.user3();break; }
  	    	   }
  	    	   if(x==2) {
  	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -263,16 +244,8 @@ public class inside {
 	    	       String today1 = today.format(d);
 	    		    System.out.println(today1);
 	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
-   	    		    Scanner x2= new Scanner(System.in);
-   	    	    	   int z =x2.nextInt();
-   	    		    if(z==1) {
-   	    		    	System.out.println("确定请按：1 ;取消请按：2");
-   	    		    	User r = new User();
-   	    		    	r.user2();
-   	    		    }
-   	    		    if(z==2) {
-   	    		    	break;
-   	    		    }break;
+	    		    {   User it = new User();
+ 	    		   it.user3();break; }
  	    	   }
  	    	   if(x==2) {
  	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -344,16 +317,8 @@ public class inside {
   	    	       String today1 = today.format(d);
   	    		    System.out.println(today1);
   	    		  System.out.println("继续租用请按：1 ;退出程序请按：2");
- 	    		    Scanner x2= new Scanner(System.in);
- 	    	    	   int z =x2.nextInt();
- 	    		    if(z==1) {
- 	    		    	System.out.println("确定请按：1 ;取消请按：2");
- 	    		    	User r = new User();
- 	    		    	r.user2();
- 	    		    }
- 	    		    if(z==2) {
- 	    		    	break;
- 	    		    }break;
+  	    		  {   User it = new User();
+	    		   it.user3();break; }
      	    	   }
      	    	   if(x==2) {
      	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -392,16 +357,8 @@ public class inside {
   	    	       String today1 = today.format(d);
   	    		    System.out.println(today1);
   	    		  System.out.println("继续租用请按：1 ;退出程序请按：2");
- 	    		    Scanner x2= new Scanner(System.in);
- 	    	    	   int z =x2.nextInt();
- 	    		    if(z==1) {
- 	    		    	System.out.println("确定请按：1 ;取消请按：2");
- 	    		    	User r = new User();
- 	    		    	r.user2();
- 	    		    }
- 	    		    if(z==2) {
- 	    		    	break;
- 	    		    }break;
+  	    		  {   User it = new User();
+	    		   it.user3();break; }
      	    	   }
      	    	   if(x==2) {
      	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -453,13 +410,14 @@ public class inside {
      
      
      
-     
-        package com.imooc;
+       package com.imooc;
    import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Renew {
-    public void s() {
+    
+	public int age;
+	public int s() {
     	  int money1 =400 ;
 		   System.out.println("请输入要租用的数量：");
 			 Scanner l1= new Scanner(System.in);
@@ -477,7 +435,8 @@ public class Renew {
    	   System.out.println("*********************************");
    	   System.out.println("请核对账单后确定是否租用！");
    	System.out.println("确定请按：1 ; 取消请按：2 ;返回上一页请按：3 ");
-    	
+   	int age = l;
+      	return age;
     }
     
     
@@ -648,19 +607,12 @@ public class Renew {
      	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
      	    	       String today1 = today.format(d);
      	    		    System.out.println(today1);
+     	    		    
      	    		   System.out.println("继续租用请按：1 ;退出程序请按：2");
-   	    		    Scanner x2= new Scanner(System.in);
-   	    	    	   int z =x2.nextInt();
-   	    		    if(z==1) {
-   	    		    	System.out.println("确定请按：1 ;取消请按：2");
-   	    		    	User r = new User();
-   	    		    	r.user2();
-   	    		    }
-   	    		    if(z==2) {
-   	    		    	break;
-   	    		    }break;
-     	    		   
-     	    	   }
+     	    		  {   User it = new User();
+   	    		   it.user3();break; }
+     	    	   }   
+     	    	   
      	    	   if(x==2) {
      	    		   System.out.println("已取消支付订单，期待您的下次使用！");
      	    		   break;
@@ -696,16 +648,8 @@ public class Renew {
    	    	       String today1 = today.format(d);
    	    		    System.out.println(today1);
    	    		   System.out.println("继续租用请按：1 ;退出程序请按：2");
-  	    		    Scanner x2= new Scanner(System.in);
-  	    	    	   int z =x2.nextInt();
-  	    		    if(z==1) {
-  	    		    	System.out.println("确定请按：1 ;取消请按：2");
-  	    		    	User r = new User();
-  	    		    	r.user2();
-  	    		    }
-  	    		    if(z==2) {
-  	    		    	break;
-  	    		    }break;
+   	    		  {   User it = new User();
+	    		   it.user3();break; }
       	    	   }
       	    	   if(x==2) {
       	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -775,16 +719,8 @@ public class Renew {
  	    	       String today1 = today.format(d);
  	    		    System.out.println(today1);
  	    		   System.out.println("继续租用请按：1 ;退出程序请按：2");
-  	    		    Scanner x2= new Scanner(System.in);
-  	    	    	   int z =x2.nextInt();
-  	    		    if(z==1) {
-  	    		    	System.out.println("确定请按：1 ;取消请按：2");
-  	    		    	User r = new User();
-  	    		    	r.user2();
-  	    		    }
-  	    		    if(z==2) {
-  	    		    	break;
-  	    		    }break;
+ 	    		  {   User it = new User();
+	    		   it.user3();break; }
   	    	   }
   	    	   if(x==2) {
   	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -823,16 +759,8 @@ public class Renew {
  	    	       String today1 = today.format(d);
  	    		    System.out.println(today1);
  	    		   System.out.println("继续租用请按：1 ;退出程序请按：2");
-  	    		    Scanner x2= new Scanner(System.in);
-  	    	    	   int z =x2.nextInt();
-  	    		    if(z==1) {
-  	    		    	System.out.println("确定请按：1 ;取消请按：2");
-  	    		    	User r = new User();
-  	    		    	r.user2();
-  	    		    }
-  	    		    if(z==2) {
-  	    		    	break;
-  	    		    }break;
+ 	    		  {   User it = new User();
+	    		   it.user3();break; }
   	    	   }
   	    	   if(x==2) {
   	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -872,16 +800,8 @@ public class Renew {
  	    	       String today1 = today.format(d);
  	    		    System.out.println(today1);
  	    		   System.out.println("继续租用请按：1 ;退出程序请按：2");
-  	    		    Scanner x2= new Scanner(System.in);
-  	    	    	   int z =x2.nextInt();
-  	    		    if(z==1) {
-  	    		    	System.out.println("确定请按：1 ;取消请按：2");
-  	    		    	User r = new User();
-  	    		    	r.user2();
-  	    		    }
-  	    		    if(z==2) {
-  	    		    	break;
-  	    		    }break;
+ 	    		  {   User it = new User();
+	    		   it.user3();break; }
   	    	   }
   	    	   if(x==2) {
   	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -950,16 +870,8 @@ public class Renew {
 	    	       String today1 = today.format(d);
 	    		    System.out.println(today1);
 	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
-   	    		    Scanner x2= new Scanner(System.in);
-   	    	    	   int z =x2.nextInt();
-   	    		    if(z==1) {
-   	    		    	System.out.println("确定请按：1 ;取消请按：2");
-   	    		    	User r = new User();
-   	    		    	r.user2();
-   	    		    }
-   	    		    if(z==2) {
-   	    		    	break;
-   	    		    }break;
+	    		    {   User it = new User();
+ 	    		   it.user3();break; }
   	    	   }
   	    	   if(x==2) {
   	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -998,16 +910,8 @@ public class Renew {
 	    	       String today1 = today.format(d);
 	    		    System.out.println(today1);
 	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
-   	    		    Scanner x2= new Scanner(System.in);
-   	    	    	   int z =x2.nextInt();
-   	    		    if(z==1) {
-   	    		    	System.out.println("确定请按：1 ;取消请按：2");
-   	    		    	User r = new User();
-   	    		    	r.user2();
-   	    		    }
-   	    		    if(z==2) {
-   	    		    	break;
-   	    		    }break;
+	    		    {   User it = new User();
+ 	    		   it.user3();break; }
   	    	   }
   	    	   if(x==2) {
   	    		   System.out.println("已取消支付订单，期待您的下次使用！");
@@ -1054,15 +958,12 @@ public class Renew {
   } 
 
 }
-  
-  
-  
-  
-  
-  
-  
-  
-  package com.imooc;
+
+
+
+
+
+package com.imooc;
 import java.util.Scanner;
 import java.util.*;
 public class User {
@@ -1119,7 +1020,46 @@ public class User {
        
        }   
      }
-	}
+}
+	
+	public void user3() {
+	    
+		{	  
+			 Scanner x2= new Scanner(System.in);
+	    	   int z =x2.nextInt();
+ 		   if(z==1) {
+	    	System.out.println("确定请按：1 ;取消请按：2");
+	    	User r = new User();
+	    	r.user2();		
+	    }
+ 
+	    if(z==2) {
+	    	System.out.println("我们诚挚邀请您为本次服务打分：");
+	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+	    	for(int i=1;i<3;i++) {
+	    	Scanner x4= new Scanner(System.in);
+  	   int z1 =x2.nextInt();
+        if(z1>=1&&z1<=10) {
+  	  System.out.println("感谢您给出的宝贵评价！");
+  	 System.out.println("期待您的再次使用，再见！");  break; 
+  	 }
+       
+        if(z1<=0&&z1>10) {
+	    	  System.out.println("系统错误，请输入正确的评分");
+	    	  if(i==3) {
+	    		 System.out.println("系统错误，已自动退出程序！"); 
+	    		 break;  }
+	    	  }
+	    	break;
+	    }  
+	 }
+	    if(z!=1&&z!=2) {
+	    	System.out.println("系统错误，请输入正确的选项！");
+	    }
+  }
+}
+	
+	
 	
 	
 	public static void main(String[] args) {
@@ -1147,3 +1087,4 @@ public class User {
 	}
 
 }
+     
