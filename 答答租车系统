@@ -410,7 +410,7 @@ public class inside extends Renew {
      
      
      
-       package com.imooc;
+      package com.imooc;
    import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -963,6 +963,8 @@ public class Renew {
 
 
 
+
+
 package com.imooc;
 import java.util.Scanner;
 import java.util.*;
@@ -1023,42 +1025,51 @@ public class User {
 }
 	
 	public void user3() {
-	    
+		 for(int i = 1 ;i<=3;i++)
 		{	  
 			 Scanner x2= new Scanner(System.in);
 	    	   int z =x2.nextInt();
  		   if(z==1) {
 	    	System.out.println("确定请按：1 ;取消请按：2");
 	    	User r = new User();
-	    	r.user2();		
+	    	r.user2();		break;
 	    }
  
 	    if(z==2) {
-	    	System.out.println("我们诚挚邀请您为本次服务打分：");
-	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
-	    	for(int i=1;i<3;i++) {
-	    	Scanner x4= new Scanner(System.in);
-  	   int z1 =x2.nextInt();
-        if(z1>=1&&z1<=10) {
-  	  System.out.println("感谢您给出的宝贵评价！");
-  	 System.out.println("期待您的再次使用，再见！");  break; 
-  	 }
-       
-        if(z1<=0&&z1>10) {
-	    	  System.out.println("系统错误，请输入正确的评分");
-	    	  if(i==3) {
-	    		 System.out.println("系统错误，已自动退出程序！"); 
-	    		 break;  }
-	    	  }
-	    	break;
-	    }  
+	   User it = new User();
+	   it.user4(); break;
 	 }
+	  
 	    if(z!=1&&z!=2) {
+	    	
 	    	System.out.println("系统错误，请输入正确的选项！");
+	    	  if(i==3) {
+	          	System.out.println("输入错误超过三次已自动退出程序！"); }
 	    }
   }
 }
 	
+	
+
+ public void user4() {
+	  	System.out.println("我们诚挚邀请您为本次服务打分：");
+    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+    	for(int i=1;i<3;i++) {
+    	Scanner x2= new Scanner(System.in);
+	   int z1 =x2.nextInt();
+    if(z1>=1&&z1<=10) {
+	  System.out.println("感谢您给出的宝贵评价！");
+	 System.out.println("期待您的再次使用，再见！");  
+	 }
+    if(z1<=0&&z1>10) {
+    	  System.out.println("系统错误，请输入正确的评分");
+    	  if(i==3) {
+    		 System.out.println("系统错误，已自动退出程序！"); 
+    		 break;  }
+    	  }
+    	break;
+    } 
+ }
 	
 	
 	
@@ -1087,4 +1098,3 @@ public class User {
 	}
 
 }
-     
