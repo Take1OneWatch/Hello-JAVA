@@ -410,7 +410,7 @@ public class inside extends Renew {
      
      
      
-      package com.imooc;
+       package com.imooc;
    import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -1052,14 +1052,36 @@ public class User {
 	
 
  public void user4() {
+	 
 	  	System.out.println("我们诚挚邀请您为本次服务打分：");
     	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
-    	for(int i=1;i<3;i++) {
-    	Scanner x2= new Scanner(System.in);
+    	try{
+    		for(int i =1 ;i<=3;i++) {
+    		Scanner x2= new Scanner(System.in);
+    		   int z1 =x2.nextInt();
+    		   if(z1>=1&&z1<=10) {
+    				  System.out.println("感谢您给出的宝贵评价！");
+    				 System.out.println("期待您的再次使用，再见！"); 
+    				 }
+    			    if(z1<=0||z1>10) {
+    			    	  System.out.println("系统错误，请输入正确的评分");
+    			    	  if(i==3) {
+    			    		 System.out.println("系统错误，已自动退出程序！"); 
+    			    		   }
+    			    	  }
+    	} }
+    	catch(InputMismatchException e)
+    	{
+    		e.printStackTrace();
+    		System.out.println("你应该输入正数！");
+    		System.out.println("由于程序错误已经退出程序！");
+    	}
+    		
+    	/*	Scanner x2= new Scanner(System.in);
 	   int z1 =x2.nextInt();
     if(z1>=1&&z1<=10) {
 	  System.out.println("感谢您给出的宝贵评价！");
-	 System.out.println("期待您的再次使用，再见！");  
+	 System.out.println("期待您的再次使用，再见！");break;  
 	 }
     if(z1<=0&&z1>10) {
     	  System.out.println("系统错误，请输入正确的评分");
@@ -1068,7 +1090,7 @@ public class User {
     		 break;  }
     	  }
     	break;
-    } 
+    }   */
  }
 	
 	
