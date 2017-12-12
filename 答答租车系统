@@ -35,13 +35,33 @@ public class inside extends Renew {
     	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
     	    		    {   User it = new User();
     	    		   it.user3();break; }
-    	    	
-    	    	    	   
-    	    		   
+    	    
     	    	   }
     	    	   if(x==2) {
-    	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-    	    		   break;
+    	    		   System.out.println("我们诚挚邀请您为本次服务打分：");
+    	    	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+    	    	    	try{
+    	    	    		for(int j =1 ;j<=3;j++) {
+    	    	    		Scanner x2= new Scanner(System.in);
+    	    	    		   int z1 =x2.nextInt();
+    	    	    		   if(z1>=1&&z1<=10) {
+    	    	    				  System.out.println("感谢您给出的宝贵评价！");
+    	    	    				 System.out.println("期待您的再次使用，再见！"); break;
+    	    	    				 }
+    	    	    		   else {
+    	    	    			    	  System.out.println("系统错误，请输入正确的评分");
+    	    	    			    	  if(j==3) {
+    	    	    			    		 System.out.println("系统错误，已自动退出程序！"); 
+    	    	    			    		break;   }
+    	    	    			    	  }
+    	    	                	} 
+    	    	    		}
+    	    	    	catch(InputMismatchException e)
+    	    	    	{
+    	    	    		e.printStackTrace();
+    	    	    		System.out.println("你应该输入正数！");
+    	    	    		System.out.println("由于程序错误已经退出程序！");
+    	    	    	}   break;
     	    	   }
     	    	   if(x==3) {
              
@@ -80,8 +100,30 @@ public class inside extends Renew {
   	    		  
      	    	   }
      	    	   if(x==2) {
-     	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-     	    		   break;
+     	    		  System.out.println("我们诚挚邀请您为本次服务打分：");
+     	    	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+     	    	    	try{
+     	    	    		for(int j =1 ;j<=3;j++) {
+     	    	    		Scanner x2= new Scanner(System.in);
+     	    	    		   int z1 =x2.nextInt();
+     	    	    		   if(z1>=1&&z1<=10) {
+     	    	    				  System.out.println("感谢您给出的宝贵评价！");
+     	    	    				 System.out.println("期待您的再次使用，再见！"); break;
+     	    	    				 }
+     	    	    		   else {
+     	    	    			    	  System.out.println("系统错误，请输入正确的评分");
+     	    	    			    	  if(j==3) {
+     	    	    			    		 System.out.println("系统错误，已自动退出程序！"); 
+     	    	    			    		break;   }
+     	    	    			    	  }
+     	    	                	} 
+     	    	    		}
+     	    	    	catch(InputMismatchException e)
+     	    	    	{
+     	    	    		e.printStackTrace();
+     	    	    		System.out.println("你应该输入正数！");
+     	    	    		System.out.println("由于程序错误已经退出程序！");
+     	    	    	}   break;
      	    	   }
      	    	   
      	    	  if(x==3) {
@@ -159,8 +201,30 @@ public class inside extends Renew {
  	    		   it.user3();break; }
  	    	   }
  	    	   if(x==2) {
- 	    		   System.out.println("已取消支付订单，期待您的下次使用！");
- 	    		   break;
+ 	    		  System.out.println("我们诚挚邀请您为本次服务打分：");
+ 	    	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+ 	    	    	try{
+ 	    	    		for(int j =1 ;j<=3;j++) {
+ 	    	    		Scanner x2= new Scanner(System.in);
+ 	    	    		   int z1 =x2.nextInt();
+ 	    	    		   if(z1>=1&&z1<=10) {
+ 	    	    				  System.out.println("感谢您给出的宝贵评价！");
+ 	    	    				 System.out.println("期待您的再次使用，再见！"); break;
+ 	    	    				 }
+ 	    	    		   else {
+ 	    	    			    	  System.out.println("系统错误，请输入正确的评分");
+ 	    	    			    	  if(j==3) {
+ 	    	    			    		 System.out.println("系统错误，已自动退出程序！"); 
+ 	    	    			    		break;   }
+ 	    	    			    	  }
+ 	    	                	} 
+ 	    	    		}
+ 	    	    	catch(InputMismatchException e)
+ 	    	    	{
+ 	    	    		e.printStackTrace();
+ 	    	    		System.out.println("你应该输入正数！");
+ 	    	    		System.out.println("由于程序错误已经退出程序！");
+ 	    	    	}   break;
  	    	   }
  	    	   
  	    	  if(x==3) {
@@ -199,8 +263,30 @@ public class inside extends Renew {
 	 	    		   it.user3();break; }
  	    	   }
  	    	   if(x==2) {
- 	    		   System.out.println("已取消支付订单，期待您的下次使用！");
- 	    		   break;
+ 	    		  System.out.println("我们诚挚邀请您为本次服务打分：");
+ 	    	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+ 	    	    	try{
+ 	    	    		for(int j =1 ;j<=3;j++) {
+ 	    	    		Scanner x2= new Scanner(System.in);
+ 	    	    		   int z1 =x2.nextInt();
+ 	    	    		   if(z1>=1&&z1<=10) {
+ 	    	    				  System.out.println("感谢您给出的宝贵评价！");
+ 	    	    				 System.out.println("期待您的再次使用，再见！"); break;
+ 	    	    				 }
+ 	    	    		   else {
+ 	    	    			    	  System.out.println("系统错误，请输入正确的评分");
+ 	    	    			    	  if(j==3) {
+ 	    	    			    		 System.out.println("系统错误，已自动退出程序！"); 
+ 	    	    			    		break;   }
+ 	    	    			    	  }
+ 	    	                	} 
+ 	    	    		}
+ 	    	    	catch(InputMismatchException e)
+ 	    	    	{
+ 	    	    		e.printStackTrace();
+ 	    	    		System.out.println("你应该输入正数！");
+ 	    	    		System.out.println("由于程序错误已经退出程序！");
+ 	    	    	}   break;
  	    	   }
  	    	   
  	    	  if(x==3) {
@@ -240,8 +326,30 @@ public class inside extends Renew {
  	    		   it.user3();break; }
  	    	   }
  	    	   if(x==2) {
- 	    		   System.out.println("已取消支付订单，期待您的下次使用！");
- 	    		   break;
+ 	    		  System.out.println("我们诚挚邀请您为本次服务打分：");
+ 	    	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+ 	    	    	try{
+ 	    	    		for(int j =1 ;j<=3;j++) {
+ 	    	    		Scanner x2= new Scanner(System.in);
+ 	    	    		   int z1 =x2.nextInt();
+ 	    	    		   if(z1>=1&&z1<=10) {
+ 	    	    				  System.out.println("感谢您给出的宝贵评价！");
+ 	    	    				 System.out.println("期待您的再次使用，再见！"); break;
+ 	    	    				 }
+ 	    	    		   else {
+ 	    	    			    	  System.out.println("系统错误，请输入正确的评分");
+ 	    	    			    	  if(j==3) {
+ 	    	    			    		 System.out.println("系统错误，已自动退出程序！"); 
+ 	    	    			    		break;   }
+ 	    	    			    	  }
+ 	    	                	} 
+ 	    	    		}
+ 	    	    	catch(InputMismatchException e)
+ 	    	    	{
+ 	    	    		e.printStackTrace();
+ 	    	    		System.out.println("你应该输入正数！");
+ 	    	    		System.out.println("由于程序错误已经退出程序！");
+ 	    	    	}   break;
  	    	   }
  	    	   
  	    	  if(x==3) {
@@ -314,8 +422,30 @@ public class inside extends Renew {
 	    		   it.user3();break; }
      	    	   }
      	    	   if(x==2) {
-     	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-     	    		   break;
+     	    		  System.out.println("我们诚挚邀请您为本次服务打分：");
+     	    	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+     	    	    	try{
+     	    	    		for(int j =1 ;j<=3;j++) {
+     	    	    		Scanner x2= new Scanner(System.in);
+     	    	    		   int z1 =x2.nextInt();
+     	    	    		   if(z1>=1&&z1<=10) {
+     	    	    				  System.out.println("感谢您给出的宝贵评价！");
+     	    	    				 System.out.println("期待您的再次使用，再见！"); break;
+     	    	    				 }
+     	    	    		   else {
+     	    	    			    	  System.out.println("系统错误，请输入正确的评分");
+     	    	    			    	  if(j==3) {
+     	    	    			    		 System.out.println("系统错误，已自动退出程序！"); 
+     	    	    			    		break;   }
+     	    	    			    	  }
+     	    	                	} 
+     	    	    		}
+     	    	    	catch(InputMismatchException e)
+     	    	    	{
+     	    	    		e.printStackTrace();
+     	    	    		System.out.println("你应该输入正数！");
+     	    	    		System.out.println("由于程序错误已经退出程序！");
+     	    	    	}   break;
      	    	   }
      	    	   
      	    	  if(x==3) {
@@ -354,8 +484,30 @@ public class inside extends Renew {
 	    		   it.user3();break; }
      	    	   }
      	    	   if(x==2) {
-     	    		   System.out.println("已取消支付订单，期待您的下次使用！");
-     	    		   break;
+     	    		  System.out.println("我们诚挚邀请您为本次服务打分：");
+     	    	    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+     	    	    	try{
+     	    	    		for(int j =1 ;j<=3;j++) {
+     	    	    		Scanner x2= new Scanner(System.in);
+     	    	    		   int z1 =x2.nextInt();
+     	    	    		   if(z1>=1&&z1<=10) {
+     	    	    				  System.out.println("感谢您给出的宝贵评价！");
+     	    	    				 System.out.println("期待您的再次使用，再见！"); break;
+     	    	    				 }
+     	    	    		   else {
+     	    	    			    	  System.out.println("系统错误，请输入正确的评分");
+     	    	    			    	  if(j==3) {
+     	    	    			    		 System.out.println("系统错误，已自动退出程序！"); 
+     	    	    			    		break;   }
+     	    	    			    	  }
+     	    	                	} 
+     	    	    		}
+     	    	    	catch(InputMismatchException e)
+     	    	    	{
+     	    	    		e.printStackTrace();
+     	    	    		System.out.println("你应该输入正数！");
+     	    	    		System.out.println("由于程序错误已经退出程序！");
+     	    	    	}   break;
      	    	   }
      	    	   
      	    	  if(x==3) {
@@ -1014,8 +1166,32 @@ public class User {
     	     User x =new User();
     	     x.user1();break;
 	}if(s==2) 
-		{System.out.println("期待您的下次使用，再见");
-		break;}
+		{
+		System.out.println("我们诚挚邀请您为本次服务打分：");
+    	System.out.println("不满意1~3 ; 比较满意4~6 ; 满意7~9 ; 非常满意10");
+    	try{
+    		for(int j =1 ;j<=3;j++) {
+    		Scanner x2= new Scanner(System.in);
+    		   int z1 =x2.nextInt();
+    		   if(z1>=1&&z1<=10) {
+    				  System.out.println("感谢您给出的宝贵评价！");
+    				 System.out.println("期待您的再次使用，再见！"); break;
+    				 }
+    		   else {
+    			    	  System.out.println("系统错误，请输入正确的评分");
+    			    	  if(j==3) {
+    			    		 System.out.println("系统错误，已自动退出程序！"); 
+    			    		break;   }
+    			    	  }
+                	} 
+    		}
+    	catch(InputMismatchException e)
+    	{
+    		e.printStackTrace();
+    		System.out.println("你应该输入正数！");
+    		System.out.println("由于程序错误已经退出程序！");
+    	}   break;
+		}   
 	if(s!=1&&s!=2) 
        {System.out.println("系统错误，请重新输入正确的序号");
        if(i==3) {
@@ -1063,14 +1239,15 @@ public class User {
     		   if(z1>=1&&z1<=10) {
     				  System.out.println("感谢您给出的宝贵评价！");
     				 System.out.println("期待您的再次使用，再见！"); 
-    				 }
-    			    if(z1<=0||z1>10) {
+    			break;	 }
+    		   else     {
     			    	  System.out.println("系统错误，请输入正确的评分");
     			    	  if(i==3) {
     			    		 System.out.println("系统错误，已自动退出程序！"); 
-    			    		   }
-    			    	  }
-    	} }
+    			    	break;	   }
+    			    	  break;	  }
+                	} 
+    		}
     	catch(InputMismatchException e)
     	{
     		e.printStackTrace();
@@ -1078,20 +1255,7 @@ public class User {
     		System.out.println("由于程序错误已经退出程序！");
     	}
     		
-    	/*	Scanner x2= new Scanner(System.in);
-	   int z1 =x2.nextInt();
-    if(z1>=1&&z1<=10) {
-	  System.out.println("感谢您给出的宝贵评价！");
-	 System.out.println("期待您的再次使用，再见！");break;  
-	 }
-    if(z1<=0&&z1>10) {
-    	  System.out.println("系统错误，请输入正确的评分");
-    	  if(i==3) {
-    		 System.out.println("系统错误，已自动退出程序！"); 
-    		 break;  }
-    	  }
-    	break;
-    }   */
+    
  }
 	
 	
