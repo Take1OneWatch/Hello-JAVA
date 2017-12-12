@@ -5,24 +5,27 @@ public class ExGui {
 	private JFrame frame;
 	private JButton b1;
 	private JButton b2;
+	private JButton b3;   //必须对要加入的按钮进行定义和封装！
 	
 	public static void main(String[] args) {
 		ExGui that = new ExGui();
-        that.go();
+        that.go();       //必须采用调用的形式创建按钮！
+		
 	}
 	public void go() {
-		frame = new JFrame("GUI example");
-		Container contentPane = frame.getContentPane();
-		contentPane.setLayout(new FlowLayout());
+		frame = new JFrame("");   //括号内可以不填写任何内容
+		Container s = frame.getContentPane();
+		s.setLayout(new FlowLayout());
 		
 		b1 = new JButton("press me ");
 		b2 = new JButton("Dpn't press me ");
-		
-		contentPane.add(b1);
-		contentPane.add(b2);
-		
+		b3 = new JButton("Silly B ");
+		s.add(b1);
+		s.add(b2);
+		s.add(b3);
 		frame.pack();
 		frame.setVisible(true);
 	}
 
 }
+
