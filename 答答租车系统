@@ -29,22 +29,13 @@ public class inside extends Renew {
     	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
     	    	       String today1 = today.format(d);
     	    		    System.out.println(today1);
-    	    		//    Renew h = new Renew();
-    	    		   
+    	    		Renew her = new Renew();
+    	    		 System.out.println(her.age);
     	    		   
     	    		    System.out.println("继续租用请按：1 ;退出程序请按：2");
     	    		    {   User it = new User();
     	    		   it.user3();break; }
-    	    	    	    
-    	    	    	   
-    	    		   
-    	    	/*		  if(z!=1&&z!=2) {
-    	    					 System.out.println("系统错误，请重新输入正确的序号");
-    	    					  if(m==3){
-    	    						 System.out.println("输入错误超过三次已自动退出程序！");   break;
-    	    					 } 
-    	    					 
-    	    				 }  */
+    	    	
     	    	    	   
     	    		   
     	    	   }
@@ -137,10 +128,11 @@ public class inside extends Renew {
     	   } 
     	  
        }
-       public void test1() {   //客车
-    	   System.out.println("1.奥迪A4  500元/天  载人：4人          空闲车数："+(c-lease));
-    	   System.out.println("2.马自达6  400元/天  载货：4人        空闲车数："+(d-lease));
-    	   System.out.println("3.金龙  800元/天  载人：20人             空闲车数："+(e-lease));
+   
+	public void test1() {   //客车
+    	   System.out.println("1.奥迪A4  500元/天  载人：4人          空闲车数："+c);
+    	   System.out.println("2.马自达6  400元/天  载货：4人        空闲车数："+d);
+    	   System.out.println("3.金龙  800元/天  载人：20人             空闲车数："+e);
     	   System.out.println("4.返回上一界面！");
     	   for(int m=1;m<=3;m++)
     	   {
@@ -268,6 +260,7 @@ public class inside extends Renew {
         }
     		
     		if(s==4){
+    			 System.out.println("您好！欢迎来到租车界面！");
     			 System.out.println("我们有货车，客车，以及皮卡供您选择");
 	    		 System.out.println("选择货车请按: 1 ");
 	    		 System.out.println("选择客车请按: 2 ");
@@ -295,8 +288,8 @@ public class inside extends Renew {
        
        
        public void test2() {    //皮卡
-    	   System.out.println("1.皮卡雪  450元/天  载货：4人 载货：2吨      空闲车数："+(f-lease));
-    	   System.out.println("2.皮卡红  500元/天  载货：4人 载货：3吨      空闲车数："+(g-lease));
+    	   System.out.println("1.皮卡雪  450元/天  载货：4人 载货：2吨      空闲车数："+f);
+    	   System.out.println("2.皮卡红  500元/天  载货：4人 载货：3吨      空闲车数："+g);
     	   System.out.println("3.返回上一界面！");
     	   for(int m=1;m<=3;m++)
     	   {   Scanner s3 = new Scanner(System.in);
@@ -380,6 +373,7 @@ public class inside extends Renew {
     	    }
     		   
     		   if(s==3){
+    			   System.out.println("您好！欢迎来到租车界面！");
     			   System.out.println("我们有货车，客车，以及皮卡供您选择");
   	    		 System.out.println("选择货车请按: 1 ");
   	    		 System.out.println("选择客车请按: 2 ");
@@ -409,14 +403,13 @@ public class inside extends Renew {
      
      
      
-     
-       package com.imooc;
+        package com.imooc;
    import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Renew {
     
-	public int age;
+	public int age=2;
 	public int s() {
     	  int money1 =400 ;
 		   System.out.println("请输入要租用的数量：");
@@ -435,9 +428,11 @@ public class Renew {
    	   System.out.println("*********************************");
    	   System.out.println("请核对账单后确定是否租用！");
    	System.out.println("确定请按：1 ; 取消请按：2 ;返回上一页请按：3 ");
-   	int age = l;
-      	return age;
+   	      int age = l; 
+      	  return age;
+      	
     }
+ 
     
     
     public void s1() {
@@ -607,6 +602,10 @@ public class Renew {
      	    		    //SimpleDateFormat里面的字母要注意大小写，大小写错误可能输出的结果会错误！
      	    	       String today1 = today.format(d);
      	    		    System.out.println(today1);
+     	    		    int a=5;
+     	    	/*	   Renew her = new Renew();
+      	    		 System.out.println(her.age);
+      	    		 a=a-her.age;  */
      	    		    
      	    		   System.out.println("继续租用请按：1 ;退出程序请按：2");
      	    		  {   User it = new User();
@@ -824,6 +823,7 @@ public class Renew {
          }
      		
      		if(s==4){
+     			 System.out.println("您好！欢迎来到租车界面！");
      			 System.out.println("我们有货车，客车，以及皮卡供您选择");
  	    		 System.out.println("选择货车请按: 1 ");
  	    		 System.out.println("选择客车请按: 2 ");
@@ -933,6 +933,7 @@ public class Renew {
  	    }
  		   
  		   if(s==3){
+ 			  System.out.println("您好！欢迎来到租车界面！");
  			   System.out.println("我们有货车，客车，以及皮卡供您选择");
 	    		 System.out.println("选择货车请按: 1 ");
 	    		 System.out.println("选择客车请按: 2 ");
