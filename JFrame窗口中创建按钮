@@ -1,0 +1,28 @@
+import javax.swing.*;
+import java.awt.*;
+public class ExGui {
+
+	private JFrame frame;
+	private JButton b1;
+	private JButton b2;
+	
+	public static void main(String[] args) {
+		ExGui that = new ExGui();
+        that.go();
+	}
+	public void go() {
+		frame = new JFrame("GUI example");
+		Container contentPane = frame.getContentPane();
+		contentPane.setLayout(new FlowLayout());
+		
+		b1 = new JButton("press me ");
+		b2 = new JButton("Dpn't press me ");
+		
+		contentPane.add(b1);
+		contentPane.add(b2);
+		
+		frame.pack();
+		frame.setVisible(true);
+	}
+
+}
