@@ -5,10 +5,10 @@ import javax.swing.border.Border;
 import java.awt.*;
 public class ExGui {
 
-	private JFrame frame;
-	private JButton b1;
-	private JButton b2;
-	private JButton b3;   //必须对要加入的按钮进行定义和封装！
+	 JFrame frame;
+	 JButton b1;
+	 JButton b2;
+	 JButton b3;   //必须对要加入的按钮进行定义和封装！
 	
 	public static void main(String[] args) {
 		ExGui that = new ExGui();
