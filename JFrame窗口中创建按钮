@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import javax.swing.border.Border;
 
@@ -16,15 +17,25 @@ public class ExGui {
 	}
 	public void go() {
 		frame = new JFrame("");   //括号内可以不填写任何内容
+		Container s = frame.getContentPane();
+		s.setLayout(new BorderLayout());
+		//创建网格模式！(想要创建什么布局管理器就在setLayou里面new 什么布局管理器)
 		
-		//创建一个FlowLayout型的布局管理器取代默认的BorderLayout布局管理器
+		
 		b1 = new JButton("press me ");   
 		b2 = new JButton("Dpn't press me ");//JButton其实就是创造一个按钮！
 		b3 = new JButton("Silly B ");
+		
+		
+		
+		
 		frame.getContentPane().add(b1,BorderLayout.EAST);//将b1放置到内容窗格里面去！
-		frame.getContentPane().add(b2,BorderLayout.WEST);
+		frame.getContentPane().add(b2,BorderLayout.SOUTH);
 		frame.getContentPane().add(b3,BorderLayout.CENTER);
-		frame.setSize(200,100);
+		
+		
+		
+		frame.setSize(300,300);
 		frame.setVisible(true); //简单来说就是用于输出的语句！
 	}
 
