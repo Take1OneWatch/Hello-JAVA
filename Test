@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
 
@@ -15,8 +16,11 @@ public class Test {
 	  JButton b2 = new JButton("Silly B");
 	  JButton b3 = new JButton("aaaaaa");
          frame.getContentPane().add(b1);
+         b1.setBackground(Color.LIGHT_GRAY);
          frame.getContentPane().add(b2);
+        b2.setBackground(Color.YELLOW);
          frame.getContentPane().add(b3);
+        b3.setBackground(Color.cyan);
          
          frame.pack();
          frame.setSize(300,200);
@@ -24,3 +28,4 @@ public class Test {
 	}
 
 }
+
