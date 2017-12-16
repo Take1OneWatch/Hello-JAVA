@@ -1,0 +1,26 @@
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Test {
+    
+	
+	public static void main(String[] args) {
+	  JFrame frame = new JFrame();
+	  Container s = frame.getContentPane();
+	  s.setLayout(new FlowLayout());
+	  JButton b1 = new JButton("caonima");
+	  JButton b2 = new JButton("Silly B");
+	  JButton b3 = new JButton("aaaaaa");
+         frame.getContentPane().add(b1);
+         frame.getContentPane().add(b2);
+         frame.getContentPane().add(b3);
+         
+         frame.pack();
+         frame.setSize(300,200);
+         frame.setVisible(true);
+	}
+
+}
