@@ -1,0 +1,59 @@
+import java.awt.*;
+import java.awt.event.MouseEvent;
+
+import javax.swing.*;
+import javax.swing.event.AncestorListener;
+
+public class Test {
+    
+	public static void main(String[] args) {
+	  JFrame frame = new JFrame();
+	  Container s = frame.getContentPane();
+	
+	 JPanel q1 = new JPanel();
+	 
+	 q1.setLayout(new BoxLayout(q1, BoxLayout.Y_AXIS));
+	 
+	
+	  q1.add(new JLabel("aaaaaaa"));
+	  q1.add(new JLabel("bbbbbbb"));
+	  q1.add(new JLabel("ccccccc"));
+	  q1.add(new JLabel("ddddddd"));
+	  
+	  s.add(q1,BorderLayout.NORTH);
+	  
+	 //  JPanel  q2 = new JPanel();
+	//	 q2.setLayout(new BoxLayout(q2, BoxLayout.X_AXIS));
+	 JButton q2 = new JButton("yes");
+		 
+		 q2.addActionListener(new AA());
+		 
+		  
+		  s.add(q2,BorderLayout.WEST);
+		  
+    
+         frame.pack();
+         frame.setSize(300,200);
+         frame.setVisible(true);
+	}
+	
+	
+}
+
+
+
+
+
+
+import java.awt.event.*;
+public class AA implements ActionListener{
+
+	public void actionPerformed(ActionEvent e ) {
+		System.out.println("1111111111111111");
+	}
+
+
+}
+
+
+//目前只是在Console里面实现输出！
