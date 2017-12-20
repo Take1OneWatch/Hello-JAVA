@@ -1,43 +1,51 @@
-import java.awt.*;
-import java.awt.event.MouseEvent;
+package com.imooc;
 
-import javax.swing.*;
-import javax.swing.event.AncestorListener;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.FlowLayout;
 
-public class Test {
-    
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class test1 {
+
 	public static void main(String[] args) {
-	  JFrame frame = new JFrame();
-	  Container s = frame.getContentPane();
-	
-	 JPanel q1 = new JPanel();
-	 
-	 q1.setLayout(new BoxLayout(q1, BoxLayout.Y_AXIS));
-	 
-	
-	  q1.add(new JLabel("aaaaaaa"));
-	  q1.add(new JLabel("bbbbbbb"));
-	  q1.add(new JLabel("ccccccc"));
-	  q1.add(new JLabel("ddddddd"));
-	  
-	  s.add(q1,BorderLayout.NORTH);
-	  
-	 //  JPanel  q2 = new JPanel();
-	//	 q2.setLayout(new BoxLayout(q2, BoxLayout.X_AXIS));
-	 JButton q2 = new JButton("yes");
-		 
-		 q2.addActionListener(new AA());
-		 
-		  
-		  s.add(q2,BorderLayout.WEST);
-		  
-    
-         frame.pack();
-         frame.setSize(300,200);
-         frame.setVisible(true);
+		JFrame frame = new JFrame();
+		Container s = frame.getContentPane();
+		s.setLayout(new FlowLayout());
+		s.setBackground(Color.BLUE);
+		JPanel q1 = new JPanel();
+        JButton q11 = new JButton("查询教师信息");
+        q1.add(q11);
+        q1.setBackground(Color.WHITE);
+     q11.addActionListener(new AA());
+     JPanel q2 = new JPanel();
+        JButton q22 = new JButton("增加教师信息");
+        q2.add(q22);
+        q2.setBackground(Color.green);
+     //   q2.addActionListener(new AA());
+        JPanel q3 = new JPanel();
+        JButton q33 = new JButton("删除教师信息");
+        q3.add(q33);
+        q3.setBackground(Color.red);
+     //   q2.addActionListener(new AA());
+        JPanel q4 = new JPanel();
+        JButton q44 = new JButton("修改教师信息");
+        q4.add(q44);
+        q4.setBackground(Color.YELLOW);
+     //   q2.addActionListener(new AA());
+        s.add(q1,BorderLayout.CENTER);
+        s.add(q2,BorderLayout.CENTER);
+        s.add(q3,BorderLayout.CENTER);
+        s.add(q4,BorderLayout.CENTER);
+        
+        frame.pack();
+        frame.setSize(300,200);
+        frame.setVisible(true);
 	}
-	
-	
+
 }
 
 
@@ -45,15 +53,47 @@ public class Test {
 
 
 
+
+
+package com.imooc;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
 import java.awt.event.*;
+
+import javax.swing.BoxLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 public class AA implements ActionListener{
 
 	public void actionPerformed(ActionEvent e ) {
-		System.out.println("1111111111111111");
+		JFrame frame = new JFrame();
+		Container s = frame.getContentPane();
+		s.setLayout(new BoxLayout(s,BoxLayout.Y_AXIS));
+		s.setBackground(Color.YELLOW);
+		JLabel q1 = new JLabel("工号：1111");
+		JLabel q2 = new JLabel("姓名：xxx");
+		JLabel q3 = new JLabel("年龄：20");
+		JLabel q4 = new JLabel("职称：xx");
+		JLabel q5 = new JLabel("所在系：计算机科学与工程系");
+		JLabel q6 = new JLabel("教授的主要课程：Linux");
+		JLabel q7 = new JLabel("联系电话：15295881226");
+		JLabel q8 = new JLabel("联系地址：天和苑2号楼114");
+		
+		
+		
+		s.add(q1,BorderLayout.CENTER);
+		s.add(q2,BorderLayout.CENTER);
+		s.add(q3,BorderLayout.CENTER);
+		s.add(q4,BorderLayout.CENTER);
+		s.add(q5,BorderLayout.CENTER);
+		s.add(q6,BorderLayout.CENTER);
+		s.add(q7,BorderLayout.CENTER);
+		s.add(q8,BorderLayout.CENTER);
+		
+		frame.pack();
+		frame.setSize(300,200);
+		frame.setVisible(true);
+		
 	}
-
-
-}
-
-
-//目前只是在Console里面实现输出！
