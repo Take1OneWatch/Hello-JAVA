@@ -18,12 +18,34 @@ public class Test1 extends JFrame implements ActionListener {
 	 }
 	 public void actionPerformed(ActionEvent e) {
 		 setVisible(false);
-		// new Test2().setVisible(true);
+		 new Test2().setVisible(true);
 		 dispose();
 	 }
 	 public static void main(String[] args) {
 	        new Test1().setVisible(true);//创建登录窗口,并可见
 	    }
 }
-      
+    
 	
+
+
+
+import java.awt.*;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+public class Test2 extends JFrame{
+	JLabel jl;
+	public Test2(){
+		  setTitle("主窗口");//标题
+	      setSize(300, 260);//大小
+	      setLocationRelativeTo(null);//居中
+	      JPanel jp1 = new JPanel();
+	      jp1.setLayout(new BorderLayout());
+	      jl=new JLabel("1111111");
+	      jp1.add(jl);
+		  add(jp1);
+
+	}
+}
