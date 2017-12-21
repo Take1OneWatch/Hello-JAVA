@@ -54,7 +54,7 @@ public class Test1 extends JFrame implements ActionListener {
 		 }
 		 if (cmd.equals("增加教师信息")) {
 			 setVisible(false);// 本窗口隐藏,
-            // new Test2().setVisible(true);// 新窗口显示
+             new Test7().setVisible(true);// 新窗口显示
              dispose();//本窗口销毁,释放内存资源
 		 }
     		 if (cmd.equals("删除教师信息")) {
@@ -83,7 +83,6 @@ public class Test1 extends JFrame implements ActionListener {
 
 
 
-	
 	import java.awt.*;
 import java.awt.event.*;
 
@@ -112,9 +111,21 @@ public class Test2 extends JFrame implements ActionListener{
 		  
 		  
 		  jb2=new JButton(" 返回");
+		  jb2.setBackground(Color.green);
 	      jb2.addActionListener(this);// 添加动作响应器
 	      jp1.add(jb2);
+	      add(jb2,BorderLayout.SOUTH);
 	      add(jp1);
+	      jb2.addActionListener(new ActionListener() {
+	            public void actionPerformed(ActionEvent e) {
+	            	 setVisible(false);// 本窗口隐藏,
+	                 new Test1().setVisible(true);// 新窗口显示
+	                 dispose();//本窗口销毁,释放内存资源
+	            }
+	        });
+	      
+	      
+	      
 
 	}
 	 public void actionPerformed(ActionEvent e) {
@@ -129,17 +140,14 @@ public class Test2 extends JFrame implements ActionListener{
              new Test4().setVisible(true);// 新窗口显示
              dispose();//本窗口销毁,释放内存资源
 		 }
-		 if (cmd.equals("返回")) {
-			 setVisible(false);// 本窗口隐藏,
-             new Test1().setVisible(true);// 新窗口显示
-             dispose();//本窗口销毁,释放内存资源
-		 }
+		
 	 }
 	 public static void main(String[] args) {
 	        new Test1().setVisible(true);//创建登录窗口,并可见
 	    }
 	 
 }
+
 
 
 
@@ -192,6 +200,7 @@ public class Test3 extends JFrame implements ActionListener {
 
 
 
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -230,13 +239,13 @@ public class Test4 extends JFrame implements ActionListener  {
 		 }
 	 }
    }
-
-
-
-
-
-
-import java.awt.*;
+   
+   
+   
+   
+   
+   
+   import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -327,6 +336,7 @@ public class Test5 extends JFrame implements ActionListener{
 
 
 
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -341,6 +351,7 @@ public class Test6 extends JFrame {
 
         JPanel jp = new JPanel();
         JLabel jl1 = new JLabel("Warn:一旦删除无法回复，请谨慎操作");
+        jl1.setBackground(Color.yellow);
         jp.add(jl1);
         add(jp, BorderLayout.CENTER);
         
@@ -370,6 +381,7 @@ public class Test6 extends JFrame {
         
         
         JButton it2 = new JButton("返回主菜单");
+        it2.setBackground(Color.green);
         jp.add(it2);
         add(it2,BorderLayout.SOUTH);
         it2.addActionListener(new ActionListener() {
@@ -382,5 +394,131 @@ public class Test6 extends JFrame {
         
     }
    
+	
+}
+
+
+
+
+
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Test7 extends JFrame implements ActionListener{
+	 JButton jb1, jb2;//按钮
+	    JLabel jl1,jl2,jl3,jl4,jl5,jl6,jl7,jl8,jl9,jl10;
+	    JTextField write,write2,write3,write4,write5,write6,write7;//文本框
+	    JPasswordField mi;//密码框
+	    public Test7(){
+	    	setTitle("增加教师信息框");//标题
+		    setSize(500, 500);//大小
+		    setLocationRelativeTo(null);//居中
+		    JPanel jp = new JPanel();
+		  
+		    jp.setLayout(new GridLayout(10, 1));
+		    
+		    
+		    JPanel jp1 = new JPanel();
+		    jl3=new JLabel("请在下面输入教师的信息！");
+		    jp1.add(jl3);
+		    jp.add(jp1);
+		    
+		    
+		    JPanel jp2 = new JPanel();
+		    jl1=new JLabel("工号 :");
+		    jp2.add(jl1);
+		    write = new JTextField(12);
+		    jp2.add(write);
+		    jp.add(jp2);
+		    
+		    
+		    JPanel jp6 = new JPanel();
+		    jl3=new JLabel("年龄 :");
+		    jp6.add(jl3);
+		    write3 = new JTextField(12);
+		    jp6.add(write3);
+		    jp.add(jp6);
+		    
+		    
+		    
+		    
+		    JPanel jp3 = new JPanel();
+		    jl2=new JLabel("职称 :");
+		    jp3.add(jl2);
+		    mi = new JPasswordField(12);
+		    jp3.add(mi);
+		    jp.add(jp3);
+		    
+		    
+	    
+		    
+		 
+		    JPanel jp7 = new JPanel();
+		    jl4=new JLabel("所在系:");
+		    jp7.add(jl4);
+		    write4 = new JTextField(12);
+		    jp7.add(write4);
+		    jp.add(jp7);
+		    
+		    
+		    JPanel jp8 = new JPanel();
+		    jl5=new JLabel("教授的主要课程:");
+		    jp8.add(jl5);
+		    write5 = new JTextField(12);
+		    jp8.add(write5);
+		    jp.add(jp8);
+		    
+		    
+		    JPanel jp9 = new JPanel();
+		    jl6=new JLabel("联系电话:");
+		    jp9.add(jl6);
+		    write6 = new JTextField(12);
+		    jp9.add(write6);
+		    jp.add(jp9);
+		    
+		    
+		    
+		    JPanel jp10 = new JPanel();
+		    jl7=new JLabel("联系电话:");
+		    jp10.add(jl7);
+		    write7 = new JTextField(12);
+		    jp10.add(write7);
+		    jp.add(jp10);
+		    
+		    
+		
+		    
+		    
+		    JPanel jp4 = new JPanel();
+		    jb1=new JButton("增加");
+		    jb1.addActionListener(this);// 添加动作响应器
+		    jp4.add(jb1);
+		    jp.add(jp4);
+		    
+		    
+		    
+		    JPanel jp5 = new JPanel();
+		    jl4=new JLabel("");
+		    jp5.add(jl4);
+		    jp.add(jp5);
+		    add(jp);   
+		    
+		    
+		    
+	    }
+	     
+	
+	
+	 public void actionPerformed(ActionEvent e) {
+		 
+	 }
+	
+	 public static void main(String[] args) {
+	        new Test7().setVisible(true);//创建登录窗口,并可见
+	    }
 	
 }
