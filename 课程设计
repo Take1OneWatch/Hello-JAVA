@@ -53,11 +53,16 @@ public class Test1 extends JFrame implements ActionListener {
                dispose();//本窗口销毁,释放内存资源
 		 }
 		 if (cmd.equals("增加教师信息")) {
-			 
+			 setVisible(false);// 本窗口隐藏,
+             new Test2().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
 		 }
-         if (cmd.equals("删除教师信息")) {
-			 
-		 }
+    		 if (cmd.equals("删除教师信息")) {
+    			 setVisible(false);// 本窗口隐藏,
+                 new Test5().setVisible(true);// 新窗口显示
+                 dispose();//本窗口销毁,释放内存资源
+    		 }
+		 
          if (cmd.equals("修改教师信息")) {
 			 
 		 }
@@ -77,20 +82,18 @@ public class Test1 extends JFrame implements ActionListener {
 	
 
 
-
-	
-	import java.awt.*;
+import java.awt.*;
 import java.awt.event.*;
 
 
 import javax.swing.*;
 
 public class Test2 extends JFrame implements ActionListener{
-	JButton jb,jb1;
+	JButton jb,jb1,jb2;
 	JTextField write,write1;//文本框
 	public Test2(){
 		  setTitle("查询窗口");//标题
-	      setSize(300, 150);//大小
+	      setSize(250, 150);//大小
 	      setLocationRelativeTo(null);//居中
 	      JPanel jp1 = new JPanel();
 	      jp1.setLayout(new FlowLayout());
@@ -98,31 +101,49 @@ public class Test2 extends JFrame implements ActionListener{
 	      jb=new JButton("按工号查询");
 	       jp1.add(jb);
 	       jb.addActionListener(this);
+	       
           jb1=new JButton("按姓名查询");
-        //  jb1.addActionListener(this);
+          jb1.addActionListener(this);
 	     
 	      jp1.add(jb1);
 		  add(jp1);
+		  
+		  
+		  jb2=new JButton(" 返回");
+	      jb2.addActionListener(this);// 添加动作响应器
+	      jp1.add(jb2);
+	      add(jp1);
 
 	}
 	 public void actionPerformed(ActionEvent e) {
-		 setVisible(false);
-		 new Test3().setVisible(true);
-		 dispose();
+		 String cmd = e.getActionCommand();
+		 if (cmd.equals("按工号查询")) {
+			 setVisible(false);// 本窗口隐藏,
+             new Test3().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+		 }
+		 if (cmd.equals("按姓名查询")) {
+			 setVisible(false);// 本窗口隐藏,
+             new Test4().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+		 }
+		 if (cmd.equals("返回")) {
+			 setVisible(false);// 本窗口隐藏,
+             new Test1().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+		 }
 	 }
 	 public static void main(String[] args) {
 	        new Test1().setVisible(true);//创建登录窗口,并可见
 	    }
 	 
 }
+	
 
-
-
-
-
-
-
-import java.awt.*;
+	
+	
+	
+	import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -163,4 +184,150 @@ public class Test3 extends JFrame implements ActionListener {
 		}
 	}
 	
+}
+
+
+
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class Test4 extends JFrame implements ActionListener  {
+	JTextField write,write1;//文本框
+	JLabel jl1,jl2,jl3;
+	JButton jb,jb1;
+	public Test4(){
+		 setTitle("查询窗口");//标题
+	      setSize(300, 150);//大小
+	      setLocationRelativeTo(null);//居中
+	      JPanel jp = new JPanel();
+	      jp.setBackground(Color.CYAN);
+	      jp.setLayout(new FlowLayout());
+	      jl1= new JLabel("姓名:");
+	      write = new JTextField(12);
+	      jp.add(jl1);
+	      jp.add(write);
+
+	      jb=new JButton("查询");
+	      jp.add(jb);
+	      jb1=new JButton("返回");
+	      jb1.addActionListener(this);// 添加动作响应器
+	      jp.add(jb1);
+	      add(jp); 
+	     }
+	 public void actionPerformed(ActionEvent e) {
+		 String cmd = e.getActionCommand();
+		 if (cmd.equals("返回")) {
+			 setVisible(false);// 本窗口隐藏,
+             new Test2().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+		 }
+	 }
+   }
+
+
+
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class Test5 extends JFrame implements ActionListener{
+	    JButton jb1, jb2;//按钮
+	    JLabel jl1,jl2,jl3,jl4;
+	    JTextField write;//文本框
+	    JPasswordField mi;//密码框
+	    public Test5(){
+	    	setTitle("登录窗");//标题
+		    setSize(300, 300);//大小
+		    setLocationRelativeTo(null);//居中
+		    JPanel jp = new JPanel();
+		  
+		    jp.setLayout(new GridLayout(5, 1));
+		    
+		    
+		    JPanel jp1 = new JPanel();
+		    jl3=new JLabel("Warn:需获得管理员权限才能删除数据！！！");
+		    jp1.add(jl3);
+		    jp.add(jp1);
+		    
+		    
+		    JPanel jp2 = new JPanel();
+		    jl1=new JLabel("账号:");
+		    jp2.add(jl1);
+		    write = new JTextField(12);
+		    jp2.add(write);
+		    jp.add(jp2);
+		    
+		    
+		    
+		    JPanel jp3 = new JPanel();
+		    jl2=new JLabel("密码:");
+		    jp3.add(jl2);
+		    mi = new JPasswordField(12);
+		    jp3.add(mi);
+		    jp.add(jp3);
+		    
+		    
+		    
+		    JPanel jp4 = new JPanel();
+		    jb1=new JButton("登录");
+		    jp4.add(jb1);
+		    jb2=new JButton("重置");
+		    jp4.add(jb2);
+		    jp.add(jp4);
+		    
+		    
+		    
+		    JPanel jp5 = new JPanel();
+		    jl4=new JLabel("提示:账号 linsir 密码 123456");
+		    jp5.add(jl4);
+		    jp.add(jp5);
+		    
+		    add(jp);
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+	    }
+	    public void actionPerformed(ActionEvent e) {
+	    	String cmd = e.getActionCommand();
+	    	if (cmd.equals("登陆")) {
+	    		String id = jl1.getText();// 取得用户名
+	            String key = new String(mi.getPassword());
+	            if (id.equals("linsir") && key.equals("123456")) {
+	            	 setVisible(false);// 本窗口隐藏,
+	                // new Test2().setVisible(true);// 新窗口显示
+	                 dispose();//本窗口销毁,释放内存资源
+	            } else {
+	                //如果登录失败  弹出提示
+	                JOptionPane.showMessageDialog(this, "用户名或者密码错误.", "通知", JOptionPane.ERROR_MESSAGE);
+	                clearText();//清空文本框 密码框的输入
+	            }
+	    	}else if (cmd.equals("重置")) {
+	            clearText();
+	        }
+	
+	    }
+	    private void clearText() {//清空文本框, 密码框的输入
+	        jl1.setText("");
+	        mi.setText("");
+	    }
+	    
+	    public static void main(String[] args) {
+	        new Test5().setVisible(true);//创建登录窗口,并可见
+	    }
+		
 }
