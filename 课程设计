@@ -83,9 +83,8 @@ public class Test1 extends JFrame implements ActionListener {
 
 
 
-
-
-import java.awt.*;
+	
+	import java.awt.*;
 import java.awt.event.*;
 
 
@@ -193,9 +192,6 @@ public class Test3 extends JFrame implements ActionListener {
 
 
 
-
-
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -234,8 +230,6 @@ public class Test4 extends JFrame implements ActionListener  {
 		 }
 	 }
    }
-
-
 
 
 
@@ -311,7 +305,7 @@ public class Test5 extends JFrame implements ActionListener{
 	              if (id.equals("linsir") && key.equals("123456")) {// 判断是否登录成功
 	                  // 如果登录成功
 	                  setVisible(false);// 本窗口隐藏,
-	                //  new MainFrame(id).setVisible(true);// 新窗口显示
+	                  new Test6(id).setVisible(true);// 新窗口显示
 	                  dispose();//本窗口销毁,释放内存资源
 	            } else {
 	                //如果登录失败  弹出提示
@@ -333,43 +327,60 @@ public class Test5 extends JFrame implements ActionListener{
 
 
 
-
-
-
 import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
-public class Test6 extends JFrame implements ActionListener{
-	JButton jb1, jb2,jb3;//按钮
-    JLabel jl1,jl2,jl3,jl4;
-    JTextField write;//文本框
+public class Test6 extends JFrame {
+	
     public Test6(String name) {
-    	 setTitle("查询窗口");//标题
-	      setSize(300, 150);//大小
-	      setLocationRelativeTo(null);//居中
-		    JPanel jp = new JPanel();
-		    jp.setLayout(new GridLayout(2, 1));
-		    
-		    JPanel jp1 = new JPanel();
-		    jb1=new JButton("按工号删除");
-		    jp1.add(jb1);
-		    jb2=new JButton("按姓名删除");
-		    jp1.add(jb2);
-		    jp.add(jp1);
-		    JTextArea jta = new JTextArea();
-		    JScrollPane jsp = new JScrollPane(jta, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		       
-		    JPanel jp2 = new JPanel();
-		 //   jb3=new JButton("");
-    	
-    	
+    	setTitle("删除窗口");//标题
+        setSize(300, 180);//大小
+        setLocationRelativeTo(null);//居中
+
+        JPanel jp = new JPanel();
+        JLabel jl1 = new JLabel("Warn:一旦删除无法回复，请谨慎操作");
+        jp.add(jl1);
+        add(jp, BorderLayout.CENTER);
+        
+        JButton it = new JButton("按工号删除");
+        jp.add(it);
+        it.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	 setVisible(false);// 本窗口隐藏,
+                 new Test1().setVisible(true);// 新窗口显示
+                 dispose();//本窗口销毁,释放内存资源
+            }
+        });
+   
+       
+        JButton it1 = new JButton("按姓名删除");
+        jp.add(it1);
+        it1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	 setVisible(false);// 本窗口隐藏,
+                 new Test1().setVisible(true);// 新窗口显示
+                 dispose();//本窗口销毁,释放内存资源
+            }
+        });
+        
+        
+        
+        
+        
+        JButton it2 = new JButton("返回主菜单");
+        jp.add(it2);
+        add(it2,BorderLayout.SOUTH);
+        it2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	 setVisible(false);// 本窗口隐藏,
+                 new Test1().setVisible(true);// 新窗口显示
+                 dispose();//本窗口销毁,释放内存资源
+            }
+        });
+        
     }
-    public Test6() {
-		
-	}
-	public void actionPerformed(ActionEvent e) {
-    	new Test6().setVisible(true);//创建登录窗口,并可见
-    }
+   
+	
 }
