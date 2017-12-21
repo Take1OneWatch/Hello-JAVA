@@ -43,26 +43,90 @@ public class Test1 extends JFrame implements ActionListener {
 	        new Test1().setVisible(true);//创建登录窗口,并可见
 	    }
 }
-   
-   
-   
-   
-   import java.awt.*;
+      
+      
+      
+      
+      
+      
+      
+      
+      import java.awt.*;
+import java.awt.event.*;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-public class Test2 extends JFrame{
-	JLabel jl;
+
+import javax.swing.*;
+
+public class Test2 extends JFrame implements ActionListener{
+	JButton jb,jb1;
+	JTextField write,write1;//文本框
 	public Test2(){
-		  setTitle("主窗口");//标题
-	      setSize(300, 260);//大小
+		  setTitle("查询窗口");//标题
+	      setSize(300, 150);//大小
 	      setLocationRelativeTo(null);//居中
 	      JPanel jp1 = new JPanel();
-	      jp1.setLayout(new BorderLayout());
-	      jl=new JLabel("1111111");
-	      jp1.add(jl);
+	      jp1.setLayout(new FlowLayout());
+	      
+	      jb=new JButton("按工号查询");
+	       jp1.add(jb);
+	       jb.addActionListener(this);
+          jb1=new JButton("按姓名查询");
+        //  jb1.addActionListener(this);
+	     
+	      jp1.add(jb1);
 		  add(jp1);
 
 	}
+	 public void actionPerformed(ActionEvent e) {
+		 setVisible(false);
+		 new Test3().setVisible(true);
+		 dispose();
+	 }
+	 public static void main(String[] args) {
+	        new Test1().setVisible(true);//创建登录窗口,并可见
+	    }
+	 
+}
+
+
+
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+
+import javax.swing.*;
+
+
+public class Test3 extends JFrame implements ActionListener {
+	JTextField write,write1;//文本框
+	JLabel jl1,jl2,jl3;
+	JButton jb;
+	public Test3(){
+		 setTitle("查询窗口");//标题
+	      setSize(300, 150);//大小
+	      setLocationRelativeTo(null);//居中
+	      JPanel jp = new JPanel();
+	      jp.setBackground(Color.CYAN);
+	      jp.setLayout(new FlowLayout());
+	      jl1= new JLabel("工号:");
+	      write = new JTextField(12);
+	      jp.add(jl1);
+	      jp.add(write);
+	   
+	      jb=new JButton("查询");
+	      jp.add(jb);
+	      
+	      add(jp);
+	    //  add(jp1);
+	      
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		 setVisible(false);
+		 new Test3().setVisible(true);
+		 dispose();
+	}
+	
 }
