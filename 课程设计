@@ -1,145 +1,68 @@
-package com.imooc;
-import java.awt.*;
-import javax.swing.*;
-
-
-public class test1 {
-
-	public static void main(String[] args) {
-		JFrame frame = new JFrame();
-		Container s = frame.getContentPane();
-		s.setLayout(new FlowLayout());
-		s.setBackground(Color.BLUE);
-		JPanel q1 = new JPanel();
-        JButton q11 = new JButton("查询教师信息");
-        q1.add(q11);
-        q1.setBackground(Color.WHITE);
-     q11.addActionListener(new AA());
-     JPanel q2 = new JPanel();
-        JButton q22 = new JButton("增加教师信息");
-        q2.add(q22);
-        q2.setBackground(Color.green);
-     //   q2.addActionListener(new AA());
-        JPanel q3 = new JPanel();
-        JButton q33 = new JButton("删除教师信息");
-        q3.add(q33);
-        q3.setBackground(Color.red);
-     //   q2.addActionListener(new AA());
-        JPanel q4 = new JPanel();
-        JButton q44 = new JButton("修改教师信息");
-        q4.add(q44);
-        q4.setBackground(Color.YELLOW);
-     //   q2.addActionListener(new AA());
-        s.add(q1,BorderLayout.CENTER);
-        s.add(q2,BorderLayout.CENTER);
-        s.add(q3,BorderLayout.CENTER);
-        s.add(q4,BorderLayout.CENTER);
-        
-        frame.pack();
-        frame.setSize(300,200);
-        frame.setVisible(true);
-	}
-
-}
-
-
-
-
-
-
-
-package com.imooc;
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-public class AA implements ActionListener{
 
-	public void actionPerformed(ActionEvent e ) {
-		JFrame frame = new JFrame();
-		Container s = frame.getContentPane();
-		s.setLayout(new BoxLayout(s,BoxLayout.Y_AXIS));
-		s.setBackground(Color.YELLOW);
-		JLabel q1 = new JLabel("工号：1111");
-		JLabel q2 = new JLabel("姓名：xxx");
-		JLabel q3 = new JLabel("年龄：20");
-		JLabel q4 = new JLabel("职称：xx");
-		JLabel q5 = new JLabel("所在系：计算机科学与工程系");
-		JLabel q6 = new JLabel("教授的主要课程：Linux");
-		JLabel q7 = new JLabel("联系电话：15295881226");
-		JLabel q8 = new JLabel("联系地址：天和苑2号楼114");
-		JButton it = new JButton("确定");
-		it.addActionListener(new AAA());
-		
-		s.add(q1,BorderLayout.CENTER);
-		s.add(q2,BorderLayout.CENTER);
-		s.add(q3,BorderLayout.CENTER);
-		s.add(q4,BorderLayout.CENTER);
-		s.add(q5,BorderLayout.CENTER);
-		s.add(q6,BorderLayout.CENTER);
-		s.add(q7,BorderLayout.CENTER);
-		s.add(q8,BorderLayout.CENTER);
-		s.add(it,BorderLayout.CENTER );
-		
-	
-		frame.setSize(300,200);
-		frame.setVisible(true);
-		
-	}
+public class Test1 extends JFrame implements ActionListener {
+	 JButton jb1,jb2,jb3,jb4;//按钮
+	 public Test1() {
+		 setTitle("教师信息管理");
+		 setSize(300, 180);
+		 setLocationRelativeTo(null);//设置窗口居中
+		 setLayout(new BorderLayout());// 设置布局流式布局
+		 JPanel jp1 = new JPanel();
+		 jp1.setBackground(Color.CYAN);
+		 jp1.setLayout(new FlowLayout());
+		 jb1 = new JButton("查询教师信息");
+		 jb1.setBackground(Color.WHITE);
+		 jb1.addActionListener(this);// 添加动作响应器
+		 jp1.add(jb1);
+		 add(jp1);
+		 jb2 = new JButton("增加教师信息");
+		 jb2.setBackground(Color.GREEN);
+		 jb2.addActionListener(this);// 添加动作响应器
+		 jp1.add(jb2);
+		 add(jp1);
+		 jb3 = new JButton("删除教师信息");
+		 jb3.setBackground(Color.red);
+		 jb3.addActionListener(this);// 添加动作响应器
+		 jp1.add(jb3);
+		 add(jp1);
+		 jb4 = new JButton("修改教师信息");
+		 jb4.setBackground(Color.YELLOW);
+		 jb4.addActionListener(this);// 添加动作响应器
+		 jp1.add(jb4);
+		 add(jp1);
+		 
+	 }
+	 public void actionPerformed(ActionEvent e) {
+		 setVisible(false);
+		 new Test2().setVisible(true);
+		 dispose();
+	 }
+	 public static void main(String[] args) {
+	        new Test1().setVisible(true);//创建登录窗口,并可见
+	    }
 }
+   
+   
+   
+   
+   import java.awt.*;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+public class Test2 extends JFrame{
+	JLabel jl;
+	public Test2(){
+		  setTitle("主窗口");//标题
+	      setSize(300, 260);//大小
+	      setLocationRelativeTo(null);//居中
+	      JPanel jp1 = new JPanel();
+	      jp1.setLayout(new BorderLayout());
+	      jl=new JLabel("1111111");
+	      jp1.add(jl);
+		  add(jp1);
 
-
-
-
-
-
-package com.imooc;
-import java.awt.*;
-import java.awt.event.*;
-
-import javax.swing.*;
-class AAA implements ActionListener {
-	
-	public static void main(String[] args) {
-		
 	}
-
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		JFrame frame = new JFrame();
-		Container s = frame.getContentPane();
-		s.setLayout(new FlowLayout());
-		s.setBackground(Color.BLUE);
-		JPanel q1 = new JPanel();
-        JButton q11 = new JButton("查询教师信息");
-        q1.add(q11);
-        q1.setBackground(Color.WHITE);
-     q11.addActionListener(new AA());
-     JPanel q2 = new JPanel();
-        JButton q22 = new JButton("增加教师信息");
-        q2.add(q22);
-        q2.setBackground(Color.green);
-     //   q2.addActionListener(new AA());
-        JPanel q3 = new JPanel();
-        JButton q33 = new JButton("删除教师信息");
-        q3.add(q33);
-        q3.setBackground(Color.red);
-     //   q2.addActionListener(new AA());
-        JPanel q4 = new JPanel();
-        JButton q44 = new JButton("修改教师信息");
-        q4.add(q44);
-        q4.setBackground(Color.YELLOW);
-     //   q2.addActionListener(new AA());
-        s.add(q1,BorderLayout.CENTER);
-        s.add(q2,BorderLayout.CENTER);
-        s.add(q3,BorderLayout.CENTER);
-        s.add(q4,BorderLayout.CENTER);
-        
-        frame.pack();
-        frame.setSize(300,200);
-        frame.setVisible(true);
-		
-	}
-
 }
