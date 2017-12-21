@@ -3,7 +3,8 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class Test1 extends JFrame implements ActionListener {
-	 JButton jb1,jb2,jb3,jb4;//按钮
+	 JButton jb1,jb2,jb3,jb4,jb5;//按钮
+	 JLabel jl;
 	 public Test1() {
 		 setTitle("教师信息管理");
 		 setSize(300, 180);
@@ -12,6 +13,9 @@ public class Test1 extends JFrame implements ActionListener {
 		 JPanel jp1 = new JPanel();
 		 jp1.setBackground(Color.CYAN);
 		 jp1.setLayout(new FlowLayout());
+		 jl=new JLabel("    欢迎来到教师信息管理系统");
+		 jp1.add(jl);
+		 add(jp1);
 		 jb1 = new JButton("查询教师信息");
 		 jb1.setBackground(Color.WHITE);
 		 jb1.addActionListener(this);// 添加动作响应器
@@ -33,25 +37,49 @@ public class Test1 extends JFrame implements ActionListener {
 		 jp1.add(jb4);
 		 add(jp1);
 		 
+		 jb5=new JButton("退出");
+		 jb5.setBackground(Color.WHITE);
+		 jb5.addActionListener(this);
+		 jp1.add(jb5);
+		 add(jp1);
+		 
+		 
 	 }
 	 public void actionPerformed(ActionEvent e) {
-		 setVisible(false);
-		 new Test2().setVisible(true);
-		 dispose();
+		 String cmd = e.getActionCommand();
+		 if (cmd.equals("查询教师信息")) {
+			   setVisible(false);// 本窗口隐藏,
+               new Test2().setVisible(true);// 新窗口显示
+               dispose();//本窗口销毁,释放内存资源
+		 }
+		 if (cmd.equals("增加教师信息")) {
+			 
+		 }
+         if (cmd.equals("删除教师信息")) {
+			 
+		 }
+         if (cmd.equals("修改教师信息")) {
+			 
+		 }
+         
+		 if (cmd.equals("退出")) {
+			 setVisible(false);// 本窗口隐藏
+			 dispose();//本窗口销毁,释放内存资源
+		 }
+		 
 	 }
 	 public static void main(String[] args) {
 	        new Test1().setVisible(true);//创建登录窗口,并可见
 	    }
 }
       
-      
-      
-      
-      
-      
-      
-      
-      import java.awt.*;
+		
+	
+
+
+
+	
+	import java.awt.*;
 import java.awt.event.*;
 
 
@@ -93,6 +121,7 @@ public class Test2 extends JFrame implements ActionListener{
 
 
 
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -102,7 +131,7 @@ import javax.swing.*;
 public class Test3 extends JFrame implements ActionListener {
 	JTextField write,write1;//文本框
 	JLabel jl1,jl2,jl3;
-	JButton jb;
+	JButton jb,jb1;
 	public Test3(){
 		 setTitle("查询窗口");//标题
 	      setSize(300, 150);//大小
@@ -117,16 +146,21 @@ public class Test3 extends JFrame implements ActionListener {
 	   
 	      jb=new JButton("查询");
 	      jp.add(jb);
-	      
+	      jb1=new JButton("返回");
+	      jb1.addActionListener(this);// 添加动作响应器
+	      jp.add(jb1);
 	      add(jp);
 	    //  add(jp1);
 	      
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		 setVisible(false);
-		 new Test3().setVisible(true);
-		 dispose();
+		String cmd = e.getActionCommand();
+		if (cmd.equals("返回")) {
+			 setVisible(false);// 本窗口隐藏,
+             new Test2().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+		}
 	}
 	
 }
