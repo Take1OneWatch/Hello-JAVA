@@ -352,13 +352,13 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
-public class Test6 extends JFrame {
+public class Test6 extends JFrame implements ActionListener{
 	
     public Test6(String name) {
     	setTitle("删除窗口");//标题
         setSize(300, 180);//大小
         setLocationRelativeTo(null);//居中
-
+       
         JPanel jp = new JPanel();
         JLabel jl1 = new JLabel("Warn:一旦删除无法回复，请谨慎操作");
         jl1.setBackground(Color.yellow);
@@ -370,7 +370,7 @@ public class Test6 extends JFrame {
         it.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	 setVisible(false);// 本窗口隐藏,
-                 new Test1().setVisible(true);// 新窗口显示
+                 new Test11().setVisible(true);// 新窗口显示
                  dispose();//本窗口销毁,释放内存资源
             }
         });
@@ -381,7 +381,7 @@ public class Test6 extends JFrame {
         it1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	 setVisible(false);// 本窗口隐藏,
-                 new Test1().setVisible(true);// 新窗口显示
+                 new Test12().setVisible(true);// 新窗口显示
                  dispose();//本窗口销毁,释放内存资源
             }
         });
@@ -402,6 +402,16 @@ public class Test6 extends JFrame {
             }
         });
         
+    }
+    
+    public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+    
+    
+    public static void main(String[] args) {
+        new Test1().setVisible(true);//创建登录窗口,并可见
     }
    
 	
@@ -737,7 +747,7 @@ public class Test11 extends JFrame implements ActionListener{
 		String cmd = e.getActionCommand();
 		if (cmd.equals("返回")) {
 			 setVisible(false);// 本窗口隐藏,
-             new Test10().setVisible(true);// 新窗口显示
+             new Test6().setVisible(true);// 新窗口显示
              dispose();//本窗口销毁,释放内存资源
 		}
 	}
@@ -788,7 +798,7 @@ public class Test12 extends JFrame implements ActionListener{
 		String cmd = e.getActionCommand();
 		if (cmd.equals("返回")) {
 			 setVisible(false);// 本窗口隐藏,
-             new Test().setVisible(true);// 新窗口显示
+             new Test6().setVisible(true);// 新窗口显示
              dispose();//本窗口销毁,释放内存资源
 		}
 	}
