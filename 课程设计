@@ -253,7 +253,7 @@ public class Test4 extends JFrame implements ActionListener  {
    
    
    
-    import java.awt.*;
+     import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -268,20 +268,21 @@ public class Test5 extends JFrame implements ActionListener{
 	    	setTitle("登录窗");//标题
 		    setSize(300, 300);//大小
 		    setLocationRelativeTo(null);//居中
+		   
 		    JPanel jp = new JPanel();
 		  
-		    jp.setLayout(new GridLayout(6, 1));
+		    jp.setLayout(new GridLayout(5, 1));
 		    
 		    
 		    JPanel jp1 = new JPanel();
-		    jl3=new JLabel("Warn:需获得管理员权限才能删除数据！！！");
-		    jp1.add(jl3);
+		    jl1=new JLabel("Warn:需获得管理员权限才能删除数据！！！");
+		    jp1.add(jl1);
 		    jp.add(jp1);
 		    
 		    
 		    JPanel jp2 = new JPanel();
-		    jl1=new JLabel("账号:");
-		    jp2.add(jl1);
+		    jl2=new JLabel("账号:");
+		    jp2.add(jl2);
 		    write = new JTextField(12);
 		    jp2.add(write);
 		    jp.add(jp2);
@@ -289,8 +290,8 @@ public class Test5 extends JFrame implements ActionListener{
 		    
 		    
 		    JPanel jp3 = new JPanel();
-		    jl2=new JLabel("密码:");
-		    jp3.add(jl2);
+		    jl3=new JLabel("密码:");
+		    jp3.add(jl3);
 		    mi = new JPasswordField(12);
 		    jp3.add(mi);
 		    jp.add(jp3);
@@ -298,21 +299,18 @@ public class Test5 extends JFrame implements ActionListener{
 		    
 		    
 		    JPanel jp4 = new JPanel();
-		    jb3=new JButton("登录");
+		    jb1=new JButton("登录");
 		    jb1.addActionListener(this);// 添加动作响应器
 		    jp4.add(jb1);
 		    jp.add(jp4);
-		    
-		    
-		    
-		 
-		    
-		    
+
 		    
 		    JPanel jp5 = new JPanel();
 		    jl4=new JLabel("提示:账号 linsir 密码 123456");
 		    jp5.add(jl4);
 		    jp.add(jp5);
+		    
+		    
 		    add(jp);
 		    
 		    
@@ -343,7 +341,8 @@ public class Test5 extends JFrame implements ActionListener{
 	    }
 		
 }
-
+   
+   
 
 
 
