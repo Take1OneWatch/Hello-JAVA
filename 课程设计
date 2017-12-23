@@ -512,8 +512,11 @@ public class Test7 extends JFrame implements ActionListener{
 		    
 		    JPanel jp4 = new JPanel();
 		    jb1=new JButton("增加");
+		    jb3 = new JButton("取消");
+		    jb3.addActionListener(this);// 添加动作响应器
 		    jb1.addActionListener(this);// 添加动作响应器
 		    jp4.add(jb1);
+		    jp4.add(jb3);
 		    jp.add(jp4);
 		    
 		    
