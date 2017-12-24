@@ -423,19 +423,20 @@ public class Test6 extends JFrame implements ActionListener{
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 import javax.swing.*;
 
-public class Test7 extends JFrame implements ActionListener{
-	 JButton jb1, jb2;//按钮
+public class Test7 extends JFrame implements ActionListener {
+	 JButton jb1, jb2,jb3;//按钮
 	    JLabel jl1,jl2,jl3,jl4,jl5,jl6,jl7,jl8,jl9,jl10;
 	    JTextField write,write2,write3,write4,write5,write6,write7,write8;//文本框
-	    JPasswordField mi;//密码框
+	   
+	  
 	    public Test7(){
 	    	setTitle("增加教师信息框");//标题
 		    setSize(500, 500);//大小
 		    setLocationRelativeTo(null);//居中
 		    JPanel jp = new JPanel();
-		  
 		    jp.setLayout(new GridLayout(10, 1));
 		    
 		    
@@ -448,7 +449,9 @@ public class Test7 extends JFrame implements ActionListener{
 		    JPanel jp2 = new JPanel();
 		    jl1=new JLabel("工号 :");
 		    jp2.add(jl1);
+		    
 		    write = new JTextField(12);
+		   
 		    jp2.add(write);
 		    jp.add(jp2);
 		    
@@ -534,7 +537,13 @@ public class Test7 extends JFrame implements ActionListener{
 	
 	
 	 public void actionPerformed(ActionEvent e) {
-		 
+		 String cmd = e.getActionCommand();
+		 if (cmd.equals("取消")) {
+			 setVisible(false);// 本窗口隐藏,
+             new Test1().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+			 
+		 }
 	 }
 	
 	 public static void main(String[] args) {
