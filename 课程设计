@@ -253,7 +253,7 @@ public class Test4 extends JFrame implements ActionListener  {
    
    
    
-     import java.awt.*;
+      import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -299,10 +299,20 @@ public class Test5 extends JFrame implements ActionListener{
 		    
 		    
 		    JPanel jp4 = new JPanel();
-		    jb1=new JButton("登录");
+		    jb1=new JButton("取消");
+		    jb2 = new JButton("登录");
+		    jb2.addActionListener(this);// 添加动作响应器
 		    jb1.addActionListener(this);// 添加动作响应器
+		    jp4.add(jb2);
 		    jp4.add(jb1);
 		    jp.add(jp4);
+		    
+		    
+		   
+		    
+		    
+		    
+		    
 
 		    
 		    JPanel jp5 = new JPanel();
@@ -331,6 +341,11 @@ public class Test5 extends JFrame implements ActionListener{
 	                JOptionPane.showMessageDialog(this, "用户名或者密码错误.", "通知", JOptionPane.ERROR_MESSAGE);
 	              
 	            }
+	    	}
+	    	if (cmd.equals("取消")) {
+	    		 setVisible(false);// 本窗口隐藏,
+                 new Test1().setVisible(true);// 新窗口显示
+                 dispose();//本窗口销毁,释放内存资源
 	    	}
 	
 	    }
@@ -641,7 +656,7 @@ public class Test9 extends JFrame implements ActionListener{
 	      jp.setBackground(Color.CYAN);
 	      jp.setLayout(new FlowLayout());
 	      
-	      jl2 = new JLabel("   请在下面输入想要查询的教师的工号 ！         ");
+	      jl2 = new JLabel("   请在下面输入想要修改的教师的工号 ！         ");
 	      jp.add(jl2);
 	      
 	      jl1= new JLabel("工号:");
@@ -689,7 +704,7 @@ public class Test10 extends JFrame implements ActionListener  {
 	      JPanel jp = new JPanel();
 	      jp.setBackground(Color.CYAN);
 	      jp.setLayout(new FlowLayout());
-	      jl2 = new JLabel("   请在下面输入想要查询的教师的姓名 ！         ");
+	      jl2 = new JLabel("   请在下面输入想要修改的教师的姓名 ！         ");
 	      jp.add(jl2);
 	      
 	      jl1= new JLabel("姓名:");
