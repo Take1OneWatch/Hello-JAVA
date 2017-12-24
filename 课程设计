@@ -464,7 +464,6 @@ public class Test7 extends JFrame implements ActionListener {
 		    JPanel jp2 = new JPanel();
 		    jl1=new JLabel("工号 :");
 		    jp2.add(jl1);
-		    
 		    write = new JTextField(12);
 		   
 		    jp2.add(write);
@@ -488,10 +487,8 @@ public class Test7 extends JFrame implements ActionListener {
 		    jp3.add(write8);
 		    jp.add(jp3);
 		    
+		
 		    
-	    
-		    
-		 
 		    JPanel jp7 = new JPanel();
 		    jl4=new JLabel("所在系:");
 		    jp7.add(jl4);
@@ -559,9 +556,169 @@ public class Test7 extends JFrame implements ActionListener {
              dispose();//本窗口销毁,释放内存资源
 			 
 		 }
+		 if(e.getSource()==jb1){
+			   if(write.getText().equals("")){
+			    JOptionPane.showMessageDialog(null,"请输入工号~","错误",JOptionPane.ERROR_MESSAGE);
+			    write.grabFocus();
+			   }else{
+			    write1(write.getText());
+			    JOptionPane.showMessageDialog(null,"写入成功","提示",JOptionPane.INFORMATION_MESSAGE);
+			   }
+			  }
+		 if(e.getSource()==jb1){
+			   if(write3.getText().equals("")){
+			    JOptionPane.showMessageDialog(null,"请输入年龄~","错误",JOptionPane.ERROR_MESSAGE);
+			    write3.grabFocus();
+			   }else{
+			    write2(write3.getText());
+			  
+			   }
+			  }
+		 
+		 if(e.getSource()==jb1){
+			   if(write8.getText().equals("")){
+			    JOptionPane.showMessageDialog(null,"请输入职称~","错误",JOptionPane.ERROR_MESSAGE);
+			    write8.grabFocus();
+			   }else{
+			    write3(write8.getText());
+			   }
+			  }
+		 
+		 if(e.getSource()==jb1){
+			   if(write4.getText().equals("")){
+			    JOptionPane.showMessageDialog(null,"请输入所在系~","错误",JOptionPane.ERROR_MESSAGE);
+			    write4.grabFocus();
+			   }else{
+			    write4(write4.getText());
+			  
+			   }
+			  }
+		 if(e.getSource()==jb1){
+			   if(write5.getText().equals("")){
+			    JOptionPane.showMessageDialog(null,"请输入教授的主要课程~","错误",JOptionPane.ERROR_MESSAGE);
+			    write5.grabFocus();
+			   }else{
+			    write5(write5.getText());
+			  
+			   }
+			  }
+		 if(e.getSource()==jb1){
+			   if(write6.getText().equals("")){
+			    JOptionPane.showMessageDialog(null,"请输入联系电话~","错误",JOptionPane.ERROR_MESSAGE);
+			    write6.grabFocus();
+			   }else{
+			    write6(write6.getText());
+			  
+			   }
+			  }
+		 if(e.getSource()==jb1){
+			   if(write7.getText().equals("")){
+			    JOptionPane.showMessageDialog(null,"请输入联系地址~","错误",JOptionPane.ERROR_MESSAGE);
+			    write7.grabFocus();
+			   }else{
+			    write7(write7.getText());
+			  
+			   }
+			  }
+		 
+		 
+		 
+		 
+		 
 	 }
+	 
+	 
+	 public void write1(String line){
+		  try{
+		   File f=new File("e:/stu.txt");//向指定文本框内写入
+		   FileWriter fw=new FileWriter(f,true);
+		   fw.write(line);
+		   fw.write("\r\n");
+		   fw.close();
+		  }catch(Exception e){
+		 
+		  }
+		 }
+	 
+	 public void write2(String line){
+		  try{
+		   File f=new File("e:/stu.txt");//向指定文本框内写入
+		   FileWriter fw=new FileWriter(f,true);
+		   fw.write(line);
+		   fw.write("\r\n");
+		   fw.close();
+		  }catch(Exception e){
+		 
+		  }
+		 }
+	 public void write3(String line){
+		  try{
+		   File f=new File("e:/stu.txt");//向指定文本框内写入
+		   FileWriter fw=new FileWriter(f,true);
+		   fw.write(line);
+		   fw.write("\r\n");
+		   fw.close();
+		  }catch(Exception e){
+		 
+		  }
+		 }
+	 public void write4(String line){
+		  try{
+		   File f=new File("e:/stu.txt");//向指定文本框内写入
+		   FileWriter fw=new FileWriter(f,true);
+		   fw.write(line);
+		   fw.write("\r\n");
+		   fw.close();
+		  }catch(Exception e){
+		 
+		  }
+		 }
+	 public void write5(String line){
+		  try{
+		   File f=new File("e:/stu.txt");//向指定文本框内写入
+		   FileWriter fw=new FileWriter(f,true);
+		   fw.write(line);
+		   fw.write("\r\n");
+		   fw.close();
+		  }catch(Exception e){
+		 
+		  }
+		 }
+	 public void write6(String line){
+		  try{
+		   File f=new File("e:/stu.txt");//向指定文本框内写入
+		   FileWriter fw=new FileWriter(f,true);
+		   fw.write(line);
+		   fw.write("\r\n");
+		   fw.close();
+		  }catch(Exception e){
+		 
+		  }
+		 }
+	 public void write7(String line){
+		  try{
+		   File f=new File("e:/stu.txt");//向指定文本框内写入
+		   FileWriter fw=new FileWriter(f,true);
+		   fw.write(line);
+		   fw.write("\r\n");
+		   fw.close();
+		  }catch(Exception e){
+		 
+		  }
+		 }
+	 
+	 
+	 
+	 
 	
-	 public static void main(String[] args) {
+	 private void write(String text) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public static void main(String[] args) {
 	        new Test7().setVisible(true);//创建登录窗口,并可见
 	    }
 	
