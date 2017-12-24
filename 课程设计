@@ -199,6 +199,18 @@ public class Test3 extends JFrame implements ActionListener {
              dispose();//本窗口销毁,释放内存资源
 		}
 	}
+	if (cmd.equals("查询")) {
+			  String id = write.getText();// 取得工名
+			  if (id.equals("103")) {
+				  setVisible(false);// 本窗口隐藏,
+		             new Test1().setVisible(true);// 新窗口显示
+		             dispose();//本窗口销毁,释放内存资源
+			  }else {
+				  JOptionPane.showMessageDialog(this, "错误:未知的用户名.", "通知", JOptionPane.ERROR_MESSAGE);
+	              
+			  }
+			
+		}
 	
 }
 
