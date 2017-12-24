@@ -518,7 +518,7 @@ public class Test7 extends JFrame implements ActionListener {
 		    
 		    
 		    JPanel jp10 = new JPanel();
-		    jl7=new JLabel("联系电话:");
+		    jl7=new JLabel("联系地址:");
 		    jp10.add(jl7);
 		    write7 = new JTextField(12);
 		    jp10.add(write7);
