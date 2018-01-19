@@ -1,32 +1,33 @@
-  import java.awt.*;
+   import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
 
-public class Test5 extends JFrame implements ActionListener{
-	    JButton jb1, jb2,jb3;//°´Å¥
+public class Test5 extends JFrame implements ActionListener,KeyListener{
+	    JButton jb1, jb2,jb3;//æŒ‰é’®
 	    JLabel jl1,jl2,jl3,jl4;
-	    JTextField write;//ÎÄ±¾¿ò
-	    JPasswordField mi;//ÃÜÂë¿ò
+	    JTextField write;//æ–‡æœ¬æ¡†
+	    JPasswordField mi;//å¯†ç æ¡†
 	    public Test5(){
-	    	setTitle("µÇÂ¼´°");//±êÌâ
-		    setSize(300, 300);//´óĞ¡
-		    setLocationRelativeTo(null);//¾ÓÖĞ
+	  
+	    	setTitle("ç™»å½•çª—");//æ ‡é¢˜
+		    setSize(300, 300);//å¤§å°
+		    setLocationRelativeTo(null);//å±…ä¸­
 		    JPanel jp = new JPanel();
 		    jp.setLayout(new GridLayout(5, 1));
 		    
 		    
 		    JPanel jp1 = new JPanel();
 		    jp1.setBackground(Color.CYAN);
-		    jl1=new JLabel("Warn:Ğè»ñµÃ¹ÜÀíÔ±È¨ÏŞ²ÅÄÜÉ¾³ıÊı¾İ£¡£¡£¡");
+		    jl1=new JLabel("Warn:éœ€è·å¾—ç®¡ç†å‘˜æƒé™æ‰èƒ½åˆ é™¤æ•°æ®ï¼ï¼ï¼");
 		    jp1.add(jl1);
 		    jp.add(jp1);
 		    
 		    
 		    JPanel jp2 = new JPanel();
 		    jp2.setBackground(Color.CYAN);
-		    jl2=new JLabel("ÕËºÅ:");
+		    jl2=new JLabel("è´¦å·:");
 		    jp2.add(jl2);
 		    write = new JTextField(12);
 		    jp2.add(write);
@@ -36,7 +37,7 @@ public class Test5 extends JFrame implements ActionListener{
 		    
 		    JPanel jp3 = new JPanel();
 		    jp3.setBackground(Color.CYAN);
-		    jl3=new JLabel("ÃÜÂë:");
+		    jl3=new JLabel("å¯†ç :");
 		    jp3.add(jl3);
 		    mi = new JPasswordField(12);
 		    jp3.add(mi);
@@ -46,12 +47,13 @@ public class Test5 extends JFrame implements ActionListener{
 		    
 		    JPanel jp4 = new JPanel();
 		    jp4.setBackground(Color.CYAN);
-		    jb1=new JButton("È¡Ïû");
+		    jb1=new JButton("å–æ¶ˆ");
 		    jb1.setBackground(Color.white);
-		    jb2 = new JButton("µÇÂ¼");
+		    jb2 = new JButton("ç™»å½•");
 		    jb2.setBackground(Color.white);
-		    jb2.addActionListener(this);// Ìí¼Ó¶¯×÷ÏìÓ¦Æ÷
-		    jb1.addActionListener(this);// Ìí¼Ó¶¯×÷ÏìÓ¦Æ÷
+		    jb2.addActionListener(this);// æ·»åŠ åŠ¨ä½œå“åº”å™¨
+		    jb2.addKeyListener(this);
+		    jb1.addActionListener(this);// æ·»åŠ åŠ¨ä½œå“åº”å™¨
 		    jp4.add(jb2);
 		    jp4.add(jb1);
 		    jp.add(jp4);
@@ -61,7 +63,7 @@ public class Test5 extends JFrame implements ActionListener{
 		    
 		   JPanel jp5 = new JPanel();
 		  jp5.setBackground(Color.CYAN);
-		 /*   jl4=new JLabel("ÌáÊ¾:ÕËºÅ linsir ÃÜÂë 123456");
+		 /*   jl4=new JLabel("æç¤º:è´¦å· linsir å¯†ç  123456");
 		    jp5.add(jl4);*/
 		    jp.add(jp5);
 		    
@@ -73,31 +75,59 @@ public class Test5 extends JFrame implements ActionListener{
 	    }
 	    public void actionPerformed(ActionEvent e) {
 	    	String cmd = e.getActionCommand();
-	    	if (cmd.equals("µÇÂ¼")) {
-	    		  String id = write.getText();// È¡µÃÓÃ»§Ãû
-	              String key = new String(mi.getPassword());// È¡µÃÃÜÂë
-	              if (id.equals("linsir") && key.equals("123456")) {// ÅĞ¶ÏÊÇ·ñµÇÂ¼³É¹¦
-	                  // Èç¹ûµÇÂ¼³É¹¦
-	                  setVisible(false);// ±¾´°¿ÚÒş²Ø,
-	                  new Test6(id).setVisible(true);// ĞÂ´°¿ÚÏÔÊ¾
-	                  dispose();//±¾´°¿ÚÏú»Ù,ÊÍ·ÅÄÚ´æ×ÊÔ´
+	    	if (cmd.equals("ç™»å½•")) {
+	    		  String id = write.getText();// å–å¾—ç”¨æˆ·å
+	              String key = new String(mi.getPassword());// å–å¾—å¯†ç 
+	              if (id.equals("linsir") && key.equals("123")) {// åˆ¤æ–­æ˜¯å¦ç™»å½•æˆåŠŸ
+	                  // å¦‚æœç™»å½•æˆåŠŸ
+	                  setVisible(false);// æœ¬çª—å£éšè—,
+	                  new Test6(id).setVisible(true);// æ–°çª—å£æ˜¾ç¤º
+	                  dispose();//æœ¬çª—å£é”€æ¯,é‡Šæ”¾å†…å­˜èµ„æº
 	            } else {
-	                //Èç¹ûµÇÂ¼Ê§°Ü  µ¯³öÌáÊ¾
-	                JOptionPane.showMessageDialog(this, "ÓÃ»§Ãû»òÕßÃÜÂë´íÎó.", "Í¨Öª", JOptionPane.ERROR_MESSAGE);
+	                //å¦‚æœç™»å½•å¤±è´¥  å¼¹å‡ºæç¤º
+	                JOptionPane.showMessageDialog(this, "ç”¨æˆ·åæˆ–è€…å¯†ç é”™è¯¯.", "é€šçŸ¥", JOptionPane.ERROR_MESSAGE);
 	              
 	            }
 	    	}
-	    	if (cmd.equals("È¡Ïû")) {
-	    		 setVisible(false);// ±¾´°¿ÚÒş²Ø,
-                 new Test1().setVisible(true);// ĞÂ´°¿ÚÏÔÊ¾
-                 dispose();//±¾´°¿ÚÏú»Ù,ÊÍ·ÅÄÚ´æ×ÊÔ´
+	    	if (cmd.equals("å–æ¶ˆ")) {
+	    		 setVisible(false);// æœ¬çª—å£éšè—,
+                 new Test1().setVisible(true);// æ–°çª—å£æ˜¾ç¤º
+                 dispose();//æœ¬çª—å£é”€æ¯,é‡Šæ”¾å†…å­˜èµ„æº
 	    	}
 	
 	    }
 	   
 	    
 	    public static void main(String[] args) {
-	        new Test5().setVisible(true);//´´½¨µÇÂ¼´°¿Ú,²¢¿É¼û
+	        new Test5().setVisible(true);//åˆ›å»ºç™»å½•çª—å£,å¹¶å¯è§
 	    }
+	
+	   
+		public void keyPressed(KeyEvent e) {
+			 if(e.getKeyCode()==KeyEvent.VK_ENTER) {
+				 setVisible(false);// æœ¬çª—å£éšè—,
+                 new Test1().setVisible(true);// æ–°çª—å£æ˜¾ç¤º
+                 dispose();//æœ¬çª—å£é”€æ¯,é‡Šæ”¾å†…å­˜èµ„æº
+			 }
+			 
+		}
+	
+		public void keyReleased(KeyEvent e) {
 		
+			
+		}
+
+		public void keyTyped(KeyEvent e) {
+		
+			
+		} 
 }
+
+
+
+
+
+
+
+/*  JOptionPane.showMessageDialog(this, "å¸å·æˆ–å¯†ç é”™è¯¯!", "è­¦å‘Š",
+JOptionPane.WARNING_MESSAGE);*/
