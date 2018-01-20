@@ -6,12 +6,12 @@ public class test extends JFrame {
   
     public test() {  
         //设置标题  
-        super("JFram设置背景图片(Cannel_2020)");  
+   
         //设置大小  
         setSize(500, 400);  
         //设置位置  
         setLocation(200, 50);  
-        //背景图片的路径。（相对路径或者绝对路径。本例图片放于"java项目名"的文件下）  
+        //背景图片的路径。（相对路径或者绝对路径。本例图片放于"java项目名"的文件下）  特别注意
         String path = "111.jpg";  
         // 背景图片  
         ImageIcon background = new ImageIcon(path);  
@@ -33,4 +33,4 @@ public class test extends JFrame {
     public static void main(String[] args) {  
         new test();  
     }  
-} 
+}  
