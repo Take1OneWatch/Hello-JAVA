@@ -1,0 +1,82 @@
+public class test
+{
+
+    public static void main(String[] args) 
+    {
+        new ImagePanelFrame();
+    }
+}
+class  ImagePanelFrame extends JFrame
+{
+     
+    
+ 
+    public ImagePanelFrame()
+    {
+ 
+        setSize(480,600);
+        setLocationRelativeTo(null);//设置窗口居中
+        JButton bt=new JButton("111111");
+        bt.setBackground(Color.WHITE);
+        JButton bt1=new JButton("2222222");
+        bt1.setBackground(Color.WHITE);
+        JButton bt2=new JButton("33333333");
+        bt2.setBackground(Color.WHITE);
+        JButton bt4=new JButton("44444444");
+        bt4.setBackground(Color.WHITE);
+       
+        ImagePanel panel=new ImagePanel(new File("222.jpg"));
+        panel.setLayout(new GridLayout(3,1));
+        JPanel jp = new JPanel();
+        
+        JPanel jp1 =new JPanel();
+        jp1.add(bt);
+        jp.add(jp1);
+        
+        
+        JPanel jp2 =new JPanel();
+        jp2.add(bt1);
+        jp.add(jp2);
+        
+        
+        
+        
+        JPanel jp3 =new JPanel();
+        jp3.add(bt2);
+        jp.add(jp3);
+        
+        
+      
+        
+        
+        
+        jp.setLayout(new GridLayout(3,1));
+       
+        panel.add(jp);
+      
+      
+       
+        add(panel);
+        setVisible(true);
+         
+    }
+    class ImagePanel extends JPanel
+    {
+        Image image;
+        public ImagePanel(File file)
+        {
+            try 
+            {
+                 image=ImageIO.read(file);
+                 
+            } catch (IOException e) {
+               
+                e.printStackTrace();
+            }
+        }
+        public void paint(Graphics g)
+        {
+            g.drawImage(image,0,0,null);
+        }
+    }
+}
