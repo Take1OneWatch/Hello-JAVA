@@ -1,0 +1,17 @@
+import javax.swing.*;
+public class test extends JFrame {
+    test(){
+	JPanel p=new JPanel();
+	JLabel l=new JLabel();
+	Icon a=new ImageIcon("222.jpg");     //在此直接创建对象
+	l.setIcon(a);
+	l.setBounds(0, 0, a.getIconWidth(),a.getIconHeight());
+	p.add(l,new Integer(Integer.MIN_VALUE));
+	getContentPane().add(p);
+    pack();             //窗口适应组件大小
+	setVisible(true);
+	}
+    public static void main(String[] a){
+	new test();
+    }
+} 
