@@ -1,0 +1,41 @@
+
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class test {
+ JLabel jl = new JLabel();
+ //JLabel jl2 = new JLabel();
+ JFrame jframe = new JFrame();
+
+ public test() {
+  init1Frame();
+ }
+
+ public void init1Frame () {
+  ImageIcon icon = new ImageIcon("222.jpg");//导入图片
+  icon.setImage(icon.getImage().getScaledInstance(icon.getIconWidth(),
+  icon.getIconHeight(), Image.SCALE_DEFAULT));
+  System.out.println(icon.getIconHeight() + "" + icon.getIconWidth());
+  
+  
+  
+  
+  jl.setIcon(icon);
+  jframe.setSize(1366, 768);
+  jframe.add(jl);
+  
+  jframe.pack();
+ 
+  jframe.setVisible(true);
+
+ }
+
+ public static void main(String args[]) {
+
+  new test();
+ }
+}

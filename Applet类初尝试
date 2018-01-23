@@ -1,0 +1,11 @@
+import java.awt.*;
+import java.applet.*;
+public class AA extends Applet{
+	String hw_test;
+	public void init() {
+		hw_test = "Silly B !";
+	} //往hw_test文件中写入内容
+	public void paint (Graphics g) {
+		g.drawString(hw_test,100,100); //实现输出hw_test中内容
+	}
+}

@@ -1,0 +1,164 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+ 
+ 
+public class test
+{
+
+    public static void main(String[] args) 
+    {
+        new ImagePanelFrame();
+    }
+}
+class  ImagePanelFrame extends JFrame implements ActionListener
+{
+  
+	
+
+	private static final JPasswordField mi = null;
+	private static final JPasswordField w = null;
+
+	public ImagePanelFrame()
+    {
+ 
+		setTitle("学生管理系统");//标题
+        setSize(480,600);
+        setLocationRelativeTo(null);//设置窗口居中
+        
+       
+        ImagePanel panel=new ImagePanel(new File("222.jpg"));
+        panel.setLayout(new GridLayout(4,1));
+       
+        
+        JPanel jp1 = new JPanel();
+        jp1.setLayout(new GridLayout(3,1));      
+        
+        
+        JPanel jp11 = new JPanel();
+        jp1.add(jp11);
+        
+        
+        
+        JPanel jp111 = new JPanel();
+      
+        
+        jp1.add(jp111);
+        
+        panel.add(jp1);
+  
+     
+        
+        
+        JPanel jp2 = new JPanel();
+        jp2.setLayout(new GridLayout(3,1));  
+        
+        
+        JPanel jp22 = new JPanel();
+        JButton jb3 = new JButton("账号:");
+        jb3.setBackground(Color.white);
+        jp22.add(jb3);
+        JTextField w = new JTextField(12);
+        
+        jp22.add(w);
+        jp2.add(jp22);
+        panel.add(jp2);
+        
+        
+        
+        JPanel jp222 = new JPanel();
+        JLabel jl1 = new JLabel("");
+        jp222.add(jl1);
+        jp2.add(jp222);
+        
+        
+        JPanel jp2222 = new JPanel();
+        JButton jb4 = new JButton("密码:");
+        jb4.setBackground(Color.WHITE);
+       
+        jp2222.add(jb4);
+        JPasswordField mi = new JPasswordField(12);
+        jp2222.add(mi);
+        jp2.add(jp2222);   
+        
+        
+        
+        JPanel jp3 = new JPanel();
+        jp3.setLayout(new GridLayout(3, 1));
+        
+        
+        JPanel jp33 = new JPanel();
+        JLabel jl2 = new JLabel("");
+        jp33.add(jl2);
+        jp3.add(jp33);
+        
+        
+        JPanel jp333 = new JPanel();
+        JButton jb = new JButton("登录");
+        getRootPane().setDefaultButton(jb);
+        jb.addActionListener(this);// 添加动作响应器
+        jb.setBackground(Color.white);
+        jp333.add(jb);
+        JButton jb1 = new JButton("取消");
+        jb1.addActionListener(this);// 添加动作响应器
+        jb1.setBackground(Color.white);
+        jp333.add(jb1);
+        jp3.add(jp333);
+        
+        panel.add(jp3);
+        
+        
+        add(panel);
+        setVisible(true);
+         
+    }
+    class ImagePanel extends JPanel
+    {
+        Image image;
+        public ImagePanel(File file)
+        {
+            try 
+            {
+                 image=ImageIO.read(file);
+                 
+            } catch (IOException e) {
+               
+                e.printStackTrace();
+            }
+        }
+        public void paint(Graphics g)
+        {
+            g.drawImage(image,0,0,null);
+        }
+    }
+	
+	public void actionPerformed(ActionEvent e) {
+		String cmd = e.getActionCommand();
+    	if (cmd.equals("登录")) {
+		String id = w.getText();// 取得用户名
+              String key = new String(mi.getPassword());// 取得密码
+              if (id.equals("linsir") && key.equals("123")) {// 判断是否登录成功
+                  // 如果登录成功
+                  setVisible(false);// 本窗口隐藏,
+             //     new Test6(id).setVisible(true);// 新窗口显示
+                  dispose();//本窗口销毁,释放内存资源
+    		 
+            } else{
+                //如果登录失败  弹出提示
+                JOptionPane.showMessageDialog(this, "用户名或者密码错误.", "通知", JOptionPane.ERROR_MESSAGE);
+              
+            }
+    	}	
+   
+    	
+    	if (cmd.equals("取消")) {
+    		 setVisible(false);// 本窗口隐藏,
+          //   new Test1().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+    	}
+		
+	}
+}

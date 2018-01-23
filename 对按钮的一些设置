@@ -1,0 +1,4 @@
+jb.setPreferredSize(new Dimension(100,40));//设置大小
+jb.setBackground(new Color(118,238,0));//设置背景色
+jb.setForeground(Color.WHITE);//设置前景色
+jb.setFont(new  java.awt.Font("微软楷体",  1,  20)); //设置字体样式

@@ -1,0 +1,59 @@
+import java.awt.*;
+import java.io.*;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+ 
+ 
+public class test
+{
+
+    public static void main(String[] args) 
+    {
+        new ImagePanelFrame();
+    }
+}
+class  ImagePanelFrame extends JFrame
+{
+     
+    
+ 
+    public ImagePanelFrame()
+    {
+ 
+        setSize(480,600);
+        setLocationRelativeTo(null);//设置窗口居中
+        JButton bt=new JButton("测试按钮");
+        JButton bt1=new JButton("测试按钮");
+        JButton bt2=new JButton("测试按钮");
+        ImagePanel panel=new ImagePanel(new File("222.jpg"));
+        JPanel jp = new JPanel();
+        jp.setLayout(new GridLayout(1,3));
+        panel.add(jp);
+        jp.add(bt);
+        jp.add(bt1);
+        jp.add(bt2);
+      
+        add(panel);
+        setVisible(true);
+         
+    }
+    class ImagePanel extends JPanel
+    {
+        Image image;
+        public ImagePanel(File file)
+        {
+            try 
+            {
+                 image=ImageIO.read(file);
+                 
+            } catch (IOException e) {
+               
+                e.printStackTrace();
+            }
+        }
+        public void paint(Graphics g)
+        {
+            g.drawImage(image,0,0,null);
+        }
+    }
+}
