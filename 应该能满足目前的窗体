@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import javax.imageio.ImageIO;
@@ -13,14 +14,18 @@ public class test
         new ImagePanelFrame();
     }
 }
-class  ImagePanelFrame extends JFrame  
+class  ImagePanelFrame extends JFrame implements ActionListener
 {
-     
-    
- 
-    public ImagePanelFrame()
+  
+	
+
+	private static final JPasswordField mi = null;
+	private static final JPasswordField w = null;
+
+	public ImagePanelFrame()
     {
  
+		setTitle("学生管理系统");//标题
         setSize(480,600);
         setLocationRelativeTo(null);//设置窗口居中
         
@@ -39,9 +44,8 @@ class  ImagePanelFrame extends JFrame
         
         
         JPanel jp111 = new JPanel();
-        JButton jb5 = new JButton("学生登录系统！");
-        jb5.setBackground(Color.CYAN);
-        jp111.add(jb5);
+      
+        
         jp1.add(jp111);
         
         panel.add(jp1);
@@ -57,9 +61,9 @@ class  ImagePanelFrame extends JFrame
         JButton jb3 = new JButton("账号:");
         jb3.setBackground(Color.white);
         jp22.add(jb3);
-        JTextField write = new JTextField(12);
+        JTextField w = new JTextField(12);
         
-        jp22.add(write);
+        jp22.add(w);
         jp2.add(jp22);
         panel.add(jp2);
         
@@ -78,7 +82,7 @@ class  ImagePanelFrame extends JFrame
         jp2222.add(jb4);
         JPasswordField mi = new JPasswordField(12);
         jp2222.add(mi);
-        jp2.add(jp2222);
+        jp2.add(jp2222);   
         
         
         
@@ -94,24 +98,17 @@ class  ImagePanelFrame extends JFrame
         
         JPanel jp333 = new JPanel();
         JButton jb = new JButton("登录");
+        getRootPane().setDefaultButton(jb);
+        jb.addActionListener(this);// 添加动作响应器
         jb.setBackground(Color.white);
         jp333.add(jb);
         JButton jb1 = new JButton("取消");
+        jb1.addActionListener(this);// 添加动作响应器
         jb1.setBackground(Color.white);
         jp333.add(jb1);
         jp3.add(jp333);
         
         panel.add(jp3);
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      
         
         
         add(panel);
@@ -137,4 +134,31 @@ class  ImagePanelFrame extends JFrame
             g.drawImage(image,0,0,null);
         }
     }
+	
+	public void actionPerformed(ActionEvent e) {
+		String cmd = e.getActionCommand();
+    	if (cmd.equals("登录")) {
+		String id = w.getText();// 取得用户名
+              String key = new String(mi.getPassword());// 取得密码
+              if (id.equals("linsir") && key.equals("123")) {// 判断是否登录成功
+                  // 如果登录成功
+                  setVisible(false);// 本窗口隐藏,
+             //     new Test6(id).setVisible(true);// 新窗口显示
+                  dispose();//本窗口销毁,释放内存资源
+    		 
+            } else{
+                //如果登录失败  弹出提示
+                JOptionPane.showMessageDialog(this, "用户名或者密码错误.", "通知", JOptionPane.ERROR_MESSAGE);
+              
+            }
+    	}	
+   
+    	
+    	if (cmd.equals("取消")) {
+    		 setVisible(false);// 本窗口隐藏,
+          //   new Test1().setVisible(true);// 新窗口显示
+             dispose();//本窗口销毁,释放内存资源
+    	}
+		
+	}
 }
