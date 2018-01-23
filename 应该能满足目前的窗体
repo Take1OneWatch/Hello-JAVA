@@ -1,3 +1,10 @@
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.io.*;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+ 
+ 
 public class test
 {
 
@@ -6,7 +13,7 @@ public class test
         new ImagePanelFrame();
     }
 }
-class  ImagePanelFrame extends JFrame
+class  ImagePanelFrame extends JFrame  
 {
      
     
@@ -16,46 +23,97 @@ class  ImagePanelFrame extends JFrame
  
         setSize(480,600);
         setLocationRelativeTo(null);//设置窗口居中
-        JButton bt=new JButton("111111");
-        bt.setBackground(Color.WHITE);
-        JButton bt1=new JButton("2222222");
-        bt1.setBackground(Color.WHITE);
-        JButton bt2=new JButton("33333333");
-        bt2.setBackground(Color.WHITE);
-        JButton bt4=new JButton("44444444");
-        bt4.setBackground(Color.WHITE);
+        
        
         ImagePanel panel=new ImagePanel(new File("222.jpg"));
-        panel.setLayout(new GridLayout(3,1));
-        JPanel jp = new JPanel();
-        
-        JPanel jp1 =new JPanel();
-        jp1.add(bt);
-        jp.add(jp1);
-        
-        
-        JPanel jp2 =new JPanel();
-        jp2.add(bt1);
-        jp.add(jp2);
-        
-        
-        
-        
-        JPanel jp3 =new JPanel();
-        jp3.add(bt2);
-        jp.add(jp3);
-        
-        
-      
-        
-        
-        
-        jp.setLayout(new GridLayout(3,1));
+        panel.setLayout(new GridLayout(4,1));
        
-        panel.add(jp);
-      
-      
+        
+        JPanel jp1 = new JPanel();
+        jp1.setLayout(new GridLayout(3,1));      
+        
+        
+        JPanel jp11 = new JPanel();
+        jp1.add(jp11);
+        
+        
+        
+        JPanel jp111 = new JPanel();
+        JButton jb5 = new JButton("学生登录系统！");
+        jb5.setBackground(Color.CYAN);
+        jp111.add(jb5);
+        jp1.add(jp111);
+        
+        panel.add(jp1);
+  
+     
+        
+        
+        JPanel jp2 = new JPanel();
+        jp2.setLayout(new GridLayout(3,1));  
+        
+        
+        JPanel jp22 = new JPanel();
+        JButton jb3 = new JButton("账号:");
+        jb3.setBackground(Color.white);
+        jp22.add(jb3);
+        JTextField write = new JTextField(12);
+        
+        jp22.add(write);
+        jp2.add(jp22);
+        panel.add(jp2);
+        
+        
+        
+        JPanel jp222 = new JPanel();
+        JLabel jl1 = new JLabel("");
+        jp222.add(jl1);
+        jp2.add(jp222);
+        
+        
+        JPanel jp2222 = new JPanel();
+        JButton jb4 = new JButton("密码:");
+        jb4.setBackground(Color.WHITE);
        
+        jp2222.add(jb4);
+        JPasswordField mi = new JPasswordField(12);
+        jp2222.add(mi);
+        jp2.add(jp2222);
+        
+        
+        
+        JPanel jp3 = new JPanel();
+        jp3.setLayout(new GridLayout(3, 1));
+        
+        
+        JPanel jp33 = new JPanel();
+        JLabel jl2 = new JLabel("");
+        jp33.add(jl2);
+        jp3.add(jp33);
+        
+        
+        JPanel jp333 = new JPanel();
+        JButton jb = new JButton("登录");
+        jb.setBackground(Color.white);
+        jp333.add(jb);
+        JButton jb1 = new JButton("取消");
+        jb1.setBackground(Color.white);
+        jp333.add(jb1);
+        jp3.add(jp333);
+        
+        panel.add(jp3);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      
+        
+        
         add(panel);
         setVisible(true);
          
