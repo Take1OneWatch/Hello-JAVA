@@ -1,80 +1,93 @@
-
 import java.awt.*;
- 
 import javax.swing.*;
- 
 import java.awt.event.*;
- 
-public class QQ1 extends JFrame{
- 
+     
+public class demo extends JFrame{
+	 
     MyPanel mp=null;
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        QQ1 test1=new QQ1();
+     
+        demo test1=new demo();
  
     }
  
-    public  QQ1(){
+    public  demo(){
          
         mp=new MyPanel();
          
-        this.add(mp);
+        add(mp);
          
-        this.addKeyListener(mp);
-         
-        this.setSize(400, 300);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(true);
+        addKeyListener(mp);
+     
+        setTitle("贪吃蛇");//标题
+        setSize(400, 350);
+        setLocationRelativeTo(null);//居中
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        MyPanel s = new  MyPanel();
+     
+        
+        	
+        
+        
     }
+
+
+	
      
 }
  
 class MyPanel extends JPanel implements KeyListener
 {
-    int x=10;
-    int y=10;
-    //重写paint方法
+	 int x=10;
+	 int y=10;
     public void paint(Graphics g){
-         
+    	
         super.paint(g);
-         
+        
         g.fillOval(x, y, 12, 12);
-        //g.drawRect(50, 50, 10,5);
-         
+       if(x>=400||x<0) {
+    	   setVisible(false);// 本窗口隐藏,
+    	   new CuoWu().setVisible(true);// 新窗口显示
+           dispose();//本窗口销毁,释放内存资源
+       }
+       if(y>=300||y<0) {
+    	   setVisible(false);// 本窗口隐藏
+    	   new CuoWu().setVisible(true);// 新窗口显示
+           dispose();//本窗口销毁,释放内存资源
+       }
+        
     }
- 
-    @Override
-    public void keyTyped(KeyEvent e) {
-        // TODO Auto-generated method stub
-        //System.out.println("被按下的是"+e.getKeyChar());
-          
-         
-         
-    }
- 
-    @Override
+    
+
+	private void dispose() {
+		
+		
+	}
+
+
+
+
+
+
+
+	public void keyTyped(KeyEvent e) {}
+    
     public void keyPressed(KeyEvent e) {
-        // TODO Auto-generated method stub
-        if(e.getKeyCode()==KeyEvent.VK_UP){
-            y-=10;
-             
-        }else if(e.getKeyCode()==KeyEvent.VK_DOWN){
+      
+        if(e.getKeyCode()==KeyEvent.VK_UP||e.getKeyCode()==KeyEvent.VK_W){
+            y-=10; 
+        }else if(e.getKeyCode()==KeyEvent.VK_DOWN||e.getKeyCode()==KeyEvent.VK_S){
             y+=10;
-        }else if(e.getKeyCode()==KeyEvent.VK_LEFT){
-             
+        }else if(e.getKeyCode()==KeyEvent.VK_LEFT||e.getKeyCode()==KeyEvent.VK_A){
             x-=10;
-        }else if(e.getKeyCode()==KeyEvent.VK_RIGHT){
-             
+        }else if(e.getKeyCode()==KeyEvent.VK_RIGHT||e.getKeyCode()==KeyEvent.VK_D){  
             x+=10;
         }
-        this.repaint();
-         
+        repaint();
     }
- 
-    @Override
-    public void keyReleased(KeyEvent e) {
-        // TODO Auto-generated method stub
-         
-    }
+
+	public void keyReleased(KeyEvent e) {}
      
-}
+}  
+
