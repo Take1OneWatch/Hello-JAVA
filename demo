@@ -16,13 +16,14 @@ public class demo extends JFrame  implements ActionListener{
 		 jp.setBackground(Color.BLUE);
 		 
 		 
-		 
+		
 
 		 JPanel jp1 = new JPanel();
 		 jp1.setBackground(Color.CYAN);
 		 jl=new JLabel("猜一猜生成随机数的大小!");
 		 jp1.add(jl);
 		 jp.add(jp1);
+		 
 		 
 		 
 		 JPanel jp2 = new JPanel();
@@ -40,7 +41,7 @@ public class demo extends JFrame  implements ActionListener{
 		 jp3.add(jb);
 		 jp.add(jp3);
 		 
-		 
+		 int s=(int)(Math.random()*5);
 		 
 		 add(jp);
 		 
@@ -48,17 +49,20 @@ public class demo extends JFrame  implements ActionListener{
 
 
 	public void actionPerformed(ActionEvent e) {
-		int x=(int)(Math.random()*10);
-		
 		 String cmd = e.getActionCommand();//确定按钮的名字
-		 if (cmd.equals("确定")) {      //equals  是等于的意思
-			   setVisible(false);// 本窗口隐藏,
-               new demo2().setVisible(true);// 新窗口显示
-               dispose();//本窗口销毁,释放内存资源
+		 if (cmd.equals("确定")) {      //equals  是等于的意思	 
+			 String id = jt.getText();// 取得用户名
+			// int x=10;
+			 if(id==(s)) {
+				 setVisible(false);// 本窗口隐藏,
+	             new demo2().setVisible(true);// 新窗口显示
+	             dispose();//本窗口销毁,释放内存资源
+			 }
 		 }
 		
 	}
      public static void main(String[] args) {
 	      new demo().setVisible(true);//创建登录窗口,并可见
+	     
 	}
 }
