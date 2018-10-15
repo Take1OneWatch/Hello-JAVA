@@ -1,0 +1,53 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class demo2 extends JFrame implements ActionListener{
+      JButton jb;
+      JLabel  jl;
+      public demo2() {
+    	  setTitle("通关啦！");
+ 		 setSize(300,250);
+ 		 setLocationRelativeTo(null);//设置窗口居中
+ 		 setLayout(new BorderLayout());
+ 		 JPanel jp = new JPanel();
+ 		 jp.setLayout(new GridLayout(2, 1));
+ 		 jp.setBackground(Color.BLUE);
+ 		 
+ 		 
+ 		 JPanel jp1 = new JPanel();
+ 		 jp1.setBackground(Color.CYAN);
+ 		 jl = new JLabel("恭喜你猜对了！");
+ 		 jp1.add(jl);
+ 		 jp.add(jp1);
+ 		 
+ 		 
+ 		 
+ 		 JPanel jp2 = new JPanel();
+ 		jp2.setBackground(Color.CYAN);
+ 		 jb=new JButton("确定");
+ 		 jb.setBackground(Color.white);
+ 		 jb.addActionListener(this);
+ 		 jp2.add(jb);
+ 		 jp.add(jp2);
+ 		 
+ 		 
+ 		 
+ 		 add(jp);
+ 		 
+    	  
+      }
+
+	public void actionPerformed(ActionEvent e) {
+		 String cmd = e.getActionCommand();//确定按钮的名字
+		 if (cmd.equals("确定")) {      //equals  是等于的意思
+			   setVisible(false);// 本窗口隐藏,
+            
+               dispose();//本窗口销毁,释放内存资源
+		 }
+		
+	}
+  
+	public static void main(String[] args) {
+        new demo2().setVisible(true);//创建登录窗口,并可见
+    }
+}
