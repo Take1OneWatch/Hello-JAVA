@@ -16,7 +16,7 @@ public class demo extends JFrame  implements ActionListener{
 		 jp.setBackground(Color.BLUE);
 		 
 		 
-		 
+		
 
 		 JPanel jp1 = new JPanel();
 		 jp1.setBackground(Color.CYAN);
