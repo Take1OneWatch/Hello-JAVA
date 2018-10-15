@@ -41,7 +41,7 @@ public class demo extends JFrame  implements ActionListener{
 		 jp3.add(jb);
 		 jp.add(jp3);
 		 
-		 int s=(int)(Math.random()*5);
+		
 		 
 		 add(jp);
 		 
@@ -52,12 +52,19 @@ public class demo extends JFrame  implements ActionListener{
 		 String cmd = e.getActionCommand();//确定按钮的名字
 		 if (cmd.equals("确定")) {      //equals  是等于的意思	 
 			 String id = jt.getText();// 取得用户名
-			// int x=10;
-			 if(id==(s)) {
+			 int s;
+			 s=Integer.parseInt(id);
+			 int x=(int)(Math.random()*5);
+			 if(x==s) {
 				 setVisible(false);// 本窗口隐藏,
 	             new demo2().setVisible(true);// 新窗口显示
 	             dispose();//本窗口销毁,释放内存资源
+			 }else {
+				 setVisible(false);// 本窗口隐藏,
+	             new demo3().setVisible(true);// 新窗口显示
+	             dispose();//本窗口销毁,释放内存资源
 			 }
+			 
 		 }
 		
 	}
