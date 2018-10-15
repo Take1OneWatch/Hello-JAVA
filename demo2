@@ -44,7 +44,7 @@ public class demo2 extends JFrame implements ActionListener{
             
                dispose();//本窗口销毁,释放内存资源
 		 }
-		
+	
 	}
   
 	public static void main(String[] args) {
