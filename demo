@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 import javax.swing.*;
 
 public class demo extends JFrame  implements ActionListener{
@@ -38,25 +39,31 @@ public class demo extends JFrame  implements ActionListener{
 		 jb=new JButton("确定");
 		 jb.setBackground(Color.WHITE);
 		 jb.addActionListener(this);// 添加动作响应器
+		 getRootPane().setDefaultButton(jb);
 		
 		 jp3.add(jb);
 		 jp.add(jp3);
 		 
 		
-		 
 		 add(jp);
 		 
 	}
+	
 
 
 	public void actionPerformed(ActionEvent e) {
-		int x=(int)(Math.random()*2);
+		
+			
+
+		 
 		 String cmd = e.getActionCommand();//确定按钮的名字
 		 if (cmd.equals("确定")) {      //equals  是等于的意思	 
 			 String id = jt.getText();// 取得用户名
 			 int s;
 			 s=Integer.parseInt(id);
 			 
+			
+			  
 			 if(x==s) {
 				 setVisible(false);// 本窗口隐藏,
 	             new demo2().setVisible(true);// 新窗口显示
@@ -72,8 +79,12 @@ public class demo extends JFrame  implements ActionListener{
 		
 		
 	}
-     public static void main(String[] args) {
+     public static void main(String[] args1) throws IOException {
 	      new demo().setVisible(true);//创建登录窗口,并可见
+	      int x=(int)(Math.random()*20);
+          FileWriter writer = new FileWriter(new File("D:\\test.txt"));
+          writer.write(String.valueOf(x));
+          writer.close();
 	     
 	}
 }
