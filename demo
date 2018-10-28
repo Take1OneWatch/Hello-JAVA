@@ -88,3 +88,5 @@ public class demo extends JFrame  implements ActionListener{
 	     
 	}
 }
+//此处写入文件的随机数字和上面产生的随机数字不一定是同一个数字，所以即使从文档中看到了答案填写进去也不一定是正确的
+//这里是两个随机，而不是同一个随机
