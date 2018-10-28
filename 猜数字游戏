@@ -6,51 +6,61 @@ import javax.swing.text.JTextComponent;
 
 public class demo extends JFrame  implements ActionListener{
 	JButton jb,jb1;//按钮
-	 JLabel jl,jl1;
+	 JLabel jl,jl1,label;
 	 JTextField jt;
+	 private int x;
 	 public demo() {
+		 final int x;
 		 setTitle("");
 		 setSize(300,250);
 		 setLocationRelativeTo(null);//设置窗口居中
 		 setLayout(new BorderLayout());
 		 JPanel jp = new JPanel();
 		 jp.setLayout(new GridLayout(4, 1));
-		 jp.setBackground(Color.BLUE);
+		 
 		 
 		 
 		
 
 		 JPanel jp1 = new JPanel();
 		 jp1.setBackground(Color.CYAN);
-		 jl=new JLabel("猜一猜生成随机数的大小!");
+		 jl=new JLabel("生成随机数的范围在0-9!");
 		 jp1.add(jl);
 		 jp.add(jp1);
 		 
 		 
-		 
 		 JPanel jp2 = new JPanel();
 		 jp2.setBackground(Color.CYAN);
-		 jl1=new JLabel("生成0-9之间的十个随机数!");
-		 jp2.add(jl1);
+		 jb1=new JButton("生成随机数");
+		 jb1.setBackground(Color.WHITE);
+		 jb1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			int x = (int)(Math.random()*10);//生成随即数
+			label.setText("随机数已经生成范围0~9");
+			}
+		});// 添加动作响应器
+		 jp2.add(jb1);
 		 jp.add(jp2);
 		 
+	
+		 
 		
-		 JPanel jp3 = new JPanel();
-		 jp3.setBackground(Color.CYAN);
-		 jt=new JTextField(12);
-		 jp3.add(jt);
-		 jp.add(jp3);
-		 
-		 
 		 JPanel jp4 = new JPanel();
 		 jp4.setBackground(Color.CYAN);
+		 jt=new JTextField(12);
+		 jp4.add(jt);
+		 jp.add(jp4);
+		 
+		 
+		 JPanel jp5 = new JPanel();
+		 jp5.setBackground(Color.CYAN);
 		 jb=new JButton("确定");
 		 jb.setBackground(Color.WHITE);
 		 jb.addActionListener(this);// 添加动作响应器
 	
 		
-		 jp4.add(jb);
-		 jp.add(jp4);
+		 jp5.add(jb);
+		 jp.add(jp5);
 		 
 		
 		 add(jp);
@@ -60,15 +70,12 @@ public class demo extends JFrame  implements ActionListener{
 
 
 	public void actionPerformed(ActionEvent e){
-		
-			
-
-		 
 		 String cmd = e.getActionCommand();//确定按钮的名字
 		 if (cmd.equals("确定")) {      //equals  是等于的意思	 
 			 String id = jt.getText();// 取得输入的数字
 			
-			 int x=(int)(Math.random()*10);
+		    
+			 
 			 int s=Integer.parseInt(id);//这里是获得从键盘输入的数字
 			 
 			 if(s<x) {
@@ -84,11 +91,13 @@ public class demo extends JFrame  implements ActionListener{
 		               dispose();//本窗口销毁,释放内存资源
 			 } 
 		 }
+		 
 		
 		
 	}
      public static void main(String[] args1) throws IOException {
 	      new demo().setVisible(true);//创建登录窗口,并可见
+	     
      
 	}
 }
