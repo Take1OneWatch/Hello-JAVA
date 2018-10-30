@@ -1,0 +1,63 @@
+
+public class test extends Thread implements Runnable
+{
+     public boolean keepRunnable;
+
+	public void run() {
+    	 System.out.println(getName()+"是一名演员！");
+    	 
+    	 boolean keepRunning=true;
+    	 while(keepRunning) {
+    		  System.out.println(Thread.currentThread().getName()+"进攻了对方！");
+    		Thread.yield();
+    		  }
+    	 System.out.println(Thread.currentThread().getName()+"结束了进攻！");
+    	
+    	 }
+}
+
+
+
+
+
+
+
+
+
+
+public class Act extends Thread {
+
+	public void run() {
+		test s = new test();
+		test s1 = new test();
+		
+		Thread armyOfSuiDynasty = new Thread(s,"1111111111111");
+		Thread armyOfRevolt = new Thread(s1,"222222222222222222");
+		
+		armyOfRevolt.start();
+		armyOfSuiDynasty.start();
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
+		s.keepRunnable=false;
+		s1.keepRunnable = false;
+		
+		try {
+			s1.join(100000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	public static void main(String[] args) {
+		new Act().start();
+	}
+}
