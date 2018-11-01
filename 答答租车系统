@@ -191,7 +191,7 @@ public class inside extends Renew {
      	    	   }
      	    	   
      	    	  if(x==3) {
-     	    		 Renew q = new Renew();
+     	    		 Renew q = new Renew();  //调用继承的类方法
 	    		      q.test();break;
    	    	   }
      	    
